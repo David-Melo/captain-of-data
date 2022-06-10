@@ -1,0 +1,109 @@
+{"vehicles":[{
+"name":"Pickup","costs":[{
+"product":"Vehicle Parts","quantity":15
+}
+,{
+"product":"Rubber","quantity":8
+}
+,{
+"product":"Diesel","quantity":5
+}
+]
+}
+,{
+"name":"Truck","costs":[{
+"product":"Vehicle Parts II","quantity":30
+}
+,{
+"product":"Rubber","quantity":23
+}
+,{
+"product":"Diesel","quantity":15
+}
+]
+}
+,{
+"name":"Haul truck (tank)","costs":[{
+"product":"Vehicle Parts III","quantity":90
+}
+,{
+"product":"Rubber","quantity":90
+}
+,{
+"product":"Diesel","quantity":36
+}
+]
+}
+,{
+"name":"Haul truck (dump)","costs":[{
+"product":"Vehicle Parts III","quantity":90
+}
+,{
+"product":"Rubber","quantity":90
+}
+,{
+"product":"Diesel","quantity":36
+}
+]
+}
+,{
+"name":"Small excavator","costs":[{
+"product":"Vehicle Parts","quantity":30
+}
+,{
+"product":"Iron","quantity":15
+}
+,{
+"product":"Diesel","quantity":10
+}
+]
+}
+,{
+"name":"Excavator","costs":[{
+"product":"Vehicle Parts II","quantity":60
+}
+,{
+"product":"Steel","quantity":30
+}
+,{
+"product":"Diesel","quantity":27
+}
+]
+}
+,{
+"name":"Mega excavator","costs":[{
+"product":"Vehicle Parts III","quantity":180
+}
+,{
+"product":"Steel","quantity":90
+}
+,{
+"product":"Diesel","quantity":70
+}
+]
+}
+,{
+"name":"Tree harvester","costs":[{
+"product":"Vehicle Parts","quantity":23
+}
+,{
+"product":"Iron","quantity":8
+}
+,{
+"product":"Diesel","quantity":12
+}
+]
+}
+,{
+"name":"Large tree harvester","costs":[{
+"product":"Vehicle Parts II","quantity":45
+}
+,{
+"product":"Steel","quantity":15
+}
+,{
+"product":"Diesel","quantity":32
+}
+]
+}
+]}
