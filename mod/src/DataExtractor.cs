@@ -164,6 +164,7 @@ namespace DataExtractorMod {
         }
 
         public string MakeMachineJsonObject (
+            string id,
             string name, 
             string category, 
             string workers,
@@ -171,39 +172,9 @@ namespace DataExtractorMod {
             string maintenance_cost_quantity,
             string electricity_consumed,
             string electricity_generated,
-            string build_costs,
-            string recipes
-        )
-        {
-            System.Text.StringBuilder obj = new System.Text.StringBuilder();
-
-            List<string> props = new List<string> { };
-
-            props.Add($"\"name\":\"{name}\"");
-            props.Add($"\"category\":\"{category}\"");
-            props.Add($"\"workers\":{workers}");
-            props.Add($"\"maintenance_cost_units\":\"{maintenance_cost_units}\"");
-            props.Add($"\"maintenance_cost_quantity\":{maintenance_cost_quantity}");
-            props.Add($"\"electricity_consumed\":{electricity_consumed}");
-            props.Add($"\"electricity_generated\":{electricity_generated}");
-            props.Add($"\"build_costs\":[{build_costs}]");
-            props.Add($"\"recipes\":[{recipes}]");
-
-            obj.AppendLine("{");
-            obj.AppendLine(props.JoinStrings(","));
-            obj.AppendLine("}");
-            return obj.ToString();
-        }
-
-        public string MakeLabJsonObject(
-            string name,
-            string category,
-            string workers,
-            string maintenance_cost_units,
-            string maintenance_cost_quantity,
-            string electricity_consumed,
-            string electricity_generated,
             string computing_consumed,
+            string computing_generated,
+            string capacity,
             string unity_cost,
             string research_speed,
             string build_costs,
@@ -214,6 +185,7 @@ namespace DataExtractorMod {
 
             List<string> props = new List<string> { };
 
+            props.Add($"\"id\":\"{id}\"");
             props.Add($"\"name\":\"{name}\"");
             props.Add($"\"category\":\"{category}\"");
             props.Add($"\"workers\":{workers}");
@@ -222,42 +194,10 @@ namespace DataExtractorMod {
             props.Add($"\"electricity_consumed\":{electricity_consumed}");
             props.Add($"\"electricity_generated\":{electricity_generated}");
             props.Add($"\"computing_consumed\":{computing_consumed}");
+            props.Add($"\"computing_generated\":{computing_generated}");
+            props.Add($"\"storage_capacity\":{capacity}");
             props.Add($"\"unity_cost\":{unity_cost}");
             props.Add($"\"research_speed\":{research_speed}");
-            props.Add($"\"build_costs\":[{build_costs}]");
-            props.Add($"\"recipes\":[{recipes}]");
-
-            obj.AppendLine("{");
-            obj.AppendLine(props.JoinStrings(","));
-            obj.AppendLine("}");
-            return obj.ToString();
-        }
-
-        public string MakeStorageJsonObject(
-            string name,
-            string category,
-            string capacity,
-            string workers,
-            string maintenance_cost_units,
-            string maintenance_cost_quantity,
-            string electricity_consumed,
-            string electricity_generated,
-            string build_costs,
-            string recipes
-        )
-        {
-            System.Text.StringBuilder obj = new System.Text.StringBuilder();
-
-            List<string> props = new List<string> { };
-
-            props.Add($"\"name\":\"{name}\"");
-            props.Add($"\"category\":\"{category}\"");
-            props.Add($"\"capacity\":{capacity}");
-            props.Add($"\"workers\":{workers}");
-            props.Add($"\"maintenance_cost_units\":\"{maintenance_cost_units}\"");
-            props.Add($"\"maintenance_cost_quantity\":{maintenance_cost_quantity}");
-            props.Add($"\"electricity_consumed\":{electricity_consumed}");
-            props.Add($"\"electricity_generated\":{electricity_generated}");
             props.Add($"\"build_costs\":[{build_costs}]");
             props.Add($"\"recipes\":[{recipes}]");
 
@@ -430,40 +370,6 @@ namespace DataExtractorMod {
             props.Add($"\"name\":\"{name}\"");
             props.Add($"\"added_capacity\":{added_capacity}");
             props.Add($"\"costs\":[{costs}]");
-
-            obj.AppendLine("{");
-            obj.AppendLine(props.JoinStrings(","));
-            obj.AppendLine("}");
-            return obj.ToString();
-        }
-
-        public string MakeServerJsonObject (
-            string name, 
-            string category, 
-            string workers,
-            string maintenance_cost_units,
-            string maintenance_cost_quantity,
-            string electricity_consumed,
-            string electricity_generated,
-            string computing_generated,
-            string build_costs,
-            string recipes
-        )
-        {
-            System.Text.StringBuilder obj = new System.Text.StringBuilder();
-
-            List<string> props = new List<string> { };
-
-            props.Add($"\"name\":\"{name}\"");
-            props.Add($"\"category\":\"{category}\"");
-            props.Add($"\"workers\":{workers}");
-            props.Add($"\"maintenance_cost_units\":\"{maintenance_cost_units}\"");
-            props.Add($"\"maintenance_cost_quantity\":{maintenance_cost_quantity}");
-            props.Add($"\"electricity_consumed\":{electricity_consumed}");
-            props.Add($"\"electricity_generated\":{electricity_generated}");
-            props.Add($"\"computing_generated\":{computing_generated}");
-            props.Add($"\"build_costs\":[{build_costs}]");
-            props.Add($"\"recipes\":[{recipes}]");
 
             obj.AppendLine("{");
             obj.AppendLine(props.JoinStrings(","));
@@ -869,6 +775,7 @@ namespace DataExtractorMod {
 
                     Option<MechPowerGeneratorFromProductProto> generator = protosDb.Get<MechPowerGeneratorFromProductProto>(machineId);
 
+                    string id = generator.Value.Id.ToString();
                     string name = generator.Value.Strings.Name.ToString();
                     string category = "";
                     string workers = generator.Value.Costs.Workers.ToString();
@@ -876,6 +783,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = generator.Value.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in generator.Value.Graphics.Categories)
                     {
@@ -928,6 +840,7 @@ namespace DataExtractorMod {
                     recipeItems.Add(machineRecipeJson);
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -935,6 +848,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
@@ -964,6 +882,7 @@ namespace DataExtractorMod {
 
                     Option<ElectricityGeneratorFromMechPowerProto> generator = protosDb.Get<ElectricityGeneratorFromMechPowerProto>(machineId);
 
+                    string id = generator.Value.Id.ToString();
                     string name = generator.Value.Strings.Name.ToString();
                     string category = "";
                     string workers = generator.Value.Costs.Workers.ToString();
@@ -971,6 +890,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = generator.Value.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in generator.Value.Graphics.Categories)
                     {
@@ -1024,6 +948,7 @@ namespace DataExtractorMod {
                     recipeItems.Add(machineRecipeJson);
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1031,6 +956,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
@@ -1060,6 +990,7 @@ namespace DataExtractorMod {
 
                     Option<Mafi.Base.Prototypes.Machines.SolarElectricityGeneratorProto> generator = protosDb.Get<Mafi.Base.Prototypes.Machines.SolarElectricityGeneratorProto>(machineId);
 
+                    string id = generator.Value.Id.ToString();
                     string name = generator.Value.Strings.Name.ToString();
                     string category = "";
                     string workers = generator.Value.Costs.Workers.ToString();
@@ -1067,6 +998,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = generator.Value.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = generator.Value.OutputElectricity.Value.ToString();
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in generator.Value.Graphics.Categories)
                     {
@@ -1085,6 +1021,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1092,6 +1029,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1120,6 +1062,7 @@ namespace DataExtractorMod {
 
                     Option<ElectricityGeneratorFromProductProto> generator = protosDb.Get<ElectricityGeneratorFromProductProto>(machineId);
 
+                    string id = generator.Value.Id.ToString();
                     string name = generator.Value.Strings.Name.ToString();
                     string category = "";
                     string workers = generator.Value.Costs.Workers.ToString();
@@ -1127,6 +1070,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = generator.Value.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = generator.Value.OutputElectricity.Value.ToString();
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in generator.Value.Graphics.Categories)
                     {
@@ -1179,6 +1127,7 @@ namespace DataExtractorMod {
                     recipeItems.Add(machineRecipeJson);
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1186,6 +1135,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
@@ -1295,6 +1249,7 @@ namespace DataExtractorMod {
 
                     IIndexable<RecipeProto> machineRecipes = machine.Value.Recipes;
 
+                    string id = machine.Value.Id.ToString();
                     string name = machine.Value.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Value.Costs.Workers.ToString();
@@ -1302,6 +1257,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Value.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = machine.Value.ElectricityConsumed.Quantity.Value.ToString();
                     string electricity_generated = "0";
+                    string computing_consumed = machine.Value.ComputingConsumed.Value.ToString();
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Value.Graphics.Categories)
                     {
@@ -1359,6 +1319,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1366,6 +1327,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
@@ -1393,6 +1359,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = item.Id.ToString();
                     string name = item.Strings.Name.ToString();
                     string category = "";
                     string workers = item.Costs.Workers.ToString();
@@ -1400,6 +1367,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = item.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in item.Graphics.Categories)
                     {
@@ -1418,6 +1390,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1425,6 +1398,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1446,6 +1424,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = item.Id.ToString();
                     string name = item.Strings.Name.ToString();
                     string category = "";
                     string workers = item.Costs.Workers.ToString();
@@ -1453,6 +1432,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = item.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in item.Graphics.Categories)
                     {
@@ -1471,6 +1455,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1478,6 +1463,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1499,6 +1489,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = item.Id.ToString();
                     string name = item.Strings.Name.ToString();
                     string category = "";
                     string workers = item.Costs.Workers.ToString();
@@ -1506,6 +1497,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = item.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in item.Graphics.Categories)
                     {
@@ -1524,6 +1520,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1531,6 +1528,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1552,6 +1554,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = item.Id.ToString();
                     string name = item.Strings.Name.ToString();
                     string category = "";
                     string capacity = item.Capacity.ToString();
@@ -1560,6 +1563,10 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = item.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
 
                     foreach (ToolbarCategoryProto cat in item.Graphics.Categories)
                     {
@@ -1577,15 +1584,20 @@ namespace DataExtractorMod {
                         machinesProducts.Add(vehicleProductJson);
                     }
 
-                    string machineJson = MakeStorageJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
-                        capacity,
                         workers,
                         maintenance_cost_units,
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1607,7 +1619,7 @@ namespace DataExtractorMod {
                 try
                 {
 
-                    Log.Info("Name :" + item.Strings.Name.ToString());
+                    string id = item.Id.ToString();
                     string name = item.Strings.Name.ToString();
                     string category = "";
                     string workers = item.Costs.Workers.ToString();
@@ -1619,6 +1631,8 @@ namespace DataExtractorMod {
                     string unity_cost = item.UnityMonthlyCost.ToString();
                     string recipes = "";
                     Fix32 research_speed = (60 / item.DurationForRecipe.Seconds) * item.StepsPerRecipe;
+                    string capacity = "0";
+                    string computing_generated = "0";
 
                     if ( item.Id.ToString() != "ResearchLab1"){
 
@@ -1653,7 +1667,8 @@ namespace DataExtractorMod {
                         machinesProducts.Add(vehicleProductJson);
                     }
 
-                    string machineJson = MakeLabJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1662,6 +1677,8 @@ namespace DataExtractorMod {
                         electricity_consumed,
                         electricity_generated,
                         computing_consumed,
+                        computing_generated,
+                        capacity,
                         unity_cost,
                         research_speed.ToString(),
                         machinesProducts.JoinStrings(","),
@@ -1685,6 +1702,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -1692,6 +1710,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = machine.ElectricityConsumed.Quantity.Value.ToString();
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -1751,6 +1774,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1758,6 +1782,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
@@ -1779,6 +1808,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -1786,6 +1816,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = machine.ElectricityConsumed.Quantity.Value.ToString();
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -1804,6 +1839,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -1811,6 +1847,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1832,6 +1873,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -1840,6 +1882,10 @@ namespace DataExtractorMod {
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
                     string capacity = machine.Capacity.ToString();
+                    string unity_cost = "0";
+                    string research_speed = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -1857,15 +1903,20 @@ namespace DataExtractorMod {
                         machinesProducts.Add(vehicleProductJson);
                     }
 
-                    string machineJson = MakeStorageJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
-                        capacity,
                         workers,
                         maintenance_cost_units,
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1888,6 +1939,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -1896,6 +1948,11 @@ namespace DataExtractorMod {
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
                     string capacity = machine.Capacity.ToString();
+                    string unity_cost = "0";
+                    string research_speed = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -1913,15 +1970,20 @@ namespace DataExtractorMod {
                         machinesProducts.Add(vehicleProductJson);
                     }
 
-                    string machineJson = MakeStorageJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
-                        capacity,
                         workers,
                         maintenance_cost_units,
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1943,6 +2005,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -1951,6 +2014,10 @@ namespace DataExtractorMod {
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
                     string capacity = machine.Capacity.ToString();
+                    string unity_cost = "0";
+                    string research_speed = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -1968,15 +2035,20 @@ namespace DataExtractorMod {
                         machinesProducts.Add(vehicleProductJson);
                     }
 
-                    string machineJson = MakeStorageJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
-                        capacity,
                         workers,
                         maintenance_cost_units,
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -1998,6 +2070,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2006,6 +2079,10 @@ namespace DataExtractorMod {
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
                     string capacity = machine.Capacity.ToString();
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2024,6 +2101,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2031,6 +2109,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2052,6 +2135,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2060,6 +2144,10 @@ namespace DataExtractorMod {
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
                     string capacity = machine.Capacity.ToString();
+                    string unity_cost = "0";
+                    string research_speed = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2077,15 +2165,20 @@ namespace DataExtractorMod {
                         machinesProducts.Add(vehicleProductJson);
                     }
 
-                    string machineJson = MakeStorageJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
-                        capacity,
                         workers,
                         maintenance_cost_units,
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2107,6 +2200,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2115,6 +2209,10 @@ namespace DataExtractorMod {
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
                     string capacity = machine.CapacityPerBuffer.ToString();
+                    string unity_cost = "0";
+                    string research_speed = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2132,15 +2230,20 @@ namespace DataExtractorMod {
                         machinesProducts.Add(vehicleProductJson);
                     }
 
-                    string machineJson = MakeStorageJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
-                        capacity,
                         workers,
                         maintenance_cost_units,
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2162,6 +2265,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2169,6 +2273,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = machine.ElectricityConsumed.Quantity.Value.ToString();
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2187,6 +2296,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2194,6 +2304,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2215,6 +2330,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2222,6 +2338,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2277,6 +2398,7 @@ namespace DataExtractorMod {
                     recipeItems.Add(machineRecipeJson);
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2284,6 +2406,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
@@ -2305,6 +2432,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2312,6 +2440,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = machine.ElectricityConsumed.Value.ToString();
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2330,6 +2463,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2337,6 +2471,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2358,6 +2497,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2365,6 +2505,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2383,6 +2528,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2390,6 +2536,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2411,6 +2562,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2418,6 +2570,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2473,6 +2630,7 @@ namespace DataExtractorMod {
                     recipeItems.Add(machineRecipeJson);
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2480,6 +2638,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
@@ -2501,6 +2664,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2508,6 +2672,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2526,6 +2695,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2533,6 +2703,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2554,6 +2729,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "";
                     string workers = machine.Costs.Workers.ToString();
@@ -2561,6 +2737,11 @@ namespace DataExtractorMod {
                     string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
@@ -2579,6 +2760,7 @@ namespace DataExtractorMod {
                     }
 
                     string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2586,6 +2768,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         ""
                     );
@@ -2607,6 +2794,7 @@ namespace DataExtractorMod {
                 try
                 {
 
+                    string id = machine.Id.ToString();
                     string name = machine.Strings.Name.ToString();
                     string category = "Data center";
                     string workers = "0";
@@ -2615,6 +2803,10 @@ namespace DataExtractorMod {
                     string electricity_consumed = machine.ConsumedPowerPerTick.Value.ToString();
                     string electricity_generated = "0";
                     string computing_generated = machine.CreatedComputingPerTick.Value.ToString();
+                    string computing_consumed = "0";
+                    string capacity = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2645,7 +2837,8 @@ namespace DataExtractorMod {
                     );
                     recipeItems.Add(machineRecipeJson);
 
-                    string machineJson = MakeServerJsonObject(
+                    string machineJson = MakeMachineJsonObject(
+                        id,
                         name,
                         category,
                         workers,
@@ -2653,7 +2846,11 @@ namespace DataExtractorMod {
                         maintenance_cost_quantity,
                         electricity_consumed,
                         electricity_generated,
+                        computing_consumed,
                         computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
                         machinesProducts.JoinStrings(","),
                         recipeItems.JoinStrings(",")
                     );
