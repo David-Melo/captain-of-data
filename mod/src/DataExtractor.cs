@@ -124,6 +124,7 @@ using Mafi.Core.Buildings.RainwaterHarvesters;
 using Mafi.Collections.ImmutableCollections;
 using Mafi.Collections.ReadonlyCollections;
 using Mafi.Base.Prototypes.Machines.PowerGenerators;
+using System.Reflection;
 
 namespace DataExtractorMod {
 	public sealed class DataExtractor : IRegistrationMod<DataOnlyMod>
@@ -377,6 +378,42 @@ namespace DataExtractorMod {
             return obj.ToString();
         }
 
+        public string MakeTerrainMaterialJsonObject(
+            string id,
+            string name,
+            string mined_product,
+            string mining_hardness,
+            string mined_quantity_per_tile_cubed,
+            string disruption_recovery_time,
+            string is_hardened_floor,
+            string max_collapse_height_diff,
+            string min_collapse_height_diff,
+            string mined_quantity_mult,
+            string vehicle_traversal_cost
+        )
+        {
+            System.Text.StringBuilder obj = new System.Text.StringBuilder();
+
+            List<string> props = new List<string> { };
+
+            props.Add($"\"id\":\"{id}\"");
+            props.Add($"\"name\":\"{name}\"");
+            props.Add($"\"mined_product\":\"{mined_product}\"");
+            props.Add($"\"mining_hardness\":\"{mining_hardness}\"");
+            props.Add($"\"mined_quantity_per_tile_cubed\":{mined_quantity_per_tile_cubed}");
+            props.Add($"\"disruption_recovery_time\":{disruption_recovery_time}");
+            props.Add($"\"is_hardened_floor\":{is_hardened_floor}");
+            props.Add($"\"max_collapse_height_diff\":{max_collapse_height_diff}");
+            props.Add($"\"min_collapse_height_diff\":{min_collapse_height_diff}");
+            props.Add($"\"mined_quantity_mult\":\"{mined_quantity_mult}\"");
+            props.Add($"\"vehicle_traversal_cost\":{vehicle_traversal_cost}");
+
+            obj.AppendLine("{");
+            obj.AppendLine(props.JoinStrings(","));
+            obj.AppendLine("}");
+            return obj.ToString();
+        }
+
         /*
          * -------------------------------------
          * Main Mod Code
@@ -387,6 +424,8 @@ namespace DataExtractorMod {
 
         void IMod.RegisterDependencies(DependencyResolverBuilder depBuilder, ProtosDb protosDb, bool gameWasLoaded)
         {
+
+            string game_version = typeof(Mafi.Base.BaseMod).GetTypeInfo().Assembly.GetName().Version.ToString();
 
             /*
              * -------------------------------------
@@ -618,7 +657,7 @@ namespace DataExtractorMod {
             }
             upgradeItems.Add($"\"fuel_tanks\":[{tankItems.JoinStrings(",")}]");
 
-            File.WriteAllText("c:/temp/ship_upgrades.json", $"{{{upgradeItems.JoinStrings(",")}}}");
+            File.WriteAllText("c:/temp/ship_upgrades.json", $"{{\"game_version\":\"{game_version}\",{upgradeItems.JoinStrings(",")}}}");
 
             /*
              * -------------------------------------
@@ -748,7 +787,7 @@ namespace DataExtractorMod {
 
             }
 
-            File.WriteAllText("c:/temp/vehicles.json", $"{{\"vehicles\":[{vehicleItems.JoinStrings(",")}]}}");
+            File.WriteAllText("c:/temp/vehicles.json", $"{{\"game_version\":\"{game_version}\",\"vehicles\":[{vehicleItems.JoinStrings(",")}]}}");
 
             /*
              * -------------------------------------
@@ -2867,11 +2906,65 @@ namespace DataExtractorMod {
 
             /*
              * -------------------------------------
-             * Part 5  - Final JSON Export
+             * Part 6  - Terrain Materials. Uses Simpler Proto LookUp Method
              * -------------------------------------
             */
 
-            File.WriteAllText("c:/temp/machines_and_buildings.json", $"{{\"machines_and_buildings\":[{machineItems.JoinStrings(",")}]}}");
+            List<string> materialItems = new List<string> { };
+
+            IEnumerable<TerrainMaterialProto> materials = protosDb.All<TerrainMaterialProto>();
+            foreach (TerrainMaterialProto material in materials)
+            {
+
+                try
+                {
+                    string id = material.Id.ToString();
+                    string name = material.Strings.Name.ToString();
+                    string mined_product = material.MinedProduct.Strings.Name.ToString();
+                    string mining_hardness = material.MiningHardness.ToString();
+                    string mined_quantity_per_tile_cubed = material.MinedQuantityPerTileCubed.ToString();
+                    string disruption_recovery_time = material.DisruptionRecoveryTime.ToString();
+                    string is_hardened_floor = material.IsHardenedFloor.ToString().ToLower();
+                    string max_collapse_height_diff = material.MaxCollapseHeightDiff.ToString();
+                    string min_collapse_height_diff = material.MinCollapseHeightDiff.ToString();
+                    string mined_quantity_mult = material.MinedQuantityMult.ToString();
+                    string vehicle_traversal_cost = material.VehicleTraversalCost.ToString();
+
+                    string materialJson = MakeTerrainMaterialJsonObject(
+                        id,
+                        name,
+                        mined_product,
+                        mining_hardness,
+                        mined_quantity_per_tile_cubed,
+                        disruption_recovery_time,
+                        is_hardened_floor,
+                        max_collapse_height_diff,
+                        min_collapse_height_diff,
+                        mined_quantity_mult,
+                        vehicle_traversal_cost
+                    );
+                    materialItems.Add(materialJson);
+
+
+                }
+                catch
+                {
+                    Log.Info("###################################################");
+                    Log.Info("ERROR Material" + material.Id.ToString());
+                    Log.Info("###################################################");
+                }
+
+            }
+
+            File.WriteAllText("c:/temp/terrain_materials.json", $"{{\"game_version\":\"{game_version}\",\"terrain_materials\":[{materialItems.JoinStrings(",")}]}}");
+
+            /*
+             * -------------------------------------
+             * Part 7  - Final JSON Export
+             * -------------------------------------
+            */
+
+            File.WriteAllText("c:/temp/machines_and_buildings.json", $"{{\"game_version\":\"{game_version}\",\"machines_and_buildings\":[{machineItems.JoinStrings(",")}]}}");
 
         }
 
