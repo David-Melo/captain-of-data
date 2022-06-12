@@ -9176,6 +9176,7 @@
             ],
             "recipes": [
                 {
+                    "name": "Research V",
                     "duration": 15,
                     "inputs": [
                         {
@@ -9222,6 +9223,7 @@
             ],
             "recipes": [
                 {
+                    "name": "Research IV",
                     "duration": 15,
                     "inputs": [
                         {
@@ -9264,6 +9266,7 @@
             ],
             "recipes": [
                 {
+                    "name": "Research III",                    
                     "duration": 15,
                     "inputs": [
                         {
@@ -9306,6 +9309,7 @@
             ],
             "recipes": [
                 {
+                    "name": "Research II",
                     "duration": 15,
                     "inputs": [
                         {
