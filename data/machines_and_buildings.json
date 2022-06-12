@@ -9176,17 +9176,16 @@
             ],
             "recipes": [
                 {
-                    "name": "Research V",
                     "duration": 15,
                     "inputs": [
                         {
-                            "product": "Lab Equipment IV",
+                            "name": "Lab Equipment IV",
                             "quantity": 1
                         }
                     ],
                     "outputs": [
                         {
-                            "product": "Recyclables",
+                            "name": "Recyclables",
                             "quantity": 4
                         }
                     ]
@@ -9223,17 +9222,16 @@
             ],
             "recipes": [
                 {
-                    "name": "Research IV",
                     "duration": 15,
                     "inputs": [
                         {
-                            "product": "Lab Equipment III",
+                            "name": "Lab Equipment III",
                             "quantity": 1
                         }
                     ],
                     "outputs": [
                         {
-                            "product": "Recyclables",
+                            "name": "Recyclables",
                             "quantity": 3
                         }
                     ]
@@ -9266,17 +9264,16 @@
             ],
             "recipes": [
                 {
-                    "name": "Research III",                    
                     "duration": 15,
                     "inputs": [
                         {
-                            "product": "Lab Equipment II",
+                            "name": "Lab Equipment II",
                             "quantity": 1
                         }
                     ],
                     "outputs": [
                         {
-                            "product": "Recyclables",
+                            "name": "Recyclables",
                             "quantity": 2
                         }
                     ]
@@ -9309,17 +9306,16 @@
             ],
             "recipes": [
                 {
-                    "name": "Research II",
                     "duration": 15,
                     "inputs": [
                         {
-                            "product": "Lab Equipment",
+                            "name": "Lab Equipment",
                             "quantity": 1
                         }
                     ],
                     "outputs": [
                         {
-                            "product": "Recyclables",
+                            "name": "Recyclables",
                             "quantity": 1
                         }
                     ]

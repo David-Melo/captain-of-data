@@ -1676,11 +1676,11 @@ namespace DataExtractorMod {
                     if ( item.Id.ToString() != "ResearchLab1"){
 
                         List<string> inputList = new List<string> { };
-                        inputList.Add($"\"product\":\"{item.ConsumedPerRecipe.Product.Strings.Name}\"");
+                        inputList.Add($"\"name\":\"{item.ConsumedPerRecipe.Product.Strings.Name}\"");
                         inputList.Add($"\"quantity\":{item.ConsumedPerRecipe.Quantity.Value}");
 
                         List<string> outputList = new List<string> { };
-                        outputList.Add($"\"product\":\"{item.ProducedPerRecipe.Product.Strings.Name}\"");
+                        outputList.Add($"\"name\":\"{item.ProducedPerRecipe.Product.Strings.Name}\"");
                         outputList.Add($"\"quantity\":{item.ProducedPerRecipe.Quantity.Value}");
 
                         string inputsObj = ($"\"inputs\":[{{{inputList.JoinStrings(",")}}}],");
