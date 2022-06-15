@@ -1,16 +1,16 @@
 {
-    "game_version": "0.4.3.0",
+    "game_version": "0.4.4.0",
     "vehicles": [
         {
             "name": "Pickup",
             "costs": [
                 {
                     "product": "Vehicle Parts",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Rubber",
-                    "quantity": 8
+                    "quantity": 10
                 },
                 {
                     "product": "Diesel",
@@ -23,11 +23,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 },
                 {
                     "product": "Rubber",
-                    "quantity": 23
+                    "quantity": 30
                 },
                 {
                     "product": "Diesel",
@@ -40,11 +40,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Rubber",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Diesel",
@@ -57,11 +57,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Rubber",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Diesel",
@@ -74,11 +74,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts",
-                    "quantity": 30
+                    "quantity": 40
                 },
                 {
                     "product": "Iron",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Diesel",
@@ -91,11 +91,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts II",
-                    "quantity": 60
+                    "quantity": 80
                 },
                 {
                     "product": "Steel",
-                    "quantity": 30
+                    "quantity": 40
                 },
                 {
                     "product": "Diesel",
@@ -108,11 +108,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts III",
-                    "quantity": 180
+                    "quantity": 240
                 },
                 {
                     "product": "Steel",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Diesel",
@@ -125,11 +125,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts",
-                    "quantity": 23
+                    "quantity": 30
                 },
                 {
                     "product": "Iron",
-                    "quantity": 8
+                    "quantity": 10
                 },
                 {
                     "product": "Diesel",
@@ -142,11 +142,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts II",
-                    "quantity": 45
+                    "quantity": 60
                 },
                 {
                     "product": "Steel",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Diesel",

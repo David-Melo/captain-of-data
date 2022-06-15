@@ -1,5 +1,5 @@
 {
-    "game_version": "0.4.3.0",
+    "game_version": "0.4.4.0",
     "machines_and_buildings": [
         {
             "id": "TurbineLowPressT2",
@@ -18,7 +18,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 105
+                    "quantity": 140
                 }
             ],
             "recipes": [
@@ -61,7 +61,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": [
@@ -104,7 +104,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": [
@@ -147,7 +147,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -181,7 +181,7 @@
             "maintenance_cost_units": "Maintenance I",
             "maintenance_cost_quantity": 1,
             "electricity_consumed": 0,
-            "electricity_generated": 360,
+            "electricity_generated": 300,
             "computing_consumed": 0,
             "computing_generated": 0,
             "storage_capacity": 0,
@@ -190,11 +190,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Electronics",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -210,7 +210,7 @@
                     "outputs": [
                         {
                             "name": "Electricity",
-                            "quantity": 360
+                            "quantity": 300
                         }
                     ]
                 }
@@ -224,7 +224,7 @@
             "maintenance_cost_units": "Maintenance I",
             "maintenance_cost_quantity": 8,
             "electricity_consumed": 0,
-            "electricity_generated": 3000,
+            "electricity_generated": 2500,
             "computing_consumed": 0,
             "computing_generated": 0,
             "storage_capacity": 0,
@@ -233,11 +233,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 60
+                    "quantity": 80
                 },
                 {
                     "product": "Electronics",
-                    "quantity": 135
+                    "quantity": 180
                 }
             ],
             "recipes": [
@@ -253,7 +253,7 @@
                     "outputs": [
                         {
                             "name": "Electricity",
-                            "quantity": 3000
+                            "quantity": 2500
                         }
                     ]
                 }
@@ -267,7 +267,7 @@
             "maintenance_cost_units": "Maintenance II",
             "maintenance_cost_quantity": 0.5996094,
             "electricity_consumed": 0,
-            "electricity_generated": 38,
+            "electricity_generated": 32,
             "computing_consumed": 0,
             "computing_generated": 0,
             "storage_capacity": 0,
@@ -276,15 +276,15 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 8
+                    "quantity": 10
                 },
                 {
                     "product": "Solar cell",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": []
@@ -297,7 +297,7 @@
             "maintenance_cost_units": "Maintenance II",
             "maintenance_cost_quantity": 0.5996094,
             "electricity_consumed": 0,
-            "electricity_generated": 48,
+            "electricity_generated": 40,
             "computing_consumed": 0,
             "computing_generated": 0,
             "storage_capacity": 0,
@@ -306,15 +306,15 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 8
+                    "quantity": 10
                 },
                 {
                     "product": "Solar cell mono",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": []
@@ -327,7 +327,7 @@
             "maintenance_cost_units": "Maintenance I",
             "maintenance_cost_quantity": 6,
             "electricity_consumed": 0,
-            "electricity_generated": 216,
+            "electricity_generated": 180,
             "computing_consumed": 0,
             "computing_generated": 0,
             "storage_capacity": 0,
@@ -336,11 +336,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Electronics",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -356,7 +356,7 @@
                     "outputs": [
                         {
                             "name": "Electricity",
-                            "quantity": 216
+                            "quantity": 180
                         },
                         {
                             "name": "Air pollution",
@@ -383,7 +383,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -426,7 +426,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -493,11 +493,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -564,11 +564,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 },
                 {
                     "product": "Electronics III",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -635,7 +635,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -714,7 +714,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -748,7 +748,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -899,7 +899,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 135
+                    "quantity": 180
                 }
             ],
             "recipes": [
@@ -1086,7 +1086,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": [
@@ -1265,7 +1265,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -1320,11 +1320,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 },
                 {
                     "product": "Steel",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -1379,7 +1379,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -1422,7 +1422,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -1465,7 +1465,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": [
@@ -1512,7 +1512,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 53
+                    "quantity": 70
                 }
             ],
             "recipes": [
@@ -1559,7 +1559,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": [
@@ -1614,7 +1614,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -1693,7 +1693,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 75
+                    "quantity": 100
                 }
             ],
             "recipes": [
@@ -1731,7 +1731,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -1794,7 +1794,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": [
@@ -1841,7 +1841,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": [
@@ -1912,11 +1912,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 30
+                    "quantity": 40
                 },
                 {
                     "product": "Electronics",
-                    "quantity": 8
+                    "quantity": 10
                 }
             ],
             "recipes": [
@@ -2043,7 +2043,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -2122,7 +2122,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -2201,7 +2201,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -2516,7 +2516,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -2623,7 +2623,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -2698,7 +2698,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -2893,7 +2893,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 11
+                    "quantity": 15
                 }
             ],
             "recipes": [
@@ -3028,7 +3028,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -3067,11 +3067,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 23
+                    "quantity": 30
                 },
                 {
                     "product": "Steel",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -3166,7 +3166,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 19
+                    "quantity": 25
                 }
             ],
             "recipes": [
@@ -3293,7 +3293,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -3484,7 +3484,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -4083,11 +4083,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -4622,7 +4622,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": [
@@ -4869,7 +4869,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": [
@@ -5164,7 +5164,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 120
+                    "quantity": 160
                 }
             ],
             "recipes": [
@@ -5459,7 +5459,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -5579,7 +5579,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -5613,7 +5613,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -5651,7 +5651,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -5685,7 +5685,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -5719,7 +5719,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -5846,7 +5846,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": [
@@ -6081,7 +6081,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 105
+                    "quantity": 140
                 }
             ],
             "recipes": [
@@ -6188,7 +6188,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -6259,7 +6259,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -6330,7 +6330,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -6433,7 +6433,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -6528,7 +6528,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -6719,11 +6719,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -6762,7 +6762,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 8
+                    "quantity": 10
                 }
             ],
             "recipes": [
@@ -6872,11 +6872,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 8
+                    "quantity": 10
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -6986,11 +6986,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 23
+                    "quantity": 30
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -7061,11 +7061,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 60
+                    "quantity": 80
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 150
+                    "quantity": 200
                 }
             ],
             "recipes": [
@@ -7136,7 +7136,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -7179,7 +7179,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": [
@@ -7218,7 +7218,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -7317,11 +7317,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 113
+                    "quantity": 150
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -7364,7 +7364,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 120
+                    "quantity": 160
                 }
             ],
             "recipes": [
@@ -7419,7 +7419,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 105
+                    "quantity": 140
                 }
             ],
             "recipes": [
@@ -7694,7 +7694,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -7737,7 +7737,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": [
@@ -7780,7 +7780,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -7823,7 +7823,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": [
@@ -7918,7 +7918,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 53
+                    "quantity": 70
                 }
             ],
             "recipes": [
@@ -7985,7 +7985,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -8036,7 +8036,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 53
+                    "quantity": 70
                 }
             ],
             "recipes": [
@@ -8083,7 +8083,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 53
+                    "quantity": 70
                 }
             ],
             "recipes": [
@@ -8130,7 +8130,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": [
@@ -8261,7 +8261,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 75
+                    "quantity": 100
                 }
             ],
             "recipes": [
@@ -8428,7 +8428,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 8
+                    "quantity": 10
                 }
             ],
             "recipes": [
@@ -8574,7 +8574,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": [
@@ -8621,7 +8621,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -8672,7 +8672,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 75
+                    "quantity": 100
                 }
             ],
             "recipes": [
@@ -8743,11 +8743,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 150
+                    "quantity": 200
                 },
                 {
                     "product": "Glass",
-                    "quantity": 480
+                    "quantity": 640
                 }
             ],
             "recipes": []
@@ -8769,11 +8769,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 75
+                    "quantity": 100
                 },
                 {
                     "product": "Glass",
-                    "quantity": 240
+                    "quantity": 320
                 }
             ],
             "recipes": []
@@ -8795,7 +8795,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": []
@@ -8817,7 +8817,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -8839,7 +8839,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": []
@@ -8861,11 +8861,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 225
+                    "quantity": 300
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 450
+                    "quantity": 600
                 }
             ],
             "recipes": []
@@ -8887,11 +8887,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 150
+                    "quantity": 200
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 300
+                    "quantity": 400
                 }
             ],
             "recipes": []
@@ -8913,11 +8913,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 180
+                    "quantity": 240
                 }
             ],
             "recipes": []
@@ -8939,11 +8939,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 75
+                    "quantity": 100
                 }
             ],
             "recipes": []
@@ -8965,7 +8965,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": []
@@ -8987,7 +8987,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": []
@@ -9009,7 +9009,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -9031,7 +9031,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": []
@@ -9053,7 +9053,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": []
@@ -9075,7 +9075,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -9097,7 +9097,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": []
@@ -9119,7 +9119,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": []
@@ -9141,7 +9141,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -9163,15 +9163,15 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 150
+                    "quantity": 200
                 },
                 {
                     "product": "Glass",
-                    "quantity": 120
+                    "quantity": 160
                 },
                 {
                     "product": "Lab Equipment IV",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -9210,15 +9210,15 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 165
+                    "quantity": 220
                 },
                 {
                     "product": "Glass",
-                    "quantity": 45
+                    "quantity": 60
                 },
                 {
                     "product": "Lab Equipment III",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -9257,11 +9257,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Lab Equipment II",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -9300,11 +9300,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 45
+                    "quantity": 60
                 },
                 {
                     "product": "Lab Equipment",
-                    "quantity": 8
+                    "quantity": 10
                 }
             ],
             "recipes": [
@@ -9343,7 +9343,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -9365,11 +9365,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 },
                 {
                     "product": "Electronics III",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -9436,11 +9436,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 38
+                    "quantity": 50
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": [
@@ -9507,7 +9507,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 38
+                    "quantity": 50
                 }
             ],
             "recipes": [
@@ -9574,7 +9574,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": [
@@ -9617,7 +9617,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 210
+                    "quantity": 280
                 }
             ],
             "recipes": []
@@ -9639,7 +9639,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 90
+                    "quantity": 120
                 }
             ],
             "recipes": []
@@ -9661,7 +9661,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -9683,7 +9683,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 53
+                    "quantity": 70
                 }
             ],
             "recipes": []
@@ -9705,7 +9705,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -9727,7 +9727,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": []
@@ -9749,7 +9749,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 135
+                    "quantity": 180
                 }
             ],
             "recipes": []
@@ -9771,7 +9771,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 68
+                    "quantity": 90
                 }
             ],
             "recipes": []
@@ -9793,7 +9793,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -9815,7 +9815,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -9837,7 +9837,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 135
+                    "quantity": 180
                 }
             ],
             "recipes": []
@@ -9859,7 +9859,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 68
+                    "quantity": 90
                 }
             ],
             "recipes": []
@@ -9881,7 +9881,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -9903,7 +9903,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -9925,7 +9925,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 135
+                    "quantity": 180
                 }
             ],
             "recipes": []
@@ -9947,7 +9947,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 68
+                    "quantity": 90
                 }
             ],
             "recipes": []
@@ -9969,7 +9969,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -9991,7 +9991,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -10013,11 +10013,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 113
+                    "quantity": 150
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 375
+                    "quantity": 500
                 }
             ],
             "recipes": []
@@ -10039,11 +10039,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 113
+                    "quantity": 150
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 375
+                    "quantity": 500
                 }
             ],
             "recipes": []
@@ -10065,11 +10065,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 150
+                    "quantity": 200
                 },
                 {
                     "product": "Glass",
-                    "quantity": 180
+                    "quantity": 240
                 }
             ],
             "recipes": []
@@ -10091,7 +10091,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 105
+                    "quantity": 140
                 }
             ],
             "recipes": []
@@ -10113,7 +10113,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": []
@@ -10135,7 +10135,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 19
+                    "quantity": 25
                 }
             ],
             "recipes": []
@@ -10157,7 +10157,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": []
@@ -10179,7 +10179,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 }
             ],
             "recipes": []
@@ -10201,7 +10201,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -10223,7 +10223,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 19
+                    "quantity": 25
                 }
             ],
             "recipes": []
@@ -10245,11 +10245,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 45
+                    "quantity": 60
                 },
                 {
                     "product": "Glass",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -10271,15 +10271,15 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 60
+                    "quantity": 80
                 },
                 {
                     "product": "Glass",
-                    "quantity": 60
+                    "quantity": 80
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": []
@@ -10301,11 +10301,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 75
+                    "quantity": 100
                 },
                 {
                     "product": "Glass",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": []
@@ -10327,7 +10327,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts II",
-                    "quantity": 30
+                    "quantity": 40
                 }
             ],
             "recipes": []
@@ -10349,11 +10349,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 600
+                    "quantity": 800
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 60
+                    "quantity": 80
                 }
             ],
             "recipes": [
@@ -10400,11 +10400,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 900
+                    "quantity": 1200
                 },
                 {
                     "product": "Vehicle Parts III",
-                    "quantity": 120
+                    "quantity": 160
                 }
             ],
             "recipes": []
@@ -10426,15 +10426,15 @@
             "build_costs": [
                 {
                     "product": "Construction Parts IV",
-                    "quantity": 225
+                    "quantity": 300
                 },
                 {
                     "product": "Concrete slab",
-                    "quantity": 750
+                    "quantity": 1000
                 },
                 {
                     "product": "Steel",
-                    "quantity": 600
+                    "quantity": 800
                 }
             ],
             "recipes": []
@@ -10456,7 +10456,7 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 300
+                    "quantity": 400
                 }
             ],
             "recipes": [
@@ -10507,11 +10507,11 @@
             "build_costs": [
                 {
                     "product": "Construction Parts",
-                    "quantity": 15
+                    "quantity": 20
                 },
                 {
                     "product": "Wood",
-                    "quantity": 23
+                    "quantity": 30
                 }
             ],
             "recipes": []
@@ -10533,15 +10533,15 @@
             "build_costs": [
                 {
                     "product": "Construction Parts III",
-                    "quantity": 75
+                    "quantity": 100
                 },
                 {
                     "product": "Electronics II",
-                    "quantity": 90
+                    "quantity": 120
                 },
                 {
                     "product": "Electronics III",
-                    "quantity": 15
+                    "quantity": 20
                 }
             ],
             "recipes": []

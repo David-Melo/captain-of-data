@@ -1,5 +1,5 @@
 {
-    "game_version": "0.4.3.0",
+    "game_version": "0.4.4.0",
     "terrain_materials": [
         {
             "id": "Grass_Terrain",
@@ -136,12 +136,12 @@
             "name": "Sand_Terrain",
             "mined_product": "Sand",
             "mining_hardness": "100.00%",
-            "mined_quantity_per_tile_cubed": 2.599609,
+            "mined_quantity_per_tile_cubed": 2,
             "disruption_recovery_time": 6000,
             "is_hardened_floor": false,
             "max_collapse_height_diff": 0.7998047,
             "min_collapse_height_diff": 0.5996094,
-            "mined_quantity_mult": "130.00%",
+            "mined_quantity_mult": "100.00%",
             "vehicle_traversal_cost": 0
         },
         {
@@ -149,12 +149,12 @@
             "name": "Limestone_Terrain",
             "mined_product": "Limestone",
             "mining_hardness": "100.00%",
-            "mined_quantity_per_tile_cubed": 2.599609,
+            "mined_quantity_per_tile_cubed": 2,
             "disruption_recovery_time": 2147483647,
             "is_hardened_floor": false,
             "max_collapse_height_diff": 3,
             "min_collapse_height_diff": 1,
-            "mined_quantity_mult": "130.00%",
+            "mined_quantity_mult": "100.00%",
             "vehicle_traversal_cost": 0
         },
         {
@@ -162,12 +162,12 @@
             "name": "Coal_Terrain",
             "mined_product": "Coal",
             "mining_hardness": "100.00%",
-            "mined_quantity_per_tile_cubed": 3.120117,
+            "mined_quantity_per_tile_cubed": 2.400391,
             "disruption_recovery_time": 2147483647,
             "is_hardened_floor": false,
             "max_collapse_height_diff": 3,
             "min_collapse_height_diff": 1,
-            "mined_quantity_mult": "156.00%",
+            "mined_quantity_mult": "120.00%",
             "vehicle_traversal_cost": 0
         },
         {
@@ -201,12 +201,12 @@
             "name": "IronOre_Terrain",
             "mined_product": "Iron ore",
             "mining_hardness": "100.00%",
-            "mined_quantity_per_tile_cubed": 2.599609,
+            "mined_quantity_per_tile_cubed": 2,
             "disruption_recovery_time": 2147483647,
             "is_hardened_floor": false,
             "max_collapse_height_diff": 4.5,
             "min_collapse_height_diff": 1.299805,
-            "mined_quantity_mult": "130.00%",
+            "mined_quantity_mult": "100.00%",
             "vehicle_traversal_cost": 0
         },
         {
@@ -214,12 +214,12 @@
             "name": "CopperOre_Terrain",
             "mined_product": "Copper ore",
             "mining_hardness": "100.00%",
-            "mined_quantity_per_tile_cubed": 2.599609,
+            "mined_quantity_per_tile_cubed": 2,
             "disruption_recovery_time": 2147483647,
             "is_hardened_floor": false,
             "max_collapse_height_diff": 4,
             "min_collapse_height_diff": 1.400391,
-            "mined_quantity_mult": "130.00%",
+            "mined_quantity_mult": "100.00%",
             "vehicle_traversal_cost": 0
         },
         {
@@ -227,12 +227,12 @@
             "name": "GoldOre_Terrain",
             "mined_product": "Gold ore",
             "mining_hardness": "100.00%",
-            "mined_quantity_per_tile_cubed": 2.599609,
+            "mined_quantity_per_tile_cubed": 2,
             "disruption_recovery_time": 2147483647,
             "is_hardened_floor": false,
             "max_collapse_height_diff": 5,
             "min_collapse_height_diff": 1.599609,
-            "mined_quantity_mult": "130.00%",
+            "mined_quantity_mult": "100.00%",
             "vehicle_traversal_cost": 0
         },
         {
