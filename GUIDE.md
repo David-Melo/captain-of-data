@@ -127,6 +127,8 @@ The log files should start showing the data once the game boots. You can find th
 
 We can see now in the log files that we have a good start with the data, but we can spot somethings we missed and some issues.
 
+![image](https://user-images.githubusercontent.com/1429949/176176240-d7fa5914-ce85-48e4-a897-c4d62a8c0024.png)
+
 1. Its a bit diffcult to identify each item, so we can add some markup to separate each item.
 2. We did not identify the actual item, so we should add the Name or the Id so we can know what we are looking at
 3. We had the wrong Type for "Units". The code we wrote thinks it was a string but it was actually another array.
