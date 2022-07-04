@@ -1,5 +1,5 @@
 {
-    "game_version": "0.4.4.0",
+    "game_version": "0.4.7.0",
     "terrain_materials": [
         {
             "id": "Grass_Terrain",
@@ -61,8 +61,8 @@
             "mined_quantity_per_tile_cubed": 1.400391,
             "disruption_recovery_time": 0,
             "is_hardened_floor": false,
-            "max_collapse_height_diff": 2097152,
-            "min_collapse_height_diff": 2097152,
+            "max_collapse_height_diff": 1,
+            "min_collapse_height_diff": 0.5996094,
             "mined_quantity_mult": "70.00%",
             "vehicle_traversal_cost": 0
         },

@@ -1,5 +1,5 @@
 {
-    "game_version": "0.4.4.0",
+    "game_version": "0.4.7.0",
     "machines_and_buildings": [
         {
             "id": "TurbineLowPressT2",
@@ -10119,6 +10119,28 @@
             "recipes": []
         },
         {
+            "id": "MineTower",
+            "name": "Mine control tower",
+            "category": "Buildings (for vehicles)",
+            "workers": 0,
+            "maintenance_cost_units": "",
+            "maintenance_cost_quantity": 0,
+            "electricity_consumed": 0,
+            "electricity_generated": 0,
+            "computing_consumed": 0,
+            "computing_generated": 0,
+            "storage_capacity": 0,
+            "unity_cost": 0,
+            "research_speed": 0,
+            "build_costs": [
+                {
+                    "product": "Construction Parts",
+                    "quantity": 20
+                }
+            ],
+            "recipes": []
+        },
+        {
             "id": "SettlementLandfillModule",
             "name": "Waste collection",
             "category": "Housing & services",
@@ -10472,19 +10494,19 @@
                     "outputs": [
                         {
                             "name": "Iron scrap",
-                            "quantity": 1
+                            "quantity": 0
                         },
                         {
                             "name": "Copper scrap",
-                            "quantity": 1
+                            "quantity": 0
                         },
                         {
                             "name": "Gold scrap",
-                            "quantity": 1
+                            "quantity": 0
                         },
                         {
                             "name": "Broken glass",
-                            "quantity": 1
+                            "quantity": 0
                         }
                     ]
                 }

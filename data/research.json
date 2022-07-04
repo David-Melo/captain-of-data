@@ -1,0 +1,929 @@
+{
+    "game_version": "0.4.7.0",
+    "research": [
+        {
+            "id": "ResearchCpPacking",
+            "name": "Construction",
+            "difficulty": 1,
+            "total_steps": 18
+        },
+        {
+            "id": "ResearchRepairDock",
+            "name": "Ship dock repair",
+            "difficulty": 3,
+            "total_steps": 70
+        },
+        {
+            "id": "ResearchMaintenanceDepot",
+            "name": "Maintenance Depot II",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchRecycling",
+            "name": "Recycling",
+            "difficulty": 9,
+            "total_steps": 234
+        },
+        {
+            "id": "ResearchConcreteProduction",
+            "name": "Concrete production",
+            "difficulty": 2,
+            "total_steps": 36
+        },
+        {
+            "id": "ResearchRotaryKilnGas",
+            "name": "Rotary kiln (gas)",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchRetainingWalls",
+            "name": "Retaining walls",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchCp2Packing",
+            "name": "Construction II",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchSettlementWater",
+            "name": "Settlement water",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchFoodMarket2",
+            "name": "Food market II",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchSettlementPower",
+            "name": "Settlement power",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchHousing2",
+            "name": "Housing II",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchCp3Packing",
+            "name": "Construction III",
+            "difficulty": 9,
+            "total_steps": 234
+        },
+        {
+            "id": "ResearchCp4Packing",
+            "name": "Construction IV",
+            "difficulty": 26,
+            "total_steps": 698
+        },
+        {
+            "id": "ResearchMaintenanceT2",
+            "name": "Electronics & maintenance",
+            "difficulty": 21,
+            "total_steps": 562
+        },
+        {
+            "id": "ResearchStatueOfMaintenance",
+            "name": "Statue of maintenance",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchHousing3",
+            "name": "Housing III",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchSettlementDecorations",
+            "name": "Settlement decorations",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchTombOfCaptains",
+            "name": "Tomb of Captains",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchAssembler3",
+            "name": "Assembly (robotic) II",
+            "difficulty": 40,
+            "total_steps": 1080
+        },
+        {
+            "id": "ResearchMicrochipProduction",
+            "name": "Microchip production",
+            "difficulty": 32,
+            "total_steps": 862
+        },
+        {
+            "id": "ResearchMicrochipProduction2",
+            "name": "Microchip production II",
+            "difficulty": 40,
+            "total_steps": 1080
+        },
+        {
+            "id": "ResearchBasicFarming",
+            "name": "Basic farming",
+            "difficulty": 1,
+            "total_steps": 18
+        },
+        {
+            "id": "ResearchFarmingT2",
+            "name": "Irrigated farms",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchCropRotation",
+            "name": "Crop rotation",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchFarmingT3",
+            "name": "Greenhouse",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchFarmingT4",
+            "name": "Greenhouse II",
+            "difficulty": 21,
+            "total_steps": 562
+        },
+        {
+            "id": "ResearchBurner",
+            "name": "Burner",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchVegetables",
+            "name": "Vegetables farming",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchCornCrop",
+            "name": "Corn farming",
+            "difficulty": 7,
+            "total_steps": 179
+        },
+        {
+            "id": "ResearchWheatCrop",
+            "name": "Wheat farming & processing",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchSoybeanCrop",
+            "name": "Soybean farming",
+            "difficulty": 8,
+            "total_steps": 207
+        },
+        {
+            "id": "ResearchCanola",
+            "name": "Canola",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchSugarCane",
+            "name": "Sugar cane",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchChickenFarm",
+            "name": "Chicken farm",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchSnacksProduction",
+            "name": "Snacks production",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchFruit",
+            "name": "Fruit",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchSausageProduction",
+            "name": "Sausage production",
+            "difficulty": 21,
+            "total_steps": 562
+        },
+        {
+            "id": "ResearchFoodPacking",
+            "name": "Food packing",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchUndergroundWater",
+            "name": "Groundwater pump",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchWaterTreatment",
+            "name": "Wastewater treatment",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchWaterTreatment2",
+            "name": "Wastewater treatment II",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchSaltProduction",
+            "name": "Salt production",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchThermalDesalinationBasic",
+            "name": "Basic desalination",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchThermalDesalination",
+            "name": "Thermal desalination",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchVacuumDesalination",
+            "name": "Vacuum desalination",
+            "difficulty": 16,
+            "total_steps": 425
+        },
+        {
+            "id": "ResearchChemicalPlant",
+            "name": "Chemical plant & fertilizer",
+            "difficulty": 8,
+            "total_steps": 207
+        },
+        {
+            "id": "ResearchChemicalPlant2",
+            "name": "Chemical plant II",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchElectrolysis",
+            "name": "Electrolysis",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchCarbonDioxideRecycling",
+            "name": "CO2 recycling",
+            "difficulty": 38,
+            "total_steps": 1026
+        },
+        {
+            "id": "ResearchOrganicFertilizer",
+            "name": "Organic fertilizer",
+            "difficulty": 7,
+            "total_steps": 179
+        },
+        {
+            "id": "ResearchChemicalFertilizer2",
+            "name": "Fertilizer II",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchFermentation",
+            "name": "Fermentation",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchHospital",
+            "name": "Hospital",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchMedicalSupplies2",
+            "name": "Medical supplies II",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchMedicalSupplies3",
+            "name": "Medical supplies III",
+            "difficulty": 38,
+            "total_steps": 1026
+        },
+        {
+            "id": "ResearchCaptainsOffice",
+            "name": "Captain's office",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchEdicts1",
+            "name": "Edicts",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchEdicts2",
+            "name": "Edicts II",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchEdicts3",
+            "name": "Edicts III",
+            "difficulty": 7,
+            "total_steps": 179
+        },
+        {
+            "id": "ResearchEdicts4",
+            "name": "Edicts IV",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchResearchLab2",
+            "name": "Research lab II",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchResearchLab3",
+            "name": "Research lab III",
+            "difficulty": 10,
+            "total_steps": 261
+        },
+        {
+            "id": "ResearchResearchLab4",
+            "name": "Research lab IV",
+            "difficulty": 15,
+            "total_steps": 398
+        },
+        {
+            "id": "ResearchResearchLab5",
+            "name": "Research lab V",
+            "difficulty": 32,
+            "total_steps": 862
+        },
+        {
+            "id": "ResearchComputing",
+            "name": "Computing",
+            "difficulty": 24,
+            "total_steps": 644
+        },
+        {
+            "id": "ResearchVehicleCapIncrease",
+            "name": "Vehicles management",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchVehicleCapIncrease2",
+            "name": "Vehicles management II",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchTradeDock",
+            "name": "Trading dock",
+            "difficulty": 1,
+            "total_steps": 18
+        },
+        {
+            "id": "ResearchCargoDepot",
+            "name": "Cargo depot",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchTrucksCapacityEdict",
+            "name": "Trucks overloading edict",
+            "difficulty": 10,
+            "total_steps": 261
+        },
+        {
+            "id": "ResearchVehicleCapIncrease3",
+            "name": "Vehicles management III",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchVehicleCapIncrease4",
+            "name": "Vehicles management IV",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchVehicleCapIncrease5",
+            "name": "Vehicles management V",
+            "difficulty": 36,
+            "total_steps": 971
+        },
+        {
+            "id": "ResearchAdvancedLogisticsControl",
+            "name": "Advanced logistics control",
+            "difficulty": 8,
+            "total_steps": 207
+        },
+        {
+            "id": "ResearchPipeTransports",
+            "name": "Pipes",
+            "difficulty": 0,
+            "total_steps": 0
+        },
+        {
+            "id": "ResearchPipeTransportsT2",
+            "name": "Pipes II",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchPipeTransportsT3",
+            "name": "Pipes III",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchStoragesT1",
+            "name": "Storage",
+            "difficulty": 3,
+            "total_steps": 70
+        },
+        {
+            "id": "ResearchStorage2",
+            "name": "Storage II",
+            "difficulty": 7,
+            "total_steps": 179
+        },
+        {
+            "id": "ResearchStorage3",
+            "name": "Storage (Large) I",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchStorage4",
+            "name": "Storage (Large) II",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchCargoDepot2",
+            "name": "Cargo depot II",
+            "difficulty": 9,
+            "total_steps": 234
+        },
+        {
+            "id": "ResearchCargoDepot3",
+            "name": "Cargo depot III",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchCargoDepot4",
+            "name": "Cargo depot IV",
+            "difficulty": 36,
+            "total_steps": 971
+        },
+        {
+            "id": "ResearchFuelStation",
+            "name": "Fuel station",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchFuelStation2",
+            "name": "Fuel station II",
+            "difficulty": 9,
+            "total_steps": 234
+        },
+        {
+            "id": "ResearchFuelStation3",
+            "name": "Fuel station III",
+            "difficulty": 16,
+            "total_steps": 425
+        },
+        {
+            "id": "ResearchConveyorBelts",
+            "name": "Conveyor belts",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchConveyorBeltsT2",
+            "name": "Conveyor belts II",
+            "difficulty": 9,
+            "total_steps": 234
+        },
+        {
+            "id": "ResearchConveyorBeltsT3",
+            "name": "Conveyor belts III",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchVehicleRamps",
+            "name": "Ramp for vehicles",
+            "difficulty": 2,
+            "total_steps": 36
+        },
+        {
+            "id": "ResearchTransportsBalancing",
+            "name": "Transports balancing",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchVehicleAssembly2",
+            "name": "Large vehicles",
+            "difficulty": 9,
+            "total_steps": 234
+        },
+        {
+            "id": "ResearchTreeHarvester",
+            "name": "Tree harvester II",
+            "difficulty": 9,
+            "total_steps": 234
+        },
+        {
+            "id": "ResearchVehicleAssembly3",
+            "name": "Mega vehicles",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchConveyorRouting",
+            "name": "Smart conveyor routing",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchIronSmeltingScrap",
+            "name": "Iron smelting (from scrap)",
+            "difficulty": 0,
+            "total_steps": 0
+        },
+        {
+            "id": "ResearchSettlementWaste",
+            "name": "Settlement waste",
+            "difficulty": 0,
+            "total_steps": 0
+        },
+        {
+            "id": "ResearchVehicleAndMining",
+            "name": "Vehicles & mining",
+            "difficulty": 2,
+            "total_steps": 36
+        },
+        {
+            "id": "ResearchCopperRefinement",
+            "name": "Copper refinement",
+            "difficulty": 3,
+            "total_steps": 70
+        },
+        {
+            "id": "ResearchConcreteAdvanced",
+            "name": "Efficient concrete",
+            "difficulty": 3,
+            "total_steps": 70
+        },
+        {
+            "id": "ResearchSteelSmelting",
+            "name": "Steel smelting",
+            "difficulty": 8,
+            "total_steps": 207
+        },
+        {
+            "id": "ResearchExhaustFiltration",
+            "name": "Exhaust filtration",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchCopperRefinement2",
+            "name": "Copper refinement II",
+            "difficulty": 8,
+            "total_steps": 207
+        },
+        {
+            "id": "ResearchGlassSmelting",
+            "name": "Glass making",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchHouseholdGoods",
+            "name": "Household goods",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchAdvancedSmelting",
+            "name": "Advanced smelting",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchGlassSmeltingT2",
+            "name": "Glass making II",
+            "difficulty": 19,
+            "total_steps": 507
+        },
+        {
+            "id": "ResearchPolySiliconProduction",
+            "name": "Silicon",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchArcFurnace2",
+            "name": "Arc furnace II",
+            "difficulty": 38,
+            "total_steps": 1026
+        },
+        {
+            "id": "ResearchGoldSmelting",
+            "name": "Gold smelting",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchRecyclingIncrease",
+            "name": "Recycling increase",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchRecyclingEdict",
+            "name": "Recycling edicts",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchRecyclingEdict2",
+            "name": "Recycling edicts II",
+            "difficulty": 19,
+            "total_steps": 507
+        },
+        {
+            "id": "ResearchDeconstructionRatioIncrease",
+            "name": "Deconstruction efficiency",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchDeconstructionRatioIncrease2",
+            "name": "Deconstruction efficiency II",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchPowerAndMaintenance",
+            "name": "Power & maintenance",
+            "difficulty": 2,
+            "total_steps": 36
+        },
+        {
+            "id": "ResearchBeacon",
+            "name": "Beacon",
+            "difficulty": 2,
+            "total_steps": 36
+        },
+        {
+            "id": "ResearchPowerGeneration2",
+            "name": "Power generation II",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchBoilerElectric",
+            "name": "Electric boiler",
+            "difficulty": 22,
+            "total_steps": 589
+        },
+        {
+            "id": "ResearchMechPowerStorage",
+            "name": "Mechanical power storage",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchPowerGeneration3",
+            "name": "Power generation III",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchPowerGeneration4",
+            "name": "Power generation IV",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchWaterRecovery",
+            "name": "Water recovery",
+            "difficulty": 8,
+            "total_steps": 207
+        },
+        {
+            "id": "ResearchUraniumEnrichment",
+            "name": "Uranium enrichment",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchNuclearReactor",
+            "name": "Nuclear reactor",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchSolarPanels",
+            "name": "Solar panels",
+            "difficulty": 21,
+            "total_steps": 562
+        },
+        {
+            "id": "ResearchSolarPanels2",
+            "name": "Solar panels II",
+            "difficulty": 42,
+            "total_steps": 1135
+        },
+        {
+            "id": "ResearchBasicDiesel",
+            "name": "Basic diesel",
+            "difficulty": 3,
+            "total_steps": 70
+        },
+        {
+            "id": "ResearchCrudeOilDistillation",
+            "name": "Advanced diesel",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchSulfurProcessing",
+            "name": "Sulfur processing",
+            "difficulty": 8,
+            "total_steps": 207
+        },
+        {
+            "id": "ResearchGasCombustion",
+            "name": "Gas combustion",
+            "difficulty": 7,
+            "total_steps": 179
+        },
+        {
+            "id": "ResearchBiofuel",
+            "name": "Biofuel",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchBioDiesel",
+            "name": "BioDiesel",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchNaphthaProcessing",
+            "name": "Naphtha processing",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchNaphthaReforming",
+            "name": "Naphtha reforming",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchHeavyOilCracking",
+            "name": "Heavy oil cracking",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchHydrogenReforming",
+            "name": "Hydrogen production",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchRubberProduction",
+            "name": "Synthetic rubber",
+            "difficulty": 4,
+            "total_steps": 98
+        },
+        {
+            "id": "ResearchPlasticProduction",
+            "name": "Plastic",
+            "difficulty": 13,
+            "total_steps": 343
+        },
+        {
+            "id": "ResearchHouseholdAppliances",
+            "name": "Household appliances",
+            "difficulty": 21,
+            "total_steps": 562
+        },
+        {
+            "id": "ResearchConsumerElectronics",
+            "name": "Consumer electronics",
+            "difficulty": 42,
+            "total_steps": 1135
+        },
+        {
+            "id": "ResearchShipWeapons",
+            "name": "Ship weapons",
+            "difficulty": 5,
+            "total_steps": 125
+        },
+        {
+            "id": "ResearchShipArmor",
+            "name": "Ship armor",
+            "difficulty": 6,
+            "total_steps": 152
+        },
+        {
+            "id": "ResearchShipRadar",
+            "name": "Ship bridge II",
+            "difficulty": 12,
+            "total_steps": 316
+        },
+        {
+            "id": "ResearchEngine2",
+            "name": "Ship engine II",
+            "difficulty": 14,
+            "total_steps": 371
+        },
+        {
+            "id": "ResearchShipWeapons2",
+            "name": "Ship weapons II",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchShipFuelTankUpgrade",
+            "name": "Fuel tank upgrade",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchShipArmor2",
+            "name": "Ship armor II",
+            "difficulty": 18,
+            "total_steps": 480
+        },
+        {
+            "id": "ResearchShipRadar2",
+            "name": "Ship bridge III",
+            "difficulty": 20,
+            "total_steps": 534
+        },
+        {
+            "id": "ResearchEngine3",
+            "name": "Ship engine III",
+            "difficulty": 38,
+            "total_steps": 1026
+        },
+        {
+            "id": "ResearchShipWeapons3",
+            "name": "Ship weapons III",
+            "difficulty": 40,
+            "total_steps": 1080
+        },
+        {
+            "id": "ResearchRocketAssemblyAndLaunch",
+            "name": "Rocket assembly & launch",
+            "difficulty": 52,
+            "total_steps": 1408
+        }
+    ]
+}

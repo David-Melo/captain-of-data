@@ -125,19 +125,34 @@ using Mafi.Collections.ImmutableCollections;
 using Mafi.Collections.ReadonlyCollections;
 using Mafi.Base.Prototypes.Machines.PowerGenerators;
 using System.Reflection;
+using Mafi.Core.Buildings.Mine;
+using UnityEngine;
+using Mafi.Core.Research;
+using Mafi.Core.UnlockingTree;
+using Mafi.Core.World.Contracts;
 
 namespace DataExtractorMod {
-	public sealed class DataExtractor : IRegistrationMod<DataOnlyMod>
-	{
-        string IMod.Name => "Data Extractor Mod By ItsDesm";
+	public sealed class DataExtractor : IMod
+    {
+        public string Name => "Data Extractor Mod By ItsDesm";
 
-        int IMod.Version => 1;
+        public int Version => 1;
 
-        bool IMod.IsUiOnly => false;
+        public bool IsUiOnly => false;
 
-        public DataExtractor(CoreMod coreMod, BaseMod baseMod) {
+        public static readonly string MOD_ROOT_DIR_PATH = new FileSystemHelper().GetDirPath(FileType.Mod, false);
+        public static readonly string MOD_DIR_PATH = Path.Combine(MOD_ROOT_DIR_PATH, "DataExtractor");
+        public static readonly string PLUGIN_DIR_PATH = Path.Combine(MOD_DIR_PATH, "Plugins");
+
+        public DataExtractor() {
+            //AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
+            Log.Info(MOD_ROOT_DIR_PATH);
+            Log.Info(MOD_DIR_PATH);
+            Log.Info(PLUGIN_DIR_PATH);
             Log.Info("Loaded Data Extractor Mod By ItsDesm");
         }
+
+
 
         /*
          * -------------------------------------
@@ -414,6 +429,61 @@ namespace DataExtractorMod {
             return obj.ToString();
         }
 
+         public string MakeContractJsonObject(
+            string id,
+            string product_to_buy_name,
+            string product_to_buy_quantity,
+            string product_to_pay_with_name,
+            string product_to_pay_with_quantity,
+            string unity_per_month,
+            string unity_per_100_bought,
+            string unity_to_establish,
+            string min_reputation_required
+        )
+        {
+            System.Text.StringBuilder obj = new System.Text.StringBuilder();
+
+            List<string> props = new List<string> { };
+
+            props.Add($"\"id\":\"{id}\"");
+            props.Add($"\"product_to_buy_name\":\"{product_to_buy_name}\"");
+            props.Add($"\"product_to_buy_quantity\":{product_to_buy_quantity}");
+            props.Add($"\"product_to_pay_with_name\":\"{product_to_pay_with_name}\"");
+            props.Add($"\"product_to_pay_with_quantity\":{product_to_pay_with_quantity}");
+            props.Add($"\"unity_per_month\":{unity_per_month}");
+            props.Add($"\"unity_per_100_bought\":{unity_per_100_bought}");
+            props.Add($"\"unity_to_establish\":{unity_to_establish}");
+            props.Add($"\"min_reputation_required\":{min_reputation_required}");
+
+
+            obj.AppendLine("{");
+            obj.AppendLine(props.JoinStrings(","));
+            obj.AppendLine("}");
+            return obj.ToString();
+        }
+
+        public string MakeResearchJsonObject(
+            string id,
+            string name,
+            string difficulty,
+            string total_steps
+        )
+        {
+            System.Text.StringBuilder obj = new System.Text.StringBuilder();
+
+            List<string> props = new List<string> { };
+
+            props.Add($"\"id\":\"{id}\"");
+            props.Add($"\"name\":\"{name}\"");
+            props.Add($"\"difficulty\":{difficulty}");
+            props.Add($"\"total_steps\":{total_steps}");
+
+            obj.AppendLine("{");
+            obj.AppendLine(props.JoinStrings(","));
+            obj.AppendLine("}");
+            return obj.ToString();
+        }
+
         /*
          * -------------------------------------
          * Main Mod Code
@@ -422,7 +492,7 @@ namespace DataExtractorMod {
          * This feels like it might not be the right place for it, but it works so...
         */
 
-        void IMod.RegisterDependencies(DependencyResolverBuilder depBuilder, ProtosDb protosDb, bool gameWasLoaded)
+        public void RegisterDependencies(DependencyResolverBuilder depBuilder, ProtosDb protosDb, bool gameWasLoaded)
         {
 
             string game_version = typeof(Mafi.Base.BaseMod).GetTypeInfo().Assembly.GetName().Version.ToString();
@@ -1971,6 +2041,38 @@ namespace DataExtractorMod {
                 }
             }
 
+            List<string> countProds = new List<string> { };
+            List<string> countProdNames = new List<string> { };
+            IEnumerable<CountableProductProto> countableProducts = protosDb.All<CountableProductProto>();
+            foreach (CountableProductProto product in countableProducts)
+            {
+                countProds.Add("\"" + product.Strings.Name.ToString() + "\"");
+                countProdNames.Add(product.Strings.Name.ToString());
+            }
+            string countProdsJson = countProds.JoinStrings(",");
+
+            List<string> looseProds = new List<string> { };
+            List<string> looseProdNames = new List<string> { };
+            IEnumerable<LooseProductProto> looseProducts = protosDb.All<LooseProductProto>();
+            foreach (LooseProductProto product in looseProducts)
+            {
+                looseProds.Add("\"" + product.Strings.Name.ToString() + "\"");
+                looseProdNames.Add(product.Strings.Name.ToString());
+            }
+            string looseProdsJson = looseProds.JoinStrings(",");
+
+            List<string> fluidProds = new List<string> { };
+            List<string> fluidProdNames = new List<string> { };
+            IEnumerable<FluidProductProto> fluidProducts = protosDb.All<FluidProductProto>();
+            foreach (FluidProductProto product in fluidProducts)
+            {
+                fluidProds.Add("\"" + product.Strings.Name.ToString() + "\"");
+                fluidProdNames.Add(product.Strings.Name.ToString());
+            }
+            string fluidProdsJson = fluidProds.JoinStrings(",");
+
+            List<string> storageItems = new List<string> { };
+
             IEnumerable<StorageProto> storages = protosDb.All<StorageProto>();
             foreach (StorageProto machine in storages)
             {
@@ -1992,7 +2094,6 @@ namespace DataExtractorMod {
                     string computing_consumed = "0";
                     string computing_generated = "0";
 
-
                     foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
                     {
                         category = cat.Strings.Name.ToString();
@@ -2007,6 +2108,50 @@ namespace DataExtractorMod {
                             cost.Quantity.ToString()
                         );
                         machinesProducts.Add(vehicleProductJson);
+                    }
+
+                    List<string> StorageInputs = new List<string> { };
+
+                    if ( machine.ProductType.Value.ToString() == "CountableProductProto")
+                    {
+                        StorageInputs = countProdNames;
+                    }
+
+                    if (machine.ProductType.Value.ToString() == "LooseProductProto")
+                    {
+                        StorageInputs = looseProdNames;
+                    }
+
+                    if (machine.ProductType.Value.ToString() == "FluidProductProto")
+                    {
+                        StorageInputs = fluidProdNames;
+                    }
+
+                    List<string> recipeItems = new List<string> { };
+
+                    foreach (string input in StorageInputs)
+                    {
+
+                        var duration = 0;
+
+                        string recipe_name = input + " Storage";
+                        string recipe_duration = duration.ToString();
+
+                        List<string> inputItems = new List<string> { };
+                        List<string> outputItems = new List<string> { };
+
+                        string machineRecipeInputJson = MakeRecipeIOJsonObject(input, machine.Capacity.ToString());
+                        inputItems.Add(machineRecipeInputJson);
+                        outputItems.Add(machineRecipeInputJson);
+
+                        string machineRecipeJson = MakeRecipeJsonObject(
+                            recipe_name,
+                            recipe_duration,
+                            inputItems.JoinStrings(","),
+                            outputItems.JoinStrings(",")
+                        );
+                        recipeItems.Add(machineRecipeJson);
+
                     }
 
                     string machineJson = MakeMachineJsonObject(
@@ -2027,6 +2172,25 @@ namespace DataExtractorMod {
                         ""
                     );
                     machineItems.Add(machineJson);
+
+                    string storageJson = MakeMachineJsonObject(
+                        id,
+                        name,
+                        category,
+                        workers,
+                        maintenance_cost_units,
+                        maintenance_cost_quantity,
+                        electricity_consumed,
+                        electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
+                        machinesProducts.JoinStrings(","),
+                        recipeItems.JoinStrings(",")
+                    );
+                    storageItems.Add(storageJson);
 
                 }
                 catch
@@ -2118,6 +2282,71 @@ namespace DataExtractorMod {
                     string electricity_consumed = "0";
                     string electricity_generated = "0";
                     string capacity = machine.Capacity.ToString();
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string unity_cost = "0";
+                    string research_speed = "0";
+
+                    foreach (ToolbarCategoryProto cat in machine.Graphics.Categories)
+                    {
+                        category = cat.Strings.Name.ToString();
+                    }
+
+                    List<string> machinesProducts = new List<string> { };
+
+                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    {
+                        string vehicleProductJson = MakeVehicleProductJsonObject(
+                            cost.Product.Strings.Name.ToString(),
+                            cost.Quantity.ToString()
+                        );
+                        machinesProducts.Add(vehicleProductJson);
+                    }
+
+                    string machineJson = MakeMachineJsonObject(
+                        id,
+                        name,
+                        category,
+                        workers,
+                        maintenance_cost_units,
+                        maintenance_cost_quantity,
+                        electricity_consumed,
+                        electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        capacity,
+                        unity_cost,
+                        research_speed,
+                        machinesProducts.JoinStrings(","),
+                        ""
+                    );
+                    machineItems.Add(machineJson);
+
+                }
+                catch
+                {
+                    Log.Info("###################################################");
+                    Log.Info("ERROR Depot" + machine.Id.ToString());
+                    Log.Info("###################################################");
+                }
+            }
+
+            IEnumerable<MineTowerProto> mines = protosDb.All<MineTowerProto>();
+            foreach (MineTowerProto machine in mines)
+            {
+
+                try
+                {
+
+                    string id = machine.Id.ToString();
+                    string name = machine.Strings.Name.ToString();
+                    string category = "";
+                    string workers = machine.Costs.Workers.ToString();
+                    string maintenance_cost_units = machine.Costs.Maintenance.Product.Strings.Name.ToString();
+                    string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
+                    string electricity_consumed = "0";
+                    string electricity_generated = "0";
+                    string capacity = "0";
                     string computing_consumed = "0";
                     string computing_generated = "0";
                     string unity_cost = "0";
@@ -2958,13 +3187,58 @@ namespace DataExtractorMod {
 
             File.WriteAllText("c:/temp/terrain_materials.json", $"{{\"game_version\":\"{game_version}\",\"terrain_materials\":[{materialItems.JoinStrings(",")}]}}");
 
+            List<string> researchItems = new List<string> { };
+
+            IEnumerable<ResearchNodeProto> researchNodes = protosDb.All<ResearchNodeProto>();
+
+            foreach (ResearchNodeProto researchNode in researchNodes)
+            {
+
+                string researchJson = MakeResearchJsonObject(
+                    researchNode.Id.ToString(),
+                    researchNode.Strings.Name.ToString(),
+                    researchNode.Difficulty.ToString(),
+                    researchNode.TotalStepsRequired.ToString()
+                );
+                researchItems.Add(researchJson);
+
+            }
+
+            File.WriteAllText("c:/temp/research.json", $"{{\"game_version\":\"{game_version}\",\"research\":[{researchItems.JoinStrings(",")}]}}");
+
+            List<string> contractItems = new List<string> { };
+
+            IEnumerable<ContractProto> contracts = protosDb.All<ContractProto>();
+
+            foreach (ContractProto contract in contracts)
+            {
+
+                string contractJson = MakeContractJsonObject(
+                    contract.Id.ToString(),
+                    contract.ProductToBuy.Product.Strings.Name.ToString(),
+                    contract.ProductToBuy.Quantity.ToString(),
+                    contract.ProductToPayWith.Product.Strings.Name.ToString(),
+                    contract.ProductToPayWith.Quantity.ToString(),
+                    contract.UpointsPerMonth.ToString(),
+                    contract.UpointsPer100ProductsBought.ToString(),
+                    contract.UpointsToEstablish.ToString(),
+                    contract.MinReputationRequired.ToString()
+                );
+                contractItems.Add(contractJson);
+
+            }
+
+            File.WriteAllText("c:/temp/contracts.json", $"{{\"game_version\":\"{game_version}\",\"contracts\":[{contractItems.JoinStrings(",")}]}}");
+
+
             /*
-             * -------------------------------------
-             * Part 7  - Final JSON Export
-             * -------------------------------------
+                * -------------------------------------
+                * Part 7  - Final JSON Export
+                * -------------------------------------
             */
 
             File.WriteAllText("c:/temp/machines_and_buildings.json", $"{{\"game_version\":\"{game_version}\",\"machines_and_buildings\":[{machineItems.JoinStrings(",")}]}}");
+            File.WriteAllText("c:/temp/storages.json", $"{{\"game_version\":\"{game_version}\",\"storages\":[{storageItems.JoinStrings(",")}]}}");
 
         }
 
@@ -2974,9 +3248,36 @@ namespace DataExtractorMod {
          * -------------------------------------
         */
 
-        void IMod.RegisterPrototypes(ProtoRegistrator registrator) { }
+        public void RegisterPrototypes(ProtoRegistrator registrator) { }
 
-        void IMod.Initialize(DependencyResolver resolver, bool gameWasLoaded) {}
+/*        public void Main(string[] args)
+        {
+            var websocketServer = new WebSocketServer("ws://0.0.0.0:8181");
+            websocketServer.Start(connection =>
+            {
+                connection.OnOpen = () =>
+                  Console.WriteLine("OnOpen");
+                connection.OnClose = () =>
+                  Console.WriteLine("OnClose");
+                connection.OnMessage = message =>
+                {
+                    Console.WriteLine($"OnMessage {message}");
+                    connection.Send($"Echo: {message}");
+                };
+                connection.OnBinary = bytes =>
+                  Console.WriteLine($"OnBinary {Encoding.UTF8.GetString(bytes)}");
+                connection.OnError = exception =>
+                  Console.WriteLine($"OnError {exception.Message}");
+                connection.OnPing = bytes =>
+                  Console.WriteLine("OnPing");
+                connection.OnPong = bytes =>
+                  Console.WriteLine("OnPong");
+            });
+        }*/
+
+        public void Initialize(DependencyResolver resolver, bool gameWasLoaded) {
+            
+        }
 
         public void Register(ImmutableArray<DataOnlyMod> mods, RegistrationContext context) {}
 
