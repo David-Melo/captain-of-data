@@ -1,0 +1,236 @@
+{
+    "game_version": "0.4.7.0",
+    "contracts": [
+        {
+            "id": "Contract_Product_Coal_For_Product_Cement",
+            "product_to_buy_name": "Coal",
+            "product_to_buy_quantity": 8,
+            "product_to_pay_with_name": "Cement",
+            "product_to_pay_with_quantity": 2,
+            "unity_per_month": 0.2001953,
+            "unity_per_100_bought": 0.1103516,
+            "unity_to_establish": 12,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_CopperOre_For_Product_HouseholdAppliances",
+            "product_to_buy_name": "Copper ore",
+            "product_to_buy_quantity": 38,
+            "product_to_pay_with_name": "Household appliances",
+            "product_to_pay_with_quantity": 10,
+            "unity_per_month": 0.2001953,
+            "unity_per_100_bought": 0.1298828,
+            "unity_to_establish": 12,
+            "min_reputation_required": 3
+        },
+        {
+            "id": "Contract_Product_Coal_For_Product_Glass",
+            "product_to_buy_name": "Coal",
+            "product_to_buy_quantity": 14,
+            "product_to_pay_with_name": "Glass",
+            "product_to_pay_with_quantity": 8,
+            "unity_per_month": 0.2001953,
+            "unity_per_100_bought": 0.09960938,
+            "unity_to_establish": 12,
+            "min_reputation_required": 1
+        },
+        {
+            "id": "Contract_Product_Limestone_For_Product_ConstructionParts2",
+            "product_to_buy_name": "Limestone",
+            "product_to_buy_quantity": 60,
+            "product_to_pay_with_name": "Construction Parts II",
+            "product_to_pay_with_quantity": 10,
+            "unity_per_month": 0.2001953,
+            "unity_per_100_bought": 0.1201172,
+            "unity_to_establish": 12,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_IronOre_For_Product_VehicleParts2",
+            "product_to_buy_name": "Iron ore",
+            "product_to_buy_quantity": 45,
+            "product_to_pay_with_name": "Vehicle Parts II",
+            "product_to_pay_with_quantity": 10,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1103516,
+            "unity_to_establish": 18,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_SourWater_For_Product_Slag",
+            "product_to_buy_name": "Sour water",
+            "product_to_buy_quantity": 218,
+            "product_to_pay_with_name": "Slag",
+            "product_to_pay_with_quantity": 540,
+            "unity_per_month": 0.4003906,
+            "unity_per_100_bought": 0.2001953,
+            "unity_to_establish": 24,
+            "min_reputation_required": 3
+        },
+        {
+            "id": "Contract_Product_Limestone_For_Product_Diesel",
+            "product_to_buy_name": "Limestone",
+            "product_to_buy_quantity": 50,
+            "product_to_pay_with_name": "Diesel",
+            "product_to_pay_with_quantity": 120,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1201172,
+            "unity_to_establish": 18,
+            "min_reputation_required": 1
+        },
+        {
+            "id": "Contract_Product_Quartz_For_Product_Diesel",
+            "product_to_buy_name": "Quartz",
+            "product_to_buy_quantity": 50,
+            "product_to_pay_with_name": "Diesel",
+            "product_to_pay_with_quantity": 120,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1396484,
+            "unity_to_establish": 18,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_GoldOre_For_Product_Diesel",
+            "product_to_buy_name": "Gold ore",
+            "product_to_buy_quantity": 60,
+            "product_to_pay_with_name": "Diesel",
+            "product_to_pay_with_quantity": 120,
+            "unity_per_month": 0.4003906,
+            "unity_per_100_bought": 0.1601563,
+            "unity_to_establish": 24,
+            "min_reputation_required": 3
+        },
+        {
+            "id": "Contract_Product_Limestone_For_Product_Coal",
+            "product_to_buy_name": "Limestone",
+            "product_to_buy_quantity": 50,
+            "product_to_pay_with_name": "Coal",
+            "product_to_pay_with_quantity": 120,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1201172,
+            "unity_to_establish": 18,
+            "min_reputation_required": 1
+        },
+        {
+            "id": "Contract_Product_Quartz_For_Product_Coal",
+            "product_to_buy_name": "Quartz",
+            "product_to_buy_quantity": 40,
+            "product_to_pay_with_name": "Coal",
+            "product_to_pay_with_quantity": 120,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1396484,
+            "unity_to_establish": 18,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_GoldOre_For_Product_Coal",
+            "product_to_buy_name": "Gold ore",
+            "product_to_buy_quantity": 60,
+            "product_to_pay_with_name": "Coal",
+            "product_to_pay_with_quantity": 120,
+            "unity_per_month": 0.4003906,
+            "unity_per_100_bought": 0.1601563,
+            "unity_to_establish": 24,
+            "min_reputation_required": 3
+        },
+        {
+            "id": "Contract_Product_CrudeOil_For_Product_FoodPack",
+            "product_to_buy_name": "Crude oil",
+            "product_to_buy_quantity": 200,
+            "product_to_pay_with_name": "Food pack",
+            "product_to_pay_with_quantity": 60,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1503906,
+            "unity_to_establish": 18,
+            "min_reputation_required": 1
+        },
+        {
+            "id": "Contract_Product_CrudeOil_For_Product_VehicleParts2",
+            "product_to_buy_name": "Crude oil",
+            "product_to_buy_quantity": 200,
+            "product_to_pay_with_name": "Vehicle Parts II",
+            "product_to_pay_with_quantity": 20,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1503906,
+            "unity_to_establish": 18,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_CrudeOil_For_Product_Gold",
+            "product_to_buy_name": "Crude oil",
+            "product_to_buy_quantity": 200,
+            "product_to_pay_with_name": "Gold",
+            "product_to_pay_with_quantity": 20,
+            "unity_per_month": 0.4003906,
+            "unity_per_100_bought": 0.1699219,
+            "unity_to_establish": 24,
+            "min_reputation_required": 3
+        },
+        {
+            "id": "Contract_Product_UraniumOre_For_Product_FoodPack",
+            "product_to_buy_name": "Uranium ore",
+            "product_to_buy_quantity": 16,
+            "product_to_pay_with_name": "Food pack",
+            "product_to_pay_with_quantity": 60,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.7001953,
+            "unity_to_establish": 18,
+            "min_reputation_required": 1
+        },
+        {
+            "id": "Contract_Product_UraniumOre_For_Product_VehicleParts2",
+            "product_to_buy_name": "Uranium ore",
+            "product_to_buy_quantity": 16,
+            "product_to_pay_with_name": "Vehicle Parts II",
+            "product_to_pay_with_quantity": 20,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.7001953,
+            "unity_to_establish": 18,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_UraniumOre_For_Product_Gold",
+            "product_to_buy_name": "Uranium ore",
+            "product_to_buy_quantity": 16,
+            "product_to_pay_with_name": "Gold",
+            "product_to_pay_with_quantity": 20,
+            "unity_per_month": 0.4003906,
+            "unity_per_100_bought": 0.7998047,
+            "unity_to_establish": 24,
+            "min_reputation_required": 3
+        },
+        {
+            "id": "Contract_Product_IronOre_For_Product_Server",
+            "product_to_buy_name": "Iron ore",
+            "product_to_buy_quantity": 240,
+            "product_to_pay_with_name": "Server",
+            "product_to_pay_with_quantity": 10,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1201172,
+            "unity_to_establish": 18,
+            "min_reputation_required": 1
+        },
+        {
+            "id": "Contract_Product_CopperOre_For_Product_MedicalSupplies3",
+            "product_to_buy_name": "Copper ore",
+            "product_to_buy_quantity": 24,
+            "product_to_pay_with_name": "Medical Supplies III",
+            "product_to_pay_with_quantity": 10,
+            "unity_per_month": 0.2001953,
+            "unity_per_100_bought": 0.1201172,
+            "unity_to_establish": 12,
+            "min_reputation_required": 2
+        },
+        {
+            "id": "Contract_Product_Quartz_For_Product_SolarCell",
+            "product_to_buy_name": "Quartz",
+            "product_to_buy_quantity": 13,
+            "product_to_pay_with_name": "Solar cell",
+            "product_to_pay_with_quantity": 4,
+            "unity_per_month": 0.2998047,
+            "unity_per_100_bought": 0.1201172,
+            "unity_to_establish": 18,
+            "min_reputation_required": 3
+        }
+    ]
+}
