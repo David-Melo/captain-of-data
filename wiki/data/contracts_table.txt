@@ -1,0 +1,252 @@
+
+{{contract define
+    | id = Contract_Product_Coal_For_Product_Cement
+    | ProductBuyName = Coal
+    | ProductBuyQty = 8
+    | ProductPayName = Cement
+    | ProductPayQty = 2
+    | UnityMonth = 0.2001953
+    | UnityQty = 0.1103516
+    | UnityEst = 12
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_CopperOre_For_Product_HouseholdAppliances
+    | ProductBuyName = Copper Ore
+    | ProductBuyQty = 38
+    | ProductPayName = Household Appliances
+    | ProductPayQty = 10
+    | UnityMonth = 0.2001953
+    | UnityQty = 0.1298828
+    | UnityEst = 12
+    | MinReputation = 3
+}}
+
+{{contract define
+    | id = Contract_Product_Coal_For_Product_Glass
+    | ProductBuyName = Coal
+    | ProductBuyQty = 14
+    | ProductPayName = Glass
+    | ProductPayQty = 8
+    | UnityMonth = 0.2001953
+    | UnityQty = 0.09960938
+    | UnityEst = 12
+    | MinReputation = 1
+}}
+
+{{contract define
+    | id = Contract_Product_Limestone_For_Product_ConstructionParts2
+    | ProductBuyName = Limestone
+    | ProductBuyQty = 60
+    | ProductPayName = Construction Parts II
+    | ProductPayQty = 10
+    | UnityMonth = 0.2001953
+    | UnityQty = 0.1201172
+    | UnityEst = 12
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_IronOre_For_Product_VehicleParts2
+    | ProductBuyName = Iron Ore
+    | ProductBuyQty = 45
+    | ProductPayName = Vehicle Parts II
+    | ProductPayQty = 10
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1103516
+    | UnityEst = 18
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_SourWater_For_Product_Slag
+    | ProductBuyName = Sour Water
+    | ProductBuyQty = 218
+    | ProductPayName = Slag
+    | ProductPayQty = 540
+    | UnityMonth = 0.4003906
+    | UnityQty = 0.2001953
+    | UnityEst = 24
+    | MinReputation = 3
+}}
+
+{{contract define
+    | id = Contract_Product_Limestone_For_Product_Diesel
+    | ProductBuyName = Limestone
+    | ProductBuyQty = 50
+    | ProductPayName = Diesel
+    | ProductPayQty = 120
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1201172
+    | UnityEst = 18
+    | MinReputation = 1
+}}
+
+{{contract define
+    | id = Contract_Product_Quartz_For_Product_Diesel
+    | ProductBuyName = Quartz
+    | ProductBuyQty = 50
+    | ProductPayName = Diesel
+    | ProductPayQty = 120
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1396484
+    | UnityEst = 18
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_GoldOre_For_Product_Diesel
+    | ProductBuyName = Gold Ore
+    | ProductBuyQty = 60
+    | ProductPayName = Diesel
+    | ProductPayQty = 120
+    | UnityMonth = 0.4003906
+    | UnityQty = 0.1601563
+    | UnityEst = 24
+    | MinReputation = 3
+}}
+
+{{contract define
+    | id = Contract_Product_Limestone_For_Product_Coal
+    | ProductBuyName = Limestone
+    | ProductBuyQty = 50
+    | ProductPayName = Coal
+    | ProductPayQty = 120
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1201172
+    | UnityEst = 18
+    | MinReputation = 1
+}}
+
+{{contract define
+    | id = Contract_Product_Quartz_For_Product_Coal
+    | ProductBuyName = Quartz
+    | ProductBuyQty = 40
+    | ProductPayName = Coal
+    | ProductPayQty = 120
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1396484
+    | UnityEst = 18
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_GoldOre_For_Product_Coal
+    | ProductBuyName = Gold Ore
+    | ProductBuyQty = 60
+    | ProductPayName = Coal
+    | ProductPayQty = 120
+    | UnityMonth = 0.4003906
+    | UnityQty = 0.1601563
+    | UnityEst = 24
+    | MinReputation = 3
+}}
+
+{{contract define
+    | id = Contract_Product_CrudeOil_For_Product_FoodPack
+    | ProductBuyName = Crude Oil
+    | ProductBuyQty = 200
+    | ProductPayName = Food Pack
+    | ProductPayQty = 60
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1503906
+    | UnityEst = 18
+    | MinReputation = 1
+}}
+
+{{contract define
+    | id = Contract_Product_CrudeOil_For_Product_VehicleParts2
+    | ProductBuyName = Crude Oil
+    | ProductBuyQty = 200
+    | ProductPayName = Vehicle Parts II
+    | ProductPayQty = 20
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1503906
+    | UnityEst = 18
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_CrudeOil_For_Product_Gold
+    | ProductBuyName = Crude Oil
+    | ProductBuyQty = 200
+    | ProductPayName = Gold
+    | ProductPayQty = 20
+    | UnityMonth = 0.4003906
+    | UnityQty = 0.1699219
+    | UnityEst = 24
+    | MinReputation = 3
+}}
+
+{{contract define
+    | id = Contract_Product_UraniumOre_For_Product_FoodPack
+    | ProductBuyName = Uranium Ore
+    | ProductBuyQty = 16
+    | ProductPayName = Food Pack
+    | ProductPayQty = 60
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.7001953
+    | UnityEst = 18
+    | MinReputation = 1
+}}
+
+{{contract define
+    | id = Contract_Product_UraniumOre_For_Product_VehicleParts2
+    | ProductBuyName = Uranium Ore
+    | ProductBuyQty = 16
+    | ProductPayName = Vehicle Parts II
+    | ProductPayQty = 20
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.7001953
+    | UnityEst = 18
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_UraniumOre_For_Product_Gold
+    | ProductBuyName = Uranium Ore
+    | ProductBuyQty = 16
+    | ProductPayName = Gold
+    | ProductPayQty = 20
+    | UnityMonth = 0.4003906
+    | UnityQty = 0.7998047
+    | UnityEst = 24
+    | MinReputation = 3
+}}
+
+{{contract define
+    | id = Contract_Product_IronOre_For_Product_Server
+    | ProductBuyName = Iron Ore
+    | ProductBuyQty = 240
+    | ProductPayName = Server
+    | ProductPayQty = 10
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1201172
+    | UnityEst = 18
+    | MinReputation = 1
+}}
+
+{{contract define
+    | id = Contract_Product_CopperOre_For_Product_MedicalSupplies3
+    | ProductBuyName = Copper Ore
+    | ProductBuyQty = 24
+    | ProductPayName = Medical Supplies III
+    | ProductPayQty = 10
+    | UnityMonth = 0.2001953
+    | UnityQty = 0.1201172
+    | UnityEst = 12
+    | MinReputation = 2
+}}
+
+{{contract define
+    | id = Contract_Product_Quartz_For_Product_SolarCell
+    | ProductBuyName = Quartz
+    | ProductBuyQty = 13
+    | ProductPayName = Solar Cell
+    | ProductPayQty = 4
+    | UnityMonth = 0.2998047
+    | UnityQty = 0.1201172
+    | UnityEst = 18
+    | MinReputation = 3
+}}
