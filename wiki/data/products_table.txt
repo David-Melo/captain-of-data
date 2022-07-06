@@ -1,0 +1,593 @@
+<includeonly>
+{{product define
+    | Name = Anesthetics
+    | State = Unit
+}}
+{{product define
+    | Name = Antibiotics
+    | State = Unit
+}}
+{{product define
+    | Name = Bread
+    | State = Unit
+}}
+{{product define
+    | Name = Cake
+    | State = Unit
+}}
+{{product define
+    | Name = Cement
+    | State = Unit
+}}
+{{product define
+    | Name = Chicken Carcass
+    | State = Unit
+}}
+{{product define
+    | Name = Concrete Slab
+    | State = Unit
+}}
+{{product define
+    | Name = Construction Parts
+    | State = Unit
+}}
+{{product define
+    | Name = Construction Parts II
+    | State = Unit
+}}
+{{product define
+    | Name = Construction Parts III
+    | State = Unit
+}}
+{{product define
+    | Name = Construction Parts IV
+    | State = Unit
+}}
+{{product define
+    | Name = Consumer Electronics
+    | State = Unit
+}}
+{{product define
+    | Name = Copper
+    | State = Unit
+}}
+{{product define
+    | Name = Disinfectant
+    | State = Unit
+}}
+{{product define
+    | Name = Eggs
+    | State = Unit
+}}
+{{product define
+    | Name = Electronics
+    | State = Unit
+}}
+{{product define
+    | Name = Electronics II
+    | State = Unit
+}}
+{{product define
+    | Name = Electronics III
+    | State = Unit
+}}
+{{product define
+    | Name = Flour
+    | State = Unit
+}}
+{{product define
+    | Name = Flowers
+    | State = Unit
+}}
+{{product define
+    | Name = Food Pack
+    | State = Unit
+}}
+{{product define
+    | Name = Fruit
+    | State = Unit
+}}
+{{product define
+    | Name = Glass
+    | State = Unit
+}}
+{{product define
+    | Name = Gold
+    | State = Unit
+}}
+{{product define
+    | Name = Graphite
+    | State = Unit
+}}
+{{product define
+    | Name = Household Appliances
+    | State = Unit
+}}
+{{product define
+    | Name = Household Goods
+    | State = Unit
+}}
+{{product define
+    | Name = Impure Copper
+    | State = Unit
+}}
+{{product define
+    | Name = Iron
+    | State = Unit
+}}
+{{product define
+    | Name = Lab Equipment
+    | State = Unit
+}}
+{{product define
+    | Name = Lab Equipment II
+    | State = Unit
+}}
+{{product define
+    | Name = Lab Equipment III
+    | State = Unit
+}}
+{{product define
+    | Name = Lab Equipment IV
+    | State = Unit
+}}
+{{product define
+    | Name = Liquid Nitrogen
+    | State = Unit
+}}
+{{product define
+    | Name = Meat
+    | State = Unit
+}}
+{{product define
+    | Name = Mechanical Parts
+    | State = Unit
+}}
+{{product define
+    | Name = Medical Equipment
+    | State = Unit
+}}
+{{product define
+    | Name = Medical Supplies
+    | State = Unit
+}}
+{{product define
+    | Name = Medical Supplies II
+    | State = Unit
+}}
+{{product define
+    | Name = Medical Supplies III
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 1 A
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 1 B
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 1 C
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 2 A
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 2 B
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 2 C
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 3 A
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 3 B
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 3 C
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 4 A
+    | State = Unit
+}}
+{{product define
+    | Name = Microchips Stage 4 B
+    | State = Unit
+}}
+{{product define
+    | Name = Morphine
+    | State = Unit
+}}
+{{product define
+    | Name = PCB
+    | State = Unit
+}}
+{{product define
+    | Name = Plastic
+    | State = Unit
+}}
+{{product define
+    | Name = Rubber
+    | State = Unit
+}}
+{{product define
+    | Name = Sausage
+    | State = Unit
+}}
+{{product define
+    | Name = Server
+    | State = Unit
+}}
+{{product define
+    | Name = Silicon (Poly)
+    | State = Unit
+}}
+{{product define
+    | Name = Silicon Wafer
+    | State = Unit
+}}
+{{product define
+    | Name = Snack
+    | State = Unit
+}}
+{{product define
+    | Name = Solar Cell
+    | State = Unit
+}}
+{{product define
+    | Name = Solar Cell Mono
+    | State = Unit
+}}
+{{product define
+    | Name = Spent Fuel
+    | State = Unit
+}}
+{{product define
+    | Name = Steel
+    | State = Unit
+}}
+{{product define
+    | Name = Tofu
+    | State = Unit
+}}
+{{product define
+    | Name = Uranium Pellets
+    | State = Unit
+}}
+{{product define
+    | Name = Uranium Rod
+    | State = Unit
+}}
+{{product define
+    | Name = Vegetables
+    | State = Unit
+}}
+{{product define
+    | Name = Vehicle Parts
+    | State = Unit
+}}
+{{product define
+    | Name = Vehicle Parts II
+    | State = Unit
+}}
+{{product define
+    | Name = Vehicle Parts III
+    | State = Unit
+}}
+{{product define
+    | Name = Wood
+    | State = Unit
+}}
+{{product define
+    | Name = Animal Feed
+    | State = Loose
+}}
+{{product define
+    | Name = Biomass
+    | State = Loose
+}}
+{{product define
+    | Name = Broken Glass
+    | State = Loose
+}}
+{{product define
+    | Name = Canola
+    | State = Loose
+}}
+{{product define
+    | Name = Coal
+    | State = Loose
+}}
+{{product define
+    | Name = Compost
+    | State = Loose
+}}
+{{product define
+    | Name = Copper Ore
+    | State = Loose
+}}
+{{product define
+    | Name = Copper Ore Crushed
+    | State = Loose
+}}
+{{product define
+    | Name = Copper Scrap
+    | State = Loose
+}}
+{{product define
+    | Name = Corn
+    | State = Loose
+}}
+{{product define
+    | Name = Dirt
+    | State = Loose
+}}
+{{product define
+    | Name = Filter Media
+    | State = Loose
+}}
+{{product define
+    | Name = Glass Mix
+    | State = Loose
+}}
+{{product define
+    | Name = Gold Ore
+    | State = Loose
+}}
+{{product define
+    | Name = Gold Ore Concentrate
+    | State = Loose
+}}
+{{product define
+    | Name = Gold Ore Crushed
+    | State = Loose
+}}
+{{product define
+    | Name = Gold Ore Powder
+    | State = Loose
+}}
+{{product define
+    | Name = Gold Scrap
+    | State = Loose
+}}
+{{product define
+    | Name = Gravel
+    | State = Loose
+}}
+{{product define
+    | Name = Iron Ore
+    | State = Loose
+}}
+{{product define
+    | Name = Iron Ore Crushed
+    | State = Loose
+}}
+{{product define
+    | Name = Iron Scrap
+    | State = Loose
+}}
+{{product define
+    | Name = Limestone
+    | State = Loose
+}}
+{{product define
+    | Name = Meat Trimmings
+    | State = Loose
+}}
+{{product define
+    | Name = Poppy
+    | State = Loose
+}}
+{{product define
+    | Name = Potato
+    | State = Loose
+}}
+{{product define
+    | Name = Quartz
+    | State = Loose
+}}
+{{product define
+    | Name = Recyclables
+    | State = Loose
+}}
+{{product define
+    | Name = Rock
+    | State = Loose
+}}
+{{product define
+    | Name = Salt
+    | State = Loose
+}}
+{{product define
+    | Name = Sand
+    | State = Loose
+}}
+{{product define
+    | Name = Slag
+    | State = Loose
+}}
+{{product define
+    | Name = Slag Crushed
+    | State = Loose
+}}
+{{product define
+    | Name = Sludge
+    | State = Loose
+}}
+{{product define
+    | Name = Soybean
+    | State = Loose
+}}
+{{product define
+    | Name = Sugar
+    | State = Loose
+}}
+{{product define
+    | Name = Sugar Cane
+    | State = Loose
+}}
+{{product define
+    | Name = Sulfur
+    | State = Loose
+}}
+{{product define
+    | Name = Uranium Ore
+    | State = Loose
+}}
+{{product define
+    | Name = Uranium Ore Crushed
+    | State = Loose
+}}
+{{product define
+    | Name = Waste
+    | State = Loose
+}}
+{{product define
+    | Name = Wheat
+    | State = Loose
+}}
+{{product define
+    | Name = Yellow Cake
+    | State = Loose
+}}
+{{product define
+    | Name = Acid
+    | State = Fluid
+}}
+{{product define
+    | Name = Ammonia
+    | State = Fluid
+}}
+{{product define
+    | Name = Brine
+    | State = Fluid
+}}
+{{product define
+    | Name = Carbon Dioxide
+    | State = Fluid
+}}
+{{product define
+    | Name = Chilled Water
+    | State = Fluid
+}}
+{{product define
+    | Name = Chlorine
+    | State = Fluid
+}}
+{{product define
+    | Name = Cooking Oil
+    | State = Fluid
+}}
+{{product define
+    | Name = Corn Mash
+    | State = Fluid
+}}
+{{product define
+    | Name = Crude Oil
+    | State = Fluid
+}}
+{{product define
+    | Name = Diesel
+    | State = Fluid
+}}
+{{product define
+    | Name = Ethanol
+    | State = Fluid
+}}
+{{product define
+    | Name = Exhaust
+    | State = Fluid
+}}
+{{product define
+    | Name = Fertilizer I
+    | State = Fluid
+}}
+{{product define
+    | Name = Fertilizer II
+    | State = Fluid
+}}
+{{product define
+    | Name = Fertilizer (Organic)
+    | State = Fluid
+}}
+{{product define
+    | Name = Fuel Gas
+    | State = Fluid
+}}
+{{product define
+    | Name = Heavy Oil
+    | State = Fluid
+}}
+{{product define
+    | Name = Hydrogen
+    | State = Fluid
+}}
+{{product define
+    | Name = Hydrogen Fluoride
+    | State = Fluid
+}}
+{{product define
+    | Name = Light Oil
+    | State = Fluid
+}}
+{{product define
+    | Name = Medium Oil
+    | State = Fluid
+}}
+{{product define
+    | Name = Naphtha
+    | State = Fluid
+}}
+{{product define
+    | Name = Nitrogen
+    | State = Fluid
+}}
+{{product define
+    | Name = Oxygen
+    | State = Fluid
+}}
+{{product define
+    | Name = Seawater
+    | State = Fluid
+}}
+{{product define
+    | Name = Sour Water
+    | State = Fluid
+}}
+{{product define
+    | Name = Steam Depleted
+    | State = Fluid
+}}
+{{product define
+    | Name = Steam Hi
+    | State = Fluid
+}}
+{{product define
+    | Name = Steam Lo
+    | State = Fluid
+}}
+{{product define
+    | Name = Toxic Slurry
+    | State = Fluid
+}}
+{{product define
+    | Name = Waste Water
+    | State = Fluid
+}}
+{{product define
+    | Name = Water
+    | State = Fluid
+}}</includeonly><noinclude>{{Documentation}}</noinclude>
