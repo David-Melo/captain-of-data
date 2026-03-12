@@ -8,7 +8,7 @@ In order to run, place compiled `DataExtractor.dll` to folder `Users\[user]\AppD
 
 Image icons: use [AssetStudio](https://github.com/Perfare/AssetStudio)
 
-- Updated for latest version `0.7.1e(b424)`, and migrated everything to `protosDb.All` getting rid of hardcoded ids, and automatically catching new items/buildings.
+- Updated for latest version `0.8.1a (b550)`, and migrated everything to `protosDb.All` getting rid of hardcoded ids, and automatically catching new items/buildings.
 - Added products.json, product ids, recipe ids, product icon references.
 - Added transports.json, conveyor belts throughput.
 - Added details on farms, recipes, production, consumption.
