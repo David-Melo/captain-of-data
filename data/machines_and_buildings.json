@@ -1,5 +1,5 @@
 {
-    "game_version": "0.7.8.0",
+    "game_version": "0.8.1.0",
     "machines_and_buildings": [
         {
             "id": "TurbineSuperPress",
@@ -1170,6 +1170,19 @@
                         }
                     ],
                     "power_multiplier": 1
+                },
+                {
+                    "id": "OceanWaterPumping2x",
+                    "name": "Ocean water pumping",
+                    "duration": 5,
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "name": "Seawater",
+                            "quantity": 18
+                        }
+                    ],
+                    "power_multiplier": 3
                 }
             ]
         },
@@ -1181,7 +1194,7 @@
             "workers": 1,
             "maintenance_cost_units": "Maintenance I",
             "maintenance_cost_quantity": 4,
-            "electricity_consumed": 300,
+            "electricity_consumed": 200,
             "electricity_generated": 0,
             "computing_consumed": 0,
             "computing_generated": 0,
@@ -1209,6 +1222,19 @@
                         }
                     ],
                     "power_multiplier": 1
+                },
+                {
+                    "id": "OceanWaterPumping2xT2",
+                    "name": "Ocean water pumping II",
+                    "duration": 5,
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "name": "Seawater",
+                            "quantity": 18
+                        }
+                    ],
+                    "power_multiplier": 3
                 }
             ]
         },
@@ -1675,17 +1701,17 @@
                 {
                     "id": "SaltMakingHeated",
                     "name": "Salt making",
-                    "duration": 30,
+                    "duration": 20,
                     "inputs": [
                         {
                             "name": "Seawater",
-                            "quantity": 48
+                            "quantity": 32
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Salt",
-                            "quantity": 3
+                            "quantity": 2
                         }
                     ],
                     "power_multiplier": 1
@@ -1755,17 +1781,17 @@
                 {
                     "id": "SaltMaking",
                     "name": "Salt making",
-                    "duration": 60,
+                    "duration": 40,
                     "inputs": [
                         {
                             "name": "Seawater",
-                            "quantity": 48
+                            "quantity": 32
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Salt",
-                            "quantity": 3
+                            "quantity": 2
                         }
                     ],
                     "power_multiplier": 1
@@ -2467,7 +2493,7 @@
                     "inputs": [
                         {
                             "name": "Glass",
-                            "quantity": 4
+                            "quantity": 2
                         },
                         {
                             "name": "Plastic",
@@ -2489,7 +2515,7 @@
                 {
                     "id": "ElectronicsAssemblyT5",
                     "name": "Electronics assembly (T5)",
-                    "duration": 10,
+                    "duration": 15,
                     "inputs": [
                         {
                             "name": "Rubber",
@@ -2497,13 +2523,13 @@
                         },
                         {
                             "name": "Copper",
-                            "quantity": 16
+                            "quantity": 24
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Electronics",
-                            "quantity": 16
+                            "quantity": 24
                         }
                     ],
                     "power_multiplier": 1
@@ -2523,7 +2549,7 @@
                         },
                         {
                             "name": "Silicon (poly)",
-                            "quantity": 4
+                            "quantity": 2
                         }
                     ],
                     "outputs": [
@@ -2593,7 +2619,7 @@
                         },
                         {
                             "name": "Silicon wafer",
-                            "quantity": 9
+                            "quantity": 12
                         },
                         {
                             "name": "Glass",
@@ -3567,7 +3593,7 @@
                     "inputs": [
                         {
                             "name": "Glass",
-                            "quantity": 4
+                            "quantity": 2
                         },
                         {
                             "name": "Plastic",
@@ -3589,7 +3615,7 @@
                 {
                     "id": "ElectronicsAssemblyT4",
                     "name": "Electronics assembly (T4)",
-                    "duration": 10,
+                    "duration": 15,
                     "inputs": [
                         {
                             "name": "Rubber",
@@ -3597,13 +3623,13 @@
                         },
                         {
                             "name": "Copper",
-                            "quantity": 8
+                            "quantity": 12
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Electronics",
-                            "quantity": 8
+                            "quantity": 12
                         }
                     ],
                     "power_multiplier": 1
@@ -3623,7 +3649,7 @@
                         },
                         {
                             "name": "Silicon (poly)",
-                            "quantity": 4
+                            "quantity": 2
                         }
                     ],
                     "outputs": [
@@ -4459,7 +4485,7 @@
                     "inputs": [
                         {
                             "name": "Glass",
-                            "quantity": 4
+                            "quantity": 2
                         },
                         {
                             "name": "Plastic",
@@ -4481,7 +4507,7 @@
                 {
                     "id": "ElectronicsAssemblyT3",
                     "name": "Electronics assembly (T3)",
-                    "duration": 10,
+                    "duration": 15,
                     "inputs": [
                         {
                             "name": "Rubber",
@@ -4489,13 +4515,13 @@
                         },
                         {
                             "name": "Copper",
-                            "quantity": 4
+                            "quantity": 6
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Electronics",
-                            "quantity": 4
+                            "quantity": 6
                         }
                     ],
                     "power_multiplier": 1
@@ -4515,7 +4541,7 @@
                         },
                         {
                             "name": "Silicon (poly)",
-                            "quantity": 4
+                            "quantity": 2
                         }
                     ],
                     "outputs": [
@@ -5049,7 +5075,7 @@
                 {
                     "id": "ElectronicsAssemblyT2",
                     "name": "Electronics assembly (T2)",
-                    "duration": 20,
+                    "duration": 30,
                     "inputs": [
                         {
                             "name": "Rubber",
@@ -5057,13 +5083,13 @@
                         },
                         {
                             "name": "Copper",
-                            "quantity": 4
+                            "quantity": 6
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Electronics",
-                            "quantity": 4
+                            "quantity": 6
                         }
                     ],
                     "power_multiplier": 1
@@ -5193,13 +5219,13 @@
                         },
                         {
                             "name": "Copper",
-                            "quantity": 4
+                            "quantity": 6
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Electronics",
-                            "quantity": 4
+                            "quantity": 6
                         }
                     ],
                     "power_multiplier": 1
@@ -8319,11 +8345,11 @@
                     "inputs": [
                         {
                             "name": "Sand",
-                            "quantity": 32
+                            "quantity": 20
                         },
                         {
                             "name": "Coal",
-                            "quantity": 8
+                            "quantity": 4
                         },
                         {
                             "name": "Graphite",
@@ -8337,11 +8363,11 @@
                     "outputs": [
                         {
                             "name": "Molten silicon",
-                            "quantity": 24
+                            "quantity": 16
                         },
                         {
                             "name": "Slag",
-                            "quantity": 12
+                            "quantity": 8
                         },
                         {
                             "name": "Steam (low)",
@@ -8349,7 +8375,7 @@
                         },
                         {
                             "name": "Exhaust",
-                            "quantity": 16
+                            "quantity": 12
                         }
                     ],
                     "power_multiplier": 1
@@ -8669,11 +8695,11 @@
                     "inputs": [
                         {
                             "name": "Sand",
-                            "quantity": 16
+                            "quantity": 10
                         },
                         {
                             "name": "Coal",
-                            "quantity": 4
+                            "quantity": 2
                         },
                         {
                             "name": "Graphite",
@@ -8683,15 +8709,15 @@
                     "outputs": [
                         {
                             "name": "Molten silicon",
-                            "quantity": 12
+                            "quantity": 8
                         },
                         {
                             "name": "Slag",
-                            "quantity": 6
+                            "quantity": 4
                         },
                         {
                             "name": "Exhaust",
-                            "quantity": 8
+                            "quantity": 6
                         }
                     ],
                     "power_multiplier": 1
@@ -9799,7 +9825,7 @@
                     "inputs": [
                         {
                             "name": "Silicon (poly)",
-                            "quantity": 24
+                            "quantity": 12
                         },
                         {
                             "name": "Water",
@@ -9861,21 +9887,21 @@
                 {
                     "id": "SiliconTreatment",
                     "name": "Silicon treatment",
-                    "duration": 30,
+                    "duration": 15,
                     "inputs": [
                         {
                             "name": "Molten silicon",
-                            "quantity": 9
+                            "quantity": 3
                         },
                         {
                             "name": "Hydrogen",
-                            "quantity": 2
+                            "quantity": 1
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Silicon (poly)",
-                            "quantity": 9
+                            "quantity": 3
                         }
                     ],
                     "power_multiplier": 1
@@ -12611,11 +12637,11 @@
                 {
                     "id": "OceanWaterDumping",
                     "name": "Water dumping",
-                    "duration": 2,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Water",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "outputs": [],
@@ -12624,11 +12650,11 @@
                 {
                     "id": "BrineDumping",
                     "name": "Brine dumping",
-                    "duration": 2,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Brine",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "outputs": [],
@@ -12637,17 +12663,17 @@
                 {
                     "id": "OceanWasteWaterPumping",
                     "name": "Waste water dumping",
-                    "duration": 2,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Waste water",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Water pollution",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "power_multiplier": 1
@@ -12655,17 +12681,17 @@
                 {
                     "id": "SourWaterDumping",
                     "name": "Sour water dumping",
-                    "duration": 2,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Sour water",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Water pollution",
-                            "quantity": 4
+                            "quantity": 20
                         }
                     ],
                     "power_multiplier": 1
@@ -12673,17 +12699,17 @@
                 {
                     "id": "WasteAcidDumping",
                     "name": "Acid dumping",
-                    "duration": 2,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Acid",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Water pollution",
-                            "quantity": 4
+                            "quantity": 20
                         }
                     ],
                     "power_multiplier": 1
@@ -12691,11 +12717,60 @@
                 {
                     "id": "ToxicSlurryDumping",
                     "name": "Toxic slurry dumping",
-                    "duration": 2,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Toxic slurry",
+                            "quantity": 10
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Water pollution",
+                            "quantity": 25
+                        }
+                    ],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "SeaWaterDumping",
+                    "name": "Seawater dumping",
+                    "duration": 3,
+                    "inputs": [
+                        {
+                            "name": "Seawater",
+                            "quantity": 10
+                        }
+                    ],
+                    "outputs": [],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "FertilizerOrganicDumping",
+                    "name": "Fertilizer dumping",
+                    "duration": 3,
+                    "inputs": [
+                        {
+                            "name": "Fertilizer (organic)",
+                            "quantity": 10
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Water pollution",
                             "quantity": 2
+                        }
+                    ],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "FertilizerChem1Dumping",
+                    "name": "Fertilizer dumping",
+                    "duration": 3,
+                    "inputs": [
+                        {
+                            "name": "Fertilizer I",
+                            "quantity": 10
                         }
                     ],
                     "outputs": [
@@ -12707,68 +12782,19 @@
                     "power_multiplier": 1
                 },
                 {
-                    "id": "SeaWaterDumping",
-                    "name": "Seawater dumping",
-                    "duration": 2,
-                    "inputs": [
-                        {
-                            "name": "Seawater",
-                            "quantity": 2
-                        }
-                    ],
-                    "outputs": [],
-                    "power_multiplier": 1
-                },
-                {
-                    "id": "FertilizerOrganicDumping",
-                    "name": "Fertilizer dumping",
-                    "duration": 4,
-                    "inputs": [
-                        {
-                            "name": "Fertilizer (organic)",
-                            "quantity": 4
-                        }
-                    ],
-                    "outputs": [
-                        {
-                            "name": "Water pollution",
-                            "quantity": 1
-                        }
-                    ],
-                    "power_multiplier": 1
-                },
-                {
-                    "id": "FertilizerChem1Dumping",
-                    "name": "Fertilizer dumping",
-                    "duration": 4,
-                    "inputs": [
-                        {
-                            "name": "Fertilizer I",
-                            "quantity": 2
-                        }
-                    ],
-                    "outputs": [
-                        {
-                            "name": "Water pollution",
-                            "quantity": 1
-                        }
-                    ],
-                    "power_multiplier": 1
-                },
-                {
                     "id": "FertilizerChem2Dumping",
                     "name": "Fertilizer dumping",
-                    "duration": 4,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Fertilizer II",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Water pollution",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "power_multiplier": 1
@@ -12776,17 +12802,17 @@
                 {
                     "id": "RedMudDumping",
                     "name": "Red mud dumping",
-                    "duration": 2,
+                    "duration": 3,
                     "inputs": [
                         {
                             "name": "Red mud",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "outputs": [
                         {
                             "name": "Water pollution",
-                            "quantity": 2
+                            "quantity": 10
                         }
                     ],
                     "power_multiplier": 1
@@ -16697,7 +16723,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 1000,
+            "storage_capacity": 1600,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleUnitT3.png",
@@ -16722,7 +16748,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 500,
+            "storage_capacity": 800,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleUnitT2.png",
@@ -16747,7 +16773,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 250,
+            "storage_capacity": 400,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleUnitT1.png",
@@ -16772,7 +16798,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 1000,
+            "storage_capacity": 1600,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleLooseT3.png",
@@ -16797,7 +16823,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 500,
+            "storage_capacity": 800,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleLooseT2.png",
@@ -16822,7 +16848,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 250,
+            "storage_capacity": 400,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleLooseT1.png",
@@ -16847,7 +16873,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 1000,
+            "storage_capacity": 1600,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleFluidT3.png",
@@ -16872,7 +16898,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 500,
+            "storage_capacity": 800,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleFluidT2.png",
@@ -16897,7 +16923,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 250,
+            "storage_capacity": 400,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/CargoDepotModuleFluidT1.png",
@@ -17266,7 +17292,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 240,
+            "storage_capacity": 400,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/FuelStationHydrogenT1.png",
@@ -17291,7 +17317,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 360,
+            "storage_capacity": 400,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/FuelStationT3.png",
@@ -17316,7 +17342,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 120,
+            "storage_capacity": 200,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/FuelStationT2.png",
@@ -17341,7 +17367,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "",
-            "storage_capacity": 40,
+            "storage_capacity": 100,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/FuelStationT1.png",
@@ -17366,7 +17392,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "CountableProductProto",
-            "storage_capacity": 5000,
+            "storage_capacity": 6000,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageUnitT4.png",
@@ -17391,7 +17417,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "CountableProductProto",
-            "storage_capacity": 2500,
+            "storage_capacity": 3000,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageUnitT3.png",
@@ -17416,7 +17442,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "CountableProductProto",
-            "storage_capacity": 400,
+            "storage_capacity": 500,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageUnitT2.png",
@@ -17466,7 +17492,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "LooseProductProto",
-            "storage_capacity": 5000,
+            "storage_capacity": 6000,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageLooseT4.png",
@@ -17491,7 +17517,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "LooseProductProto",
-            "storage_capacity": 2500,
+            "storage_capacity": 3000,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageLooseT3.png",
@@ -17516,7 +17542,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "LooseProductProto",
-            "storage_capacity": 400,
+            "storage_capacity": 500,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageLooseT2.png",
@@ -17566,7 +17592,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "FluidProductProto",
-            "storage_capacity": 5000,
+            "storage_capacity": 6000,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageFluidT4.png",
@@ -17591,7 +17617,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "FluidProductProto",
-            "storage_capacity": 2500,
+            "storage_capacity": 3000,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageFluidT3.png",
@@ -17616,7 +17642,7 @@
             "computing_consumed": 0,
             "computing_generated": 0,
             "product_type": "FluidProductProto",
-            "storage_capacity": 400,
+            "storage_capacity": 500,
             "unity_cost": 0,
             "research_speed": 0,
             "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/StorageFluidT2.png",

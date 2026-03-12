@@ -1,5 +1,5 @@
 {
-    "game_version": "0.7.1.0",
+    "game_version": "0.8.1.0",
     "contracts": [
         {
             "id": "Contract_Product_Coal_For_Product_Cement",
@@ -420,6 +420,17 @@
             "min_reputation_required": 2
         },
         {
+            "id": "Contract_Product_FuelGas_For_Product_Rock",
+            "product_to_buy_name": "Fuel gas",
+            "product_to_buy_quantity": 20,
+            "product_to_pay_with_name": "Rock",
+            "product_to_pay_with_quantity": 80,
+            "unity_per_month": 0.2001953,
+            "unity_per_100_bought": 0.09960938,
+            "unity_to_establish": 12,
+            "min_reputation_required": 2
+        },
+        {
             "id": "Contract_Product_UraniumOre_For_Product_FoodPack",
             "product_to_buy_name": "Uranium ore",
             "product_to_buy_quantity": 60,
@@ -468,7 +479,7 @@
             "product_to_buy_name": "Iron ore",
             "product_to_buy_quantity": 460,
             "product_to_pay_with_name": "Server",
-            "product_to_pay_with_quantity": 10,
+            "product_to_pay_with_quantity": 5,
             "unity_per_month": 0.2998047,
             "unity_per_100_bought": 0.1201172,
             "unity_to_establish": 18,
@@ -543,7 +554,7 @@
         {
             "id": "Contract_Product_TitaniumOre_For_Product_Server",
             "product_to_buy_name": "Titanium ore",
-            "product_to_buy_quantity": 460,
+            "product_to_buy_quantity": 450,
             "product_to_pay_with_name": "Server",
             "product_to_pay_with_quantity": 5,
             "unity_per_month": 0.4003906,

@@ -1,5 +1,5 @@
 {
-    "game_version": "0.7.1.0",
+    "game_version": "0.8.1.0",
     "vehicles": [
         {
             "name": "Truck",
@@ -35,7 +35,7 @@
                 },
                 {
                     "product": "Hydrogen",
-                    "quantity": 18
+                    "quantity": 19
                 }
             ]
         },
@@ -103,7 +103,7 @@
                 },
                 {
                     "product": "Hydrogen",
-                    "quantity": 43
+                    "quantity": 45
                 }
             ]
         },
@@ -120,7 +120,45 @@
                 },
                 {
                     "product": "Hydrogen",
-                    "quantity": 43
+                    "quantity": 45
+                }
+            ]
+        },
+        {
+            "name": "Amphibious truck",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 20
+                },
+                {
+                    "product": "Diesel",
+                    "quantity": 36
+                }
+            ]
+        },
+        {
+            "name": "Amphibious truck",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 20
+                },
+                {
+                    "product": "Electronics",
+                    "quantity": 20
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 45
                 }
             ]
         },
@@ -154,7 +192,7 @@
                 },
                 {
                     "product": "Hydrogen",
-                    "quantity": 84
+                    "quantity": 88
                 }
             ]
         },
@@ -192,7 +230,7 @@
                 },
                 {
                     "product": "Hydrogen",
-                    "quantity": 32
+                    "quantity": 34
                 }
             ]
         },
@@ -210,6 +248,40 @@
                 {
                     "product": "Diesel",
                     "quantity": 10
+                }
+            ]
+        },
+        {
+            "name": "Amphibious excavator",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 30
+                },
+                {
+                    "product": "Diesel",
+                    "quantity": 45
+                }
+            ]
+        },
+        {
+            "name": "Amphibious excavator",
+            "costs": [
+                {
+                    "product": "Steel",
+                    "quantity": 30
+                },
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 220
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 56
                 }
             ]
         },
@@ -247,7 +319,7 @@
                 },
                 {
                     "product": "Hydrogen",
-                    "quantity": 38
+                    "quantity": 40
                 }
             ]
         },

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Data Extraction Mod
  * 
  * -------------------------------------
@@ -95,6 +95,7 @@
 using Mafi;
 using Mafi.Base.Prototypes.Machines;
 using Mafi.Base.Prototypes.Machines.PowerGenerators;
+using Mafi.Collections;
 using Mafi.Collections.ImmutableCollections;
 using Mafi.Core;
 using Mafi.Core.Buildings.Cargo;
@@ -142,22 +143,35 @@ namespace DataExtractorMod
 
         public Option<IConfig> ModConfig => Option<IConfig>.None;
 
-        public static readonly string MOD_ROOT_DIR_PATH = new FileSystemHelper().GetDirPath(FileType.Mod, false);
-        public static readonly string MOD_DIR_PATH = Path.Combine(MOD_ROOT_DIR_PATH, "DataExtractor");
-        public static readonly string PLUGIN_DIR_PATH = Path.Combine(MOD_DIR_PATH, "Plugins");
+        private static readonly string MOD_ROOT_DIR_PATH = new FileSystemHelper().GetDirPath(FileType.Mod, false);
+        private static readonly string MOD_DIR_PATH = Path.Combine(MOD_ROOT_DIR_PATH, "DataExtractor");
+        private static readonly string PLUGIN_DIR_PATH = Path.Combine(MOD_DIR_PATH, "Plugins");
 
-        public static readonly bool DEBUG = true;
+        private static readonly bool DEBUG = false;
 
-        public DataExtractor()
+        private ModManifest manifest;
+
+        public ModManifest Manifest => manifest;
+        public ModJsonConfig JsonConfig => new ModJsonConfig(this);
+
+        public DataExtractor(ModManifest modManifest)
         {
             //AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             Log.Info(MOD_ROOT_DIR_PATH);
             Log.Info(MOD_DIR_PATH);
             Log.Info(PLUGIN_DIR_PATH);
             Log.Info("Loaded Data Extractor Mod By ItsDesm");
+
+            manifest = modManifest;
         }
 
+        public void MigrateJsonConfig(VersionSlim savedVersion, Dict<string, object> savedValues)
+        {
+        }
 
+        public void Dispose()
+        {
+        }
 
         /*
          * -------------------------------------
@@ -1021,7 +1035,7 @@ namespace DataExtractorMod
 ;
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in generator.Costs.Price.Products)
+                    foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1094,7 +1108,7 @@ namespace DataExtractorMod
 ;
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in generator.Costs.Price.Products)
+                    foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1168,7 +1182,7 @@ namespace DataExtractorMod
 ;
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in generator.Costs.Price.Products)
+                    foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1237,7 +1251,7 @@ namespace DataExtractorMod
 ;
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in generator.Costs.Price.Products)
+                    foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1320,7 +1334,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1409,7 +1423,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in item.Costs.Price.Products)
+                    foreach (ProductQuantity cost in item.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1547,7 +1561,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in item.Costs.Price.Products)
+                    foreach (ProductQuantity cost in item.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1655,7 +1669,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in item.Costs.Price.Products)
+                    foreach (ProductQuantity cost in item.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1729,7 +1743,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in item.Costs.Price.Products)
+                    foreach (ProductQuantity cost in item.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1811,7 +1825,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in item.Costs.Price.Products)
+                    foreach (ProductQuantity cost in item.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1885,7 +1899,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -1959,7 +1973,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2091,7 +2105,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2227,7 +2241,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2293,7 +2307,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2359,7 +2373,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2425,7 +2439,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2491,7 +2505,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2563,7 +2577,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2802,7 +2816,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2868,7 +2882,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -2939,7 +2953,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -3010,7 +3024,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -3090,7 +3104,7 @@ namespace DataExtractorMod
 
                     List<string> machinesProducts = new List<string> { };
 
-                    foreach (ProductQuantity cost in machine.Costs.Price.Products)
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
                     {
                         string vehicleProductJson = MakeVehicleProductJsonObject(
                             cost.Product.Strings.Name.ToString(),
@@ -3322,7 +3336,7 @@ namespace DataExtractorMod
 
                 List<string> machinesProducts = new List<string> { };
 
-                foreach (ProductQuantity cost in transport.Costs.Price.Products)
+                foreach (ProductQuantity cost in transport.Costs.BaseConstructionCost.Products)
                 {
                     string vehicleProductJson = MakeVehicleProductJsonObject(
                         cost.Product.Strings.Name.ToString(),
