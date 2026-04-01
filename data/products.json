@@ -1,0 +1,1594 @@
+{
+    "game_version": "0.8.1.0",
+    "products": [
+        {
+            "id": "Product_Virtual_Electricity",
+            "name": "Electricity",
+            "icon": "Electricity",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Electricity.svg"
+        },
+        {
+            "id": "Product_Virtual_MechPower",
+            "name": "Mechanical power",
+            "icon": "Mechanicalpower",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MechanicalPower.svg"
+        },
+        {
+            "id": "Product_Virtual_Computing",
+            "name": "Computing",
+            "icon": "Computing",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Unity/UserInterface/General/Computing128.png"
+        },
+        {
+            "id": "Product_Virtual_Upoints",
+            "name": "Unity",
+            "icon": "Unity",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Unity/UserInterface/General/Unity128.png"
+        },
+        {
+            "id": "Product_Virtual_Heat",
+            "name": "Heat",
+            "icon": "Heat",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Heat.svg"
+        },
+        {
+            "id": "Product_Virtual_MaintenanceT1",
+            "name": "Maintenance I",
+            "icon": "Maintenance1",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Maintenance1.svg"
+        },
+        {
+            "id": "Product_Virtual_MaintenanceT2",
+            "name": "Maintenance II",
+            "icon": "Maintenance2",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Maintenance2.svg"
+        },
+        {
+            "id": "Product_Virtual_MaintenanceT3",
+            "name": "Maintenance III",
+            "icon": "Maintenance3",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Maintenance3.svg"
+        },
+        {
+            "id": "Product_Virtual_SpaceCrew",
+            "name": "Space crew",
+            "icon": "Spacecrew",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SpaceCrew.svg"
+        },
+        {
+            "id": "Product_Virtual_SpaceResearchPoints",
+            "name": "Space research points",
+            "icon": "Spaceresearchpoints",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SpaceResearchPoints.svg"
+        },
+        {
+            "id": "Product_Wood",
+            "name": "Wood",
+            "icon": "Wood",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Wood.svg"
+        },
+        {
+            "id": "Product_Woodchips",
+            "name": "Woodchips",
+            "icon": "Woodchips",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Woodchips.svg"
+        },
+        {
+            "id": "Product_Fertilizer",
+            "name": "Fertilizer I",
+            "icon": "Fertilizer1",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Fertilizer.svg"
+        },
+        {
+            "id": "Product_Fertilizer2",
+            "name": "Fertilizer II",
+            "icon": "Fertilizer2",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Fertilizer2.svg"
+        },
+        {
+            "id": "Product_FertilizerOrganic",
+            "name": "Fertilizer (organic)",
+            "icon": "Fertilizerorganic",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/FertilizerOrganic.svg"
+        },
+        {
+            "id": "Product_TreeSapling",
+            "name": "Tree sapling",
+            "icon": "Treesapling",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TreeSapling.svg"
+        },
+        {
+            "id": "Product_Paper",
+            "name": "Paper",
+            "icon": "Paper",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Paper.svg"
+        },
+        {
+            "id": "Product_Dirt",
+            "name": "Dirt",
+            "icon": "Dirt",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Dirt.svg"
+        },
+        {
+            "id": "Product_Compost",
+            "name": "Compost",
+            "icon": "Compost",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Digestate.svg"
+        },
+        {
+            "id": "Product_Sludge",
+            "name": "Sludge",
+            "icon": "Sludge",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Sludge.svg"
+        },
+        {
+            "id": "Product_Limestone",
+            "name": "Limestone",
+            "icon": "Limestone",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Limestone.svg"
+        },
+        {
+            "id": "Product_Rock",
+            "name": "Rock",
+            "icon": "Rock",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Rock.svg"
+        },
+        {
+            "id": "Product_Gravel",
+            "name": "Gravel",
+            "icon": "Gravel",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Gravel.svg"
+        },
+        {
+            "id": "Product_ManufacturedSand",
+            "name": "Manufactured sand",
+            "icon": "Manufacturedsand",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ManufacturedSand.svg"
+        },
+        {
+            "id": "Product_FilterMedia",
+            "name": "Filter media",
+            "icon": "Filtermedia",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/FilterMedia.svg"
+        },
+        {
+            "id": "Product_Coal",
+            "name": "Coal",
+            "icon": "Coal",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Coal.svg"
+        },
+        {
+            "id": "Product_Graphite",
+            "name": "Graphite",
+            "icon": "Graphite",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Graphite.svg"
+        },
+        {
+            "id": "Product_Slag",
+            "name": "Slag",
+            "icon": "Slag",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Slag.svg"
+        },
+        {
+            "id": "Product_SlagCrushed",
+            "name": "Slag crushed",
+            "icon": "Slagcrushed",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SlagCrushed.svg"
+        },
+        {
+            "id": "Product_IronOre",
+            "name": "Iron ore",
+            "icon": "Ironore",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/IronOre.svg"
+        },
+        {
+            "id": "Product_IronOreCrushed",
+            "name": "Iron ore crushed",
+            "icon": "Ironorecrushed",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/IronCrushed.svg"
+        },
+        {
+            "id": "Product_IronScrap",
+            "name": "Iron scrap",
+            "icon": "Ironscrap",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/IronScrap.svg"
+        },
+        {
+            "id": "Product_IronScrapPressed",
+            "name": "Iron scrap pressed",
+            "icon": "Ironscrappressed",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/IronScrapPressed.svg"
+        },
+        {
+            "id": "Product_MoltenIron",
+            "name": "Molten iron",
+            "icon": "Molteniron",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/IronMolten.svg"
+        },
+        {
+            "id": "Product_MoltenSteel",
+            "name": "Molten steel",
+            "icon": "Moltensteel",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SteelMolten.svg"
+        },
+        {
+            "id": "Product_Iron",
+            "name": "Iron",
+            "icon": "Iron",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Iron.svg"
+        },
+        {
+            "id": "Product_Steel",
+            "name": "Steel",
+            "icon": "Steel",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Steel.svg"
+        },
+        {
+            "id": "Product_CopperOre",
+            "name": "Copper ore",
+            "icon": "Copperore",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CopperOre.svg"
+        },
+        {
+            "id": "Product_CopperOreCrushed",
+            "name": "Copper ore crushed",
+            "icon": "Copperorecrushed",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CopperCrushed.svg"
+        },
+        {
+            "id": "Product_CopperScrap",
+            "name": "Copper scrap",
+            "icon": "Copperscrap",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CopperScrap.svg"
+        },
+        {
+            "id": "Product_CopperScrapPressed",
+            "name": "Copper scrap pressed",
+            "icon": "Copperscrappressed",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CopperScrapPressed.svg"
+        },
+        {
+            "id": "Product_MoltenCopper",
+            "name": "Molten copper",
+            "icon": "Moltencopper",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CopperMolten.svg"
+        },
+        {
+            "id": "Product_ImpureCopper",
+            "name": "Impure copper",
+            "icon": "Impurecopper",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CopperImpure.svg"
+        },
+        {
+            "id": "Product_Copper",
+            "name": "Copper",
+            "icon": "Copper",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Copper.svg"
+        },
+        {
+            "id": "Product_Bauxite",
+            "name": "Bauxite",
+            "icon": "Bauxite",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Bauxite.svg"
+        },
+        {
+            "id": "Product_BauxitePowder",
+            "name": "Bauxite powder",
+            "icon": "Bauxitepowder",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/BauxitePowder.svg"
+        },
+        {
+            "id": "Product_RedMud",
+            "name": "Red mud",
+            "icon": "Redmud",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/RedMud.svg"
+        },
+        {
+            "id": "Product_HydratedAlumina",
+            "name": "Hydrated alumina",
+            "icon": "Hydratedalumina",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/AluminaHydrated.svg"
+        },
+        {
+            "id": "Product_Alumina",
+            "name": "Alumina",
+            "icon": "Alumina",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Alumina.svg"
+        },
+        {
+            "id": "Product_AluminumScrap",
+            "name": "Aluminum scrap",
+            "icon": "Aluminumscrap",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/AluminumScrap.svg"
+        },
+        {
+            "id": "Product_AluminumScrapPressed",
+            "name": "Aluminum scrap pressed",
+            "icon": "Aluminumscrappressed",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/AluminumScrapPressed.svg"
+        },
+        {
+            "id": "Product_MoltenAluminum",
+            "name": "Molten aluminum",
+            "icon": "Moltenaluminum",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/AluminumMolten.svg"
+        },
+        {
+            "id": "Product_Aluminum",
+            "name": "Aluminum",
+            "icon": "Aluminum",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Aluminum.svg"
+        },
+        {
+            "id": "Product_TitaniumOre",
+            "name": "Titanium ore",
+            "icon": "Titaniumore",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumOre.svg"
+        },
+        {
+            "id": "Product_TitaniumOreCrushed",
+            "name": "Titanium ore crushed",
+            "icon": "Titaniumorecrushed",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumOreCrushed.svg"
+        },
+        {
+            "id": "Product_TitaniumSlag",
+            "name": "Titanium slag",
+            "icon": "Titaniumslag",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumSlag.svg"
+        },
+        {
+            "id": "Product_TitaniumChloride",
+            "name": "Titanium chloride",
+            "icon": "Titaniumchloride",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumChloride.svg"
+        },
+        {
+            "id": "Product_TitaniumChloridePure",
+            "name": "Titanium chloride (pure)",
+            "icon": "Titaniumchloridepure",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumChloridePure.svg"
+        },
+        {
+            "id": "Product_TitaniumSponge",
+            "name": "Titanium sponge",
+            "icon": "Titaniumsponge",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumSponge.svg"
+        },
+        {
+            "id": "Product_MoltenTitanium",
+            "name": "Molten titanium",
+            "icon": "Moltentitanium",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumMolten.svg"
+        },
+        {
+            "id": "Product_MoltenTitaniumAlloy",
+            "name": "Molten titanium alloy",
+            "icon": "Moltentitaniumalloy",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/TitaniumAlloyMolten.svg"
+        },
+        {
+            "id": "Product_TitaniumAlloy",
+            "name": "Titanium alloy",
+            "icon": "Titaniumalloy",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Titanium.svg"
+        },
+        {
+            "id": "Product_GoldOre",
+            "name": "Gold ore",
+            "icon": "Goldore",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GoldOre.svg"
+        },
+        {
+            "id": "Product_GoldOreCrushed",
+            "name": "Gold ore crushed",
+            "icon": "Goldorecrushed",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GoldOreCrushed.svg"
+        },
+        {
+            "id": "Product_GoldOrePowder",
+            "name": "Gold ore powder",
+            "icon": "Goldorepowder",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GoldOrePowder.svg"
+        },
+        {
+            "id": "Product_GoldOreConcentrate",
+            "name": "Gold ore concentrate",
+            "icon": "Goldoreconcentrate",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GoldOreConcentrate.svg"
+        },
+        {
+            "id": "Product_Gold",
+            "name": "Gold",
+            "icon": "Gold",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Gold.svg"
+        },
+        {
+            "id": "Product_GoldScrap",
+            "name": "Gold scrap",
+            "icon": "Goldscrap",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GoldScrap.svg"
+        },
+        {
+            "id": "Product_GoldScrapPressed",
+            "name": "Gold scrap pressed",
+            "icon": "Goldscrappressed",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GoldScrapPressed.svg"
+        },
+        {
+            "id": "Product_Sand",
+            "name": "Sand",
+            "icon": "Sand",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Sand.svg"
+        },
+        {
+            "id": "Product_MoltenGlass",
+            "name": "Molten glass",
+            "icon": "Moltenglass",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GlassMolten.svg"
+        },
+        {
+            "id": "Product_BrokenGlass",
+            "name": "Broken glass",
+            "icon": "Brokenglass",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/BrokenGlass.svg"
+        },
+        {
+            "id": "Product_Glass",
+            "name": "Glass",
+            "icon": "Glass",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Glass.svg"
+        },
+        {
+            "id": "Product_GlassMix",
+            "name": "Glass mix",
+            "icon": "Glassmix",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/GlassMix.svg"
+        },
+        {
+            "id": "Product_UraniumOre",
+            "name": "Uranium ore",
+            "icon": "Uraniumore",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/UraniumOre.svg"
+        },
+        {
+            "id": "Product_UraniumOreCrushed",
+            "name": "Uranium ore powder",
+            "icon": "Uraniumorepowder",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/UraniumOreCrushed.svg"
+        },
+        {
+            "id": "Product_Yellowcake",
+            "name": "Yellowcake",
+            "icon": "Yellowcake",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/YellowCake.svg"
+        },
+        {
+            "id": "Product_UraniumEnriched",
+            "name": "Enriched uranium (4%)",
+            "icon": "Enricheduranium4%",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/UraniumEnriched4Perc.svg"
+        },
+        {
+            "id": "Product_UraniumEnriched20",
+            "name": "Enriched uranium (20%)",
+            "icon": "Enricheduranium20%",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/UraniumEnriched20Perc.svg"
+        },
+        {
+            "id": "Product_UraniumReprocessed",
+            "name": "Reprocessed uranium (1%)",
+            "icon": "Reprocesseduranium1%",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ReprocessedUranium.svg"
+        },
+        {
+            "id": "Product_Plutonium",
+            "name": "Plutonium",
+            "icon": "Plutonium",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Plutonium.svg"
+        },
+        {
+            "id": "Product_UraniumDepleted",
+            "name": "Depleted uranium",
+            "icon": "Depleteduranium",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/DepletedUranium.svg"
+        },
+        {
+            "id": "Product_UraniumRod",
+            "name": "Uranium rod",
+            "icon": "Uraniumrod",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/UraniumRod.svg"
+        },
+        {
+            "id": "Product_MoxRod",
+            "name": "MOX rod",
+            "icon": "MOXrod",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MoxRod.svg"
+        },
+        {
+            "id": "Product_SpentFuel",
+            "name": "Spent fuel",
+            "icon": "Spentfuel",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SpentFuel.svg"
+        },
+        {
+            "id": "Product_SpentMox",
+            "name": "Spent MOX",
+            "icon": "SpentMOX",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SpentMox.svg"
+        },
+        {
+            "id": "Product_FissionProduct",
+            "name": "Fission product",
+            "icon": "Fissionproduct",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/FissionProduct.svg"
+        },
+        {
+            "id": "Product_RetiredWaste",
+            "name": "Retired waste",
+            "icon": "Retiredwaste",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/RetiredWaste.svg"
+        },
+        {
+            "id": "Product_CoreFuel",
+            "name": "Core fuel",
+            "icon": "Corefuel",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CoreFuel.svg"
+        },
+        {
+            "id": "Product_CoreFuelDirty",
+            "name": "Core fuel (spent)",
+            "icon": "Corefuelspent",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CoreFuelDirty.svg"
+        },
+        {
+            "id": "Product_BlanketFuel",
+            "name": "Blanket fuel",
+            "icon": "Blanketfuel",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/BlanketFuel.svg"
+        },
+        {
+            "id": "Product_BlanketFuelEnriched",
+            "name": "Blanket fuel (enriched)",
+            "icon": "Blanketfuelenriched",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/BlanketFuelEnriched.svg"
+        },
+        {
+            "id": "Product_Quartz",
+            "name": "Quartz",
+            "icon": "Quartz",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Quartz.svg"
+        },
+        {
+            "id": "Product_QuartzCrushed",
+            "name": "Quartz crushed",
+            "icon": "Quartzcrushed",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/QuartzCrushed.svg"
+        },
+        {
+            "id": "Product_MoltenSilicon",
+            "name": "Molten silicon",
+            "icon": "Moltensilicon",
+            "type": "MoltenProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SiliconMolten.svg"
+        },
+        {
+            "id": "Product_PolySilicon",
+            "name": "Silicon (poly)",
+            "icon": "Siliconpoly",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Silicon.svg"
+        },
+        {
+            "id": "Product_SiliconWafer",
+            "name": "Silicon wafer",
+            "icon": "Siliconwafer",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MonoWafer.svg"
+        },
+        {
+            "id": "Product_Water",
+            "name": "Water",
+            "icon": "Water",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Water.svg"
+        },
+        {
+            "id": "Product_ChilledWater",
+            "name": "Chilled water",
+            "icon": "Chilledwater",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/WaterChilled.svg"
+        },
+        {
+            "id": "Product_Seawater",
+            "name": "Seawater",
+            "icon": "Seawater",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SeaWater.svg"
+        },
+        {
+            "id": "Product_Brine",
+            "name": "Brine",
+            "icon": "Brine",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Brine.svg"
+        },
+        {
+            "id": "Product_WasteWater",
+            "name": "Waste water",
+            "icon": "Wastewater",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/WasteWater.svg"
+        },
+        {
+            "id": "Product_ToxicSlurry",
+            "name": "Toxic slurry",
+            "icon": "Toxicslurry",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ToxicSlurry.svg"
+        },
+        {
+            "id": "Product_Virtual_PollutedWater",
+            "name": "Water pollution",
+            "icon": "Waterpollution",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/WaterPollution.svg"
+        },
+        {
+            "id": "Product_Virtual_PollutedAir",
+            "name": "Air pollution",
+            "icon": "Airpollution",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/AirPollution.svg"
+        },
+        {
+            "id": "Product_Chlorine",
+            "name": "Chlorine",
+            "icon": "Chlorine",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Chlorine.svg"
+        },
+        {
+            "id": "Product_SteamSp",
+            "name": "Steam (super)",
+            "icon": "Steamsuper",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SteamSp.svg"
+        },
+        {
+            "id": "Product_SteamHi",
+            "name": "Steam (high)",
+            "icon": "Steamhigh",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SteamHp.svg"
+        },
+        {
+            "id": "Product_SteamLP",
+            "name": "Steam (low)",
+            "icon": "Steamlow",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SteamLp.svg"
+        },
+        {
+            "id": "Product_SteamDepleted",
+            "name": "Steam (depleted)",
+            "icon": "Steamdepleted",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SteamDepleated.svg"
+        },
+        {
+            "id": "Product_Salt",
+            "name": "Salt",
+            "icon": "Salt",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Salt.svg"
+        },
+        {
+            "id": "Product_Exhaust",
+            "name": "Exhaust",
+            "icon": "Exhaust",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Exhaust.svg"
+        },
+        {
+            "id": "Product_Recyclables",
+            "name": "Recyclables",
+            "icon": "Recyclables",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MetalScrap128.png"
+        },
+        {
+            "id": "Product_RecyclablesPressed",
+            "name": "Recyclables pressed",
+            "icon": "Recyclablespressed",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/RecyclablesPressed.svg"
+        },
+        {
+            "id": "Product_CrudeOil",
+            "name": "Crude oil",
+            "icon": "Crudeoil",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CrudeOil.svg"
+        },
+        {
+            "id": "Product_Diesel",
+            "name": "Diesel",
+            "icon": "Diesel",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Diesel.svg"
+        },
+        {
+            "id": "Product_Naphtha",
+            "name": "Naphtha",
+            "icon": "Naphtha",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Naphtha.svg"
+        },
+        {
+            "id": "Product_FuelGas",
+            "name": "Fuel gas",
+            "icon": "Fuelgas",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/FuelGas.svg"
+        },
+        {
+            "id": "Product_Sulfur",
+            "name": "Sulfur",
+            "icon": "Sulfur",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Sulfur.svg"
+        },
+        {
+            "id": "Product_SourWater",
+            "name": "Sour water",
+            "icon": "Sourwater",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SourWater.svg"
+        },
+        {
+            "id": "Product_Ammonia",
+            "name": "Ammonia",
+            "icon": "Ammonia",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Ammonia.svg"
+        },
+        {
+            "id": "Product_Acid",
+            "name": "Acid",
+            "icon": "Acid",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Acid.svg"
+        },
+        {
+            "id": "Product_HeavyOil",
+            "name": "Heavy oil",
+            "icon": "Heavyoil",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/OilHeavy.svg"
+        },
+        {
+            "id": "Product_MediumOil",
+            "name": "Medium oil",
+            "icon": "Mediumoil",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/OilMedium.svg"
+        },
+        {
+            "id": "Product_LightOil",
+            "name": "Light oil",
+            "icon": "Lightoil",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/OilLight.svg"
+        },
+        {
+            "id": "Product_Plastic",
+            "name": "Plastic",
+            "icon": "Plastic",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Plastic.svg"
+        },
+        {
+            "id": "Product_Rubber",
+            "name": "Rubber",
+            "icon": "Rubber",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Rubber.svg"
+        },
+        {
+            "id": "Product_Hydrogen",
+            "name": "Hydrogen",
+            "icon": "Hydrogen",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Hydrogen.svg"
+        },
+        {
+            "id": "Product_Nitrogen",
+            "name": "Nitrogen",
+            "icon": "Nitrogen",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Nitrogen.svg"
+        },
+        {
+            "id": "Product_CarbonDioxide",
+            "name": "Carbon dioxide",
+            "icon": "Carbondioxide",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CarbonDioxide.svg"
+        },
+        {
+            "id": "Product_Ethanol",
+            "name": "Ethanol",
+            "icon": "Ethanol",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Ethanol.svg"
+        },
+        {
+            "id": "Product_Potato",
+            "name": "Potato",
+            "icon": "Potato",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Potato128.png"
+        },
+        {
+            "id": "Product_Corn",
+            "name": "Corn",
+            "icon": "Corn",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Corn.svg"
+        },
+        {
+            "id": "Product_Wheat",
+            "name": "Wheat",
+            "icon": "Wheat",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Wheat.svg"
+        },
+        {
+            "id": "Product_Soybean",
+            "name": "Soybean",
+            "icon": "Soybean",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Soybean.svg"
+        },
+        {
+            "id": "Product_SugarCane",
+            "name": "Sugar cane",
+            "icon": "Sugarcane",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SugarCane.svg"
+        },
+        {
+            "id": "Product_Canola",
+            "name": "Canola",
+            "icon": "Canola",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Canola.svg"
+        },
+        {
+            "id": "Product_Vegetables",
+            "name": "Vegetables",
+            "icon": "Vegetables",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Vegetables.svg"
+        },
+        {
+            "id": "Product_Fruit",
+            "name": "Fruit",
+            "icon": "Fruit",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Fruits.svg"
+        },
+        {
+            "id": "Product_Poppy",
+            "name": "Poppy",
+            "icon": "Poppy",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Poppy.svg"
+        },
+        {
+            "id": "Product_Bread",
+            "name": "Bread",
+            "icon": "Bread",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Bread.svg"
+        },
+        {
+            "id": "Product_Flour",
+            "name": "Flour",
+            "icon": "Flour",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Flour.svg"
+        },
+        {
+            "id": "Product_AnimalFeed",
+            "name": "Animal feed",
+            "icon": "Animalfeed",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/AnimalFood.svg"
+        },
+        {
+            "id": "Product_Biomass",
+            "name": "Biomass",
+            "icon": "Biomass",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Biomass.svg"
+        },
+        {
+            "id": "Product_Eggs",
+            "name": "Eggs",
+            "icon": "Eggs",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Eggs.svg"
+        },
+        {
+            "id": "Product_Tofu",
+            "name": "Tofu",
+            "icon": "Tofu",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Tofu.svg"
+        },
+        {
+            "id": "Product_CookingOil",
+            "name": "Cooking oil",
+            "icon": "Cookingoil",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CookingOil.svg"
+        },
+        {
+            "id": "Product_Meat",
+            "name": "Meat",
+            "icon": "Meat",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Meat.svg"
+        },
+        {
+            "id": "Product_Sausage",
+            "name": "Sausage",
+            "icon": "Sausage",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Sausage.svg"
+        },
+        {
+            "id": "Product_Snack",
+            "name": "Snack",
+            "icon": "Snack",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Snack.svg"
+        },
+        {
+            "id": "Product_Cake",
+            "name": "Cake",
+            "icon": "Cake",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Cake.svg"
+        },
+        {
+            "id": "Product_FoodPack",
+            "name": "Food pack",
+            "icon": "Foodpack",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/FoodPack.svg"
+        },
+        {
+            "id": "Product_Chicken",
+            "name": "Chicken",
+            "icon": "Chicken",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Chicken.svg"
+        },
+        {
+            "id": "Product_CargoShip",
+            "name": "Cargo ship",
+            "icon": "Cargoship",
+            "type": "VirtualProductProto",
+            "icon_path": "Assets/Unity/UserInterface/WorldMap/CargoShipStoryIcon256.png"
+        },
+        {
+            "id": "Product_ChickenCarcass",
+            "name": "Chicken carcass",
+            "icon": "Chickencarcass",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ChickenCarcass.svg"
+        },
+        {
+            "id": "Product_MeatTrimmings",
+            "name": "Meat trimmings",
+            "icon": "Meattrimmings",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MeatTrimmings.svg"
+        },
+        {
+            "id": "Product_Sugar",
+            "name": "Sugar",
+            "icon": "Sugar",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Sugar.svg"
+        },
+        {
+            "id": "Product_CornMash",
+            "name": "Corn mash",
+            "icon": "Cornmash",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CornMash.svg"
+        },
+        {
+            "id": "Product_HouseholdGoods",
+            "name": "Household goods",
+            "icon": "Householdgoods",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/HouseholdGoods.svg"
+        },
+        {
+            "id": "Product_HouseholdAppliances",
+            "name": "Household appliances",
+            "icon": "Householdappliances",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/HouseholdAppliances.svg"
+        },
+        {
+            "id": "Product_ConsumerElectronics",
+            "name": "Consumer electronics",
+            "icon": "Consumerelectronics",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ConsumerElectronics.svg"
+        },
+        {
+            "id": "Product_LuxuryGoods",
+            "name": "Luxury goods",
+            "icon": "Luxurygoods",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/LuxuryGoods.svg"
+        },
+        {
+            "id": "Product_ImportedGoods",
+            "name": "Imported goods",
+            "icon": "Importedgoods",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ImportedGoods.svg"
+        },
+        {
+            "id": "Product_Antibiotics",
+            "name": "Antibiotics",
+            "icon": "Antibiotics",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Penicillin.svg"
+        },
+        {
+            "id": "Product_Disinfectant",
+            "name": "Disinfectant",
+            "icon": "Disinfectant",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Disinfectant.svg"
+        },
+        {
+            "id": "Product_Anesthetics",
+            "name": "Anesthetics",
+            "icon": "Anesthetics",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Anesthetics.svg"
+        },
+        {
+            "id": "Product_Morphine",
+            "name": "Morphine",
+            "icon": "Morphine",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Morphine.svg"
+        },
+        {
+            "id": "Product_MedicalEquipment",
+            "name": "Medical equipment",
+            "icon": "Medicalequipment",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MedicalEquipment.svg"
+        },
+        {
+            "id": "Product_MedicalSupplies",
+            "name": "Medical Supplies",
+            "icon": "MedicalSupplies",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MedicalSupplies.svg"
+        },
+        {
+            "id": "Product_MedicalSupplies2",
+            "name": "Medical Supplies II",
+            "icon": "MedicalSupplies2",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MedicalSupplies2.svg"
+        },
+        {
+            "id": "Product_MedicalSupplies3",
+            "name": "Medical Supplies III",
+            "icon": "MedicalSupplies3",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MedicalSupplies3.svg"
+        },
+        {
+            "id": "Product_Cement",
+            "name": "Cement",
+            "icon": "Cement",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Cement.svg"
+        },
+        {
+            "id": "Product_ConcreteSlab",
+            "name": "Concrete slab",
+            "icon": "Concreteslab",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Concrete.svg"
+        },
+        {
+            "id": "Product_Bricks",
+            "name": "Bricks",
+            "icon": "Bricks",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Bricks.svg"
+        },
+        {
+            "id": "Product_ConstructionParts",
+            "name": "Construction Parts",
+            "icon": "ConstructionParts",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ConstructionParts1.svg"
+        },
+        {
+            "id": "Product_ConstructionParts2",
+            "name": "Construction Parts II",
+            "icon": "ConstructionParts2",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ConstructionParts2.svg"
+        },
+        {
+            "id": "Product_ConstructionParts3",
+            "name": "Construction Parts III",
+            "icon": "ConstructionParts3",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ConstructionParts3.svg"
+        },
+        {
+            "id": "Product_ConstructionParts4",
+            "name": "Construction Parts IV",
+            "icon": "ConstructionParts4",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ConstructionParts4.svg"
+        },
+        {
+            "id": "Product_MechanicalParts",
+            "name": "Mechanical Parts",
+            "icon": "MechanicalParts",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MechanicalParts.svg"
+        },
+        {
+            "id": "Product_VehicleParts",
+            "name": "Vehicle Parts",
+            "icon": "VehicleParts",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/VehicleParts1.svg"
+        },
+        {
+            "id": "Product_VehicleParts2",
+            "name": "Vehicle Parts II",
+            "icon": "VehicleParts2",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/VehicleParts2.svg"
+        },
+        {
+            "id": "Product_VehicleParts3",
+            "name": "Vehicle Parts III",
+            "icon": "VehicleParts3",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/VehicleParts3.svg"
+        },
+        {
+            "id": "Product_LabEquipment",
+            "name": "Lab Equipment",
+            "icon": "LabEquipment",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/LabEquipment1.svg"
+        },
+        {
+            "id": "Product_LabEquipment2",
+            "name": "Lab Equipment II",
+            "icon": "LabEquipment2",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/LabEquipment2.svg"
+        },
+        {
+            "id": "Product_LabEquipment3",
+            "name": "Lab Equipment III",
+            "icon": "LabEquipment3",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/LabEquipment3.svg"
+        },
+        {
+            "id": "Product_LabEquipment4",
+            "name": "Lab Equipment IV",
+            "icon": "LabEquipment4",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/LabEquipment4.svg"
+        },
+        {
+            "id": "Product_RailParts",
+            "name": "Rail Parts",
+            "icon": "RailParts",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/RailParts.svg"
+        },
+        {
+            "id": "Product_OfficeSupplies",
+            "name": "Office Supplies",
+            "icon": "OfficeSupplies",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/OfficeSupplies.svg"
+        },
+        {
+            "id": "Product_Electronics",
+            "name": "Electronics",
+            "icon": "Electronics",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Electronics1.svg"
+        },
+        {
+            "id": "Product_PCB",
+            "name": "PCB",
+            "icon": "PCB",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/PCB.svg"
+        },
+        {
+            "id": "Product_Electronics2",
+            "name": "Electronics II",
+            "icon": "Electronics2",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Electronics2.svg"
+        },
+        {
+            "id": "Product_Electronics3",
+            "name": "Electronics III",
+            "icon": "Electronics3",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Electronics3.svg"
+        },
+        {
+            "id": "Product_Electronics4",
+            "name": "Electronics IV",
+            "icon": "Electronics4",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Electronics4.svg"
+        },
+        {
+            "id": "Product_Server",
+            "name": "Server",
+            "icon": "Server",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Server.svg"
+        },
+        {
+            "id": "Product_Microchips",
+            "name": "Microchips",
+            "icon": "Microchips",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Microchip.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage1A",
+            "name": "Microchips stage 1 a",
+            "icon": "Microchipsstage1a",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer1A.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage1B",
+            "name": "Microchips stage 1 b",
+            "icon": "Microchipsstage1b",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer1B.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage1C",
+            "name": "Microchips stage 1 c",
+            "icon": "Microchipsstage1c",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer1C.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage2A",
+            "name": "Microchips stage 2 a",
+            "icon": "Microchipsstage2a",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer2A.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage2B",
+            "name": "Microchips stage 2 b",
+            "icon": "Microchipsstage2b",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer2B.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage2C",
+            "name": "Microchips stage 2 c",
+            "icon": "Microchipsstage2c",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer2C.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage3A",
+            "name": "Microchips stage 3 a",
+            "icon": "Microchipsstage3a",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer3A.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage3B",
+            "name": "Microchips stage 3 b",
+            "icon": "Microchipsstage3b",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer3B.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage3C",
+            "name": "Microchips stage 3 c",
+            "icon": "Microchipsstage3c",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer3C.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage4A",
+            "name": "Microchips stage 4 a",
+            "icon": "Microchipsstage4a",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer4A.svg"
+        },
+        {
+            "id": "Product_MicrochipsStage4B",
+            "name": "Microchips stage 4 b",
+            "icon": "Microchipsstage4b",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/MicrochipWafer4B.svg"
+        },
+        {
+            "id": "Product_Diamond",
+            "name": "Diamond",
+            "icon": "Diamond",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Diamond.svg"
+        },
+        {
+            "id": "Product_DiamondPaste",
+            "name": "Diamond paste",
+            "icon": "Diamondpaste",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/DiamondPaste.svg"
+        },
+        {
+            "id": "Product_SapphireWafer",
+            "name": "Sapphire wafer",
+            "icon": "Sapphirewafer",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SapphireWafer.svg"
+        },
+        {
+            "id": "Product_Lens",
+            "name": "Lens",
+            "icon": "Lens",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Lens.svg"
+        },
+        {
+            "id": "Product_SolarCell",
+            "name": "Solar cell",
+            "icon": "Solarcell",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SolarCell.svg"
+        },
+        {
+            "id": "Product_SolarCellMono",
+            "name": "Solar cell mono",
+            "icon": "Solarcellmono",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SolarCellMono.svg"
+        },
+        {
+            "id": "Product_CompositePanel",
+            "name": "Composite panel",
+            "icon": "Compositepanel",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CompositePanel.svg"
+        },
+        {
+            "id": "Product_CompositeBodyBasic",
+            "name": "Composite core basic",
+            "icon": "Compositecorebasic",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CompositeCore1.svg"
+        },
+        {
+            "id": "Product_CompositeCore",
+            "name": "Composite core",
+            "icon": "Compositecore",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CompositeCore2.svg"
+        },
+        {
+            "id": "Product_ChemicalFuel",
+            "name": "Chemical fuel",
+            "icon": "Chemicalfuel",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/ChemicalFuel.svg"
+        },
+        {
+            "id": "Product_SpaceStationParts1",
+            "name": "Station parts (basic)",
+            "icon": "Stationpartsbasic",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SpaceStationParts1.svg"
+        },
+        {
+            "id": "Product_SpaceStationParts2",
+            "name": "Station parts",
+            "icon": "Stationparts",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SpaceStationParts2.svg"
+        },
+        {
+            "id": "Product_CrewSupplies",
+            "name": "Crew supplies",
+            "icon": "Crewsupplies",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CrewSupplies.svg"
+        },
+        {
+            "id": "Product_SpaceProbeParts",
+            "name": "Space probe parts",
+            "icon": "Spaceprobeparts",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/SpaceProbeParts.svg"
+        },
+        {
+            "id": "Product_AsteroidBoosterParts",
+            "name": "Asteroid booster parts",
+            "icon": "Asteroidboosterparts",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/AsteroidBoosterParts.svg"
+        },
+        {
+            "id": "Product_CompactReactor",
+            "name": "Compact reactor",
+            "icon": "Compactreactor",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/CompactReactor.svg"
+        },
+        {
+            "id": "Product_Oxygen",
+            "name": "Oxygen",
+            "icon": "Oxygen",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Oxygen.svg"
+        },
+        {
+            "id": "Product_HydrogenFluoride",
+            "name": "Hydrogen fluoride",
+            "icon": "Hydrogenfluoride",
+            "type": "FluidProductProto",
+            "icon_path": "Assets/Base/Products/Icons/HydrogenFluoride.svg"
+        },
+        {
+            "id": "Product_Waste",
+            "name": "Waste",
+            "icon": "Waste",
+            "type": "LooseProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Waste.svg"
+        },
+        {
+            "id": "Product_WastePressed",
+            "name": "Waste pressed",
+            "icon": "Wastepressed",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/WastePressed.svg"
+        },
+        {
+            "id": "Product_Flowers",
+            "name": "Flowers",
+            "icon": "Flowers",
+            "type": "CountableProductProto",
+            "icon_path": "Assets/Base/Products/Icons/Flowers.svg"
+        }
+    ]
+}

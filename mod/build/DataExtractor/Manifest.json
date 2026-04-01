@@ -1,0 +1,16 @@
+{
+  "id": "DataExtractor",
+  "version": "1.0.0",
+  "display_name": "Data Extractor Mod By ItsDesm (modified by doubleaxe)",
+  "description_short": "",
+  "description_long": "",
+  "authors": [ "ItsDesm", "doubleaxe" ],
+  "primary_dlls": [ "DataExtractor.dll" ],
+  "min_game_version": "0.8.0",
+  "max_verified_game_version": "0.8.2",
+  "mod_dependencies": [],
+  "optional_mod_dependencies": [],
+  "incompatible_mods": [],
+  "non_locking_dll_load": true,
+  "can_add_to_saved_game": true
+}

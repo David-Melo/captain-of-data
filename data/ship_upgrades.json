@@ -1,5 +1,5 @@
 {
-    "game_version": "0.4.7.0",
+    "game_version": "0.8.1.0",
     "engines": [
         {
             "name": "Ship engine",
@@ -71,7 +71,43 @@
             ]
         },
         {
+            "name": "Gun I (rear)",
+            "range": 15,
+            "damage": 50,
+            "extra_crew_needed": 10,
+            "costs": [
+                {
+                    "product": "Iron",
+                    "quantity": 180
+                },
+                {
+                    "product": "Mechanical Parts",
+                    "quantity": 40
+                }
+            ]
+        },
+        {
             "name": "Gun II (front)",
+            "range": 20,
+            "damage": 150,
+            "extra_crew_needed": 15,
+            "costs": [
+                {
+                    "product": "Steel",
+                    "quantity": 180
+                },
+                {
+                    "product": "Mechanical Parts",
+                    "quantity": 80
+                },
+                {
+                    "product": "Electronics",
+                    "quantity": 20
+                }
+            ]
+        },
+        {
+            "name": "Gun II (rear)",
             "range": 20,
             "damage": 150,
             "extra_crew_needed": 15,
@@ -107,38 +143,6 @@
                 {
                     "product": "Electronics",
                     "quantity": 160
-                }
-            ]
-        },
-        {
-            "name": "Gun I (rear)",
-            "range": 15,
-            "damage": 50,
-            "extra_crew_needed": 10,
-            "costs": [
-                {
-                    "product": "Iron",
-                    "quantity": 180
-                },
-                {
-                    "product": "Mechanical Parts",
-                    "quantity": 40
-                }
-            ]
-        },
-        {
-            "name": "Gun I (rear)",
-            "range": 15,
-            "damage": 50,
-            "extra_crew_needed": 10,
-            "costs": [
-                {
-                    "product": "Iron",
-                    "quantity": 180
-                },
-                {
-                    "product": "Mechanical Parts",
-                    "quantity": 40
                 }
             ]
         },

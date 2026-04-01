@@ -1,6 +1,44 @@
 {
-    "game_version": "0.4.7.0",
+    "game_version": "0.8.1.0",
     "vehicles": [
+        {
+            "name": "Truck",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 30
+                },
+                {
+                    "product": "Rubber",
+                    "quantity": 30
+                },
+                {
+                    "product": "Diesel",
+                    "quantity": 15
+                }
+            ]
+        },
+        {
+            "name": "Truck",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 30
+                },
+                {
+                    "product": "Rubber",
+                    "quantity": 30
+                },
+                {
+                    "product": "Electronics",
+                    "quantity": 20
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 19
+                }
+            ]
+        },
         {
             "name": "Pickup",
             "costs": [
@@ -19,19 +57,19 @@
             ]
         },
         {
-            "name": "Truck",
+            "name": "Haul truck (dump)",
             "costs": [
                 {
-                    "product": "Vehicle Parts II",
-                    "quantity": 40
+                    "product": "Vehicle Parts III",
+                    "quantity": 90
                 },
                 {
                     "product": "Rubber",
-                    "quantity": 30
+                    "quantity": 90
                 },
                 {
                     "product": "Diesel",
-                    "quantity": 15
+                    "quantity": 36
                 }
             ]
         },
@@ -40,11 +78,11 @@
             "costs": [
                 {
                     "product": "Vehicle Parts III",
-                    "quantity": 120
+                    "quantity": 90
                 },
                 {
                     "product": "Rubber",
-                    "quantity": 120
+                    "quantity": 90
                 },
                 {
                     "product": "Diesel",
@@ -56,16 +94,143 @@
             "name": "Haul truck (dump)",
             "costs": [
                 {
-                    "product": "Vehicle Parts III",
-                    "quantity": 120
+                    "product": "Rubber",
+                    "quantity": 90
                 },
                 {
+                    "product": "Vehicle Parts III",
+                    "quantity": 110
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 45
+                }
+            ]
+        },
+        {
+            "name": "Haul truck (tank)",
+            "costs": [
+                {
                     "product": "Rubber",
-                    "quantity": 120
+                    "quantity": 90
+                },
+                {
+                    "product": "Vehicle Parts III",
+                    "quantity": 110
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 45
+                }
+            ]
+        },
+        {
+            "name": "Amphibious truck",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 20
                 },
                 {
                     "product": "Diesel",
                     "quantity": 36
+                }
+            ]
+        },
+        {
+            "name": "Amphibious truck",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 20
+                },
+                {
+                    "product": "Electronics",
+                    "quantity": 20
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 45
+                }
+            ]
+        },
+        {
+            "name": "Mega excavator",
+            "costs": [
+                {
+                    "product": "Vehicle Parts III",
+                    "quantity": 180
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 90
+                },
+                {
+                    "product": "Diesel",
+                    "quantity": 70
+                }
+            ]
+        },
+        {
+            "name": "Mega excavator",
+            "costs": [
+                {
+                    "product": "Steel",
+                    "quantity": 90
+                },
+                {
+                    "product": "Vehicle Parts III",
+                    "quantity": 220
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 88
+                }
+            ]
+        },
+        {
+            "name": "Excavator",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 30
+                },
+                {
+                    "product": "Diesel",
+                    "quantity": 27
+                }
+            ]
+        },
+        {
+            "name": "Excavator",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 30
+                },
+                {
+                    "product": "Electronics",
+                    "quantity": 40
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 34
                 }
             ]
         },
@@ -87,53 +252,36 @@
             ]
         },
         {
-            "name": "Excavator",
+            "name": "Amphibious excavator",
             "costs": [
                 {
                     "product": "Vehicle Parts II",
-                    "quantity": 80
+                    "quantity": 60
                 },
                 {
                     "product": "Steel",
-                    "quantity": 40
-                },
-                {
-                    "product": "Diesel",
-                    "quantity": 27
-                }
-            ]
-        },
-        {
-            "name": "Mega excavator",
-            "costs": [
-                {
-                    "product": "Vehicle Parts III",
-                    "quantity": 240
-                },
-                {
-                    "product": "Steel",
-                    "quantity": 120
-                },
-                {
-                    "product": "Diesel",
-                    "quantity": 70
-                }
-            ]
-        },
-        {
-            "name": "Tree harvester",
-            "costs": [
-                {
-                    "product": "Vehicle Parts",
                     "quantity": 30
                 },
                 {
-                    "product": "Iron",
-                    "quantity": 10
+                    "product": "Diesel",
+                    "quantity": 45
+                }
+            ]
+        },
+        {
+            "name": "Amphibious excavator",
+            "costs": [
+                {
+                    "product": "Steel",
+                    "quantity": 30
                 },
                 {
-                    "product": "Diesel",
-                    "quantity": 12
+                    "product": "Vehicle Parts II",
+                    "quantity": 220
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 56
                 }
             ]
         },
@@ -151,6 +299,44 @@
                 {
                     "product": "Diesel",
                     "quantity": 32
+                }
+            ]
+        },
+        {
+            "name": "Large tree harvester",
+            "costs": [
+                {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
+                    "product": "Steel",
+                    "quantity": 20
+                },
+                {
+                    "product": "Electronics",
+                    "quantity": 40
+                },
+                {
+                    "product": "Hydrogen",
+                    "quantity": 40
+                }
+            ]
+        },
+        {
+            "name": "Tree harvester",
+            "costs": [
+                {
+                    "product": "Vehicle Parts",
+                    "quantity": 30
+                },
+                {
+                    "product": "Iron",
+                    "quantity": 10
+                },
+                {
+                    "product": "Diesel",
+                    "quantity": 12
                 }
             ]
         }
