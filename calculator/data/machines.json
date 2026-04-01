@@ -4,15 +4,15 @@
         "game_id": "AirSeparator",
         "icon": "AirSeparator.png",
         "name": "Air Separator",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "iron",
+        "category_name": "Iron",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
-        "electricity_consumed": 60,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -37,20 +37,101 @@
             ]
         }
     },
+    "alloy_mixer": {
+        "id": "alloy_mixer",
+        "game_id": "AlloyMixer",
+        "icon": "AlloyMixer.png",
+        "name": "Alloy Mixer",
+        "category_id": "titanium",
+        "category_name": "Titanium",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 12,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 1000,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 100
+            }
+        ],
+        "recipes": [
+            "titanium_alloy_mixing"
+        ],
+        "products": {
+            "input": [
+                "molten_aluminum",
+                "molten_titanium"
+            ],
+            "output": [
+                "molten_titanium_alloy"
+            ]
+        }
+    },
+    "aluminum_cell": {
+        "id": "aluminum_cell",
+        "game_id": "AluminumCell",
+        "icon": "AluminumCell.png",
+        "name": "Aluminum Cell",
+        "category_id": "aluminum",
+        "category_name": "Aluminum",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 14,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 12,
+        "electricity_consumed": 8000,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 300
+            }
+        ],
+        "recipes": [
+            "aluminum_electrolysis"
+        ],
+        "products": {
+            "input": [
+                "alumina",
+                "graphite"
+            ],
+            "output": [
+                "carbon_dioxide",
+                "molten_aluminum"
+            ]
+        }
+    },
     "anaerobic_digester": {
         "id": "anaerobic_digester",
         "game_id": "AnaerobicDigester",
         "icon": "AnaerobicDigester.png",
         "name": "Anaerobic Digester",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "solid",
+        "category_name": "Solid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 4,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 1,
-        "electricity_consumed": 10,
+        "electricity_consumed": 50,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -66,15 +147,29 @@
         ],
         "recipes": [
             "digestion",
+            "digestion_10",
+            "digestion_11",
             "digestion_2",
             "digestion_3",
-            "digestion_4"
+            "digestion_4",
+            "digestion_5",
+            "digestion_6",
+            "digestion_7",
+            "digestion_8",
+            "digestion_9"
         ],
         "products": {
             "input": [
+                "corn",
+                "eggs",
+                "fruit",
                 "meat_trimmings",
+                "poppy",
                 "potato",
                 "sludge",
+                "soybean",
+                "sugar_cane",
+                "vegetables",
                 "wheat"
             ],
             "output": [
@@ -88,15 +183,15 @@
         "game_id": "ArcFurnace",
         "icon": "ArcFurnace.png",
         "name": "Arc Furnace",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "silicon",
+        "category_name": "Silicon",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 8,
+        "workers": 12,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 4,
-        "electricity_consumed": 750,
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 4000,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -111,16 +206,35 @@
             }
         ],
         "recipes": [
+            "aluminum_scrap_smelting_i",
+            "copper_scrap_smelting_arc",
+            "copper_smelting_arc",
+            "glass_smelting_3",
+            "glass_smelting_arc",
+            "iron_scrap_smelting_arc",
+            "iron_smelting_arc",
             "silicon_smelting_arc"
         ],
         "products": {
             "input": [
+                "aluminum_scrap",
+                "broken_glass",
                 "coal",
+                "copper_ore_crushed",
+                "copper_scrap",
+                "glass_mix",
                 "graphite",
-                "quartz"
+                "iron_ore_crushed",
+                "iron_scrap",
+                "limestone",
+                "sand"
             ],
             "output": [
                 "exhaust",
+                "molten_aluminum",
+                "molten_copper",
+                "molten_glass",
+                "molten_iron",
                 "molten_silicon",
                 "slag"
             ]
@@ -131,17 +245,17 @@
         "game_id": "ArcFurnace2",
         "icon": "ArcFurnace2.png",
         "name": "Arc Furnace II",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "titanium",
+        "category_name": "Titanium",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 18,
+        "workers": 14,
         "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 4,
-        "electricity_consumed": 1400,
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 6000,
         "electricity_generated": 0,
-        "computing_consumed": 6,
+        "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
         "unity_cost": 0,
@@ -154,16 +268,20 @@
             }
         ],
         "recipes": [
-            "copper_scrap_smelting_arc",
-            "copper_smelting_arc",
-            "glass_smelting_3",
-            "glass_smelting_4",
-            "iron_scrap_smelting_arc",
-            "iron_smelting_arc",
-            "silicon_smelting_arc_ii"
+            "aluminum_scrap_smelting_ii",
+            "copper_scrap_smelting_arc_ii",
+            "copper_smelting_arc_ii",
+            "glass_smelting",
+            "glass_smelting_2",
+            "ilmenite_smelting_arc_ii",
+            "iron_scrap_smelting_arc_ii",
+            "iron_smelting_arc_ii",
+            "silicon_smelting_arc_ii",
+            "titanium_smelting_arc_ii"
         ],
         "products": {
             "input": [
+                "aluminum_scrap",
                 "broken_glass",
                 "coal",
                 "copper_ore_crushed",
@@ -173,36 +291,93 @@
                 "iron_ore_crushed",
                 "iron_scrap",
                 "limestone",
-                "quartz",
                 "sand",
+                "titanium_ore_crushed",
+                "titanium_sponge",
                 "water"
             ],
             "output": [
                 "exhaust",
+                "molten_aluminum",
                 "molten_copper",
                 "molten_glass",
                 "molten_iron",
                 "molten_silicon",
+                "molten_titanium",
                 "slag",
-                "steam_hi",
-                "steam_lo"
+                "steam_low",
+                "titanium_slag"
             ]
         }
     },
-    "assembly_electric": {
-        "id": "assembly_electric",
+    "assembly_i": {
+        "id": "assembly_i",
+        "game_id": "AssemblyManual",
+        "icon": "AssemblyManual.png",
+        "name": "Assembly I",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 4,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 40,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 25
+            }
+        ],
+        "recipes": [
+            "cp_assembly_t1",
+            "cp2_assembly_t1_2",
+            "electronics_assembly_t1",
+            "mech._parts_assembly_t1",
+            "vehicle_parts_assembly_t1"
+        ],
+        "products": {
+            "input": [
+                "concrete_slab",
+                "construction_parts",
+                "copper",
+                "electronics",
+                "iron",
+                "mechanical_parts",
+                "rubber",
+                "wood"
+            ],
+            "output": [
+                "construction_parts",
+                "construction_parts_ii",
+                "electronics",
+                "mechanical_parts",
+                "vehicle_parts"
+            ]
+        }
+    },
+    "assembly_ii": {
+        "id": "assembly_ii",
         "game_id": "AssemblyElectrified",
         "icon": "AssemblyElectrified.png",
-        "name": "Assembly (Electric)",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "name": "Assembly II",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 20,
+        "electricity_consumed": 80,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -218,11 +393,11 @@
         ],
         "recipes": [
             "cp_assembly_t2",
-            "cp2_assembly_t1_2",
+            "cp2_assembly_t1",
             "cp3_assembly_t1",
             "electronics_assembly_t2",
             "household_goods_assembly_t1",
-            "lab_equipment_assembly_t1",
+            "lab_equipment_1_assembly_t1",
             "mech._parts_assembly_t2",
             "vehicle_parts_assembly_t2"
         ],
@@ -252,20 +427,20 @@
             ]
         }
     },
-    "assembly_electric_ii": {
-        "id": "assembly_electric_ii",
+    "assembly_iii": {
+        "id": "assembly_iii",
         "game_id": "AssemblyElectrifiedT2",
         "icon": "AssemblyElectrifiedT2.png",
-        "name": "Assembly (Electric) II",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "name": "Assembly III",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 8,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 30,
+        "electricity_consumed": 150,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -280,29 +455,36 @@
             }
         ],
         "recipes": [
+            "composite_core_basic_assembly_3",
+            "composite_panel_assembly_3",
+            "cp_assembly_steel_t1",
             "cp_assembly_t3",
             "cp2_assembly_t2",
             "cp3_assembly_t2",
+            "cp4_assembly_t1",
+            "crew_supplies_assembly_3",
             "electronics_2_assembly_t1",
-            "electronics_3_assembly_t1",
             "electronics_assembly_t3",
-            "food_pack_assembly_eggs",
-            "food_pack_assembly_meat",
+            "food_pack_assembly_eggs_3",
+            "food_pack_assembly_meat_3",
+            "food_pack_assembly_tofu_3",
             "household_appliances_assembly_t1",
             "household_goods_assembly_t2",
-            "lab_equipment_2_assembly_t2",
-            "lab_equipment_4_assembly_t2",
-            "lab_equipment_assembly_t1_2",
-            "lab_equipment_assembly_t2",
-            "mech._parts_assembly_t3-1",
+            "lab_equipment_1_assembly_t2",
+            "lab_equipment_2_assembly_t1",
+            "lab_equipment_3_assembly_t1",
+            "luxury_goods_assembly_t1",
+            "mech._parts_assembly_t3-1_3",
             "mech._parts_assembly_t3-2",
             "medical_equipment_assembly_t1",
             "medical_supplies_assembly_t1",
             "medical_supplies_assembly_t1_2",
             "medical_supplies_iii_assembly_t1",
+            "office_supplies_assembly_3",
             "pcb_assembly_t1",
-            "server_assembly_t1",
-            "solar_cell_assembly",
+            "rail_parts_assembly_3",
+            "solar_cell_assembly_4",
+            "station_parts_basic_assembly_3",
             "uranium_rods_t1",
             "vehicle_parts_2_assembly_t1",
             "vehicle_parts_3_assembly_t1",
@@ -310,64 +492,77 @@
         ],
         "products": {
             "input": [
+                "aluminum",
                 "anesthetics",
                 "antibiotics",
                 "bread",
+                "chemical_fuel",
+                "composite_core_basic",
+                "composite_panel",
                 "concrete_slab",
                 "construction_parts",
                 "construction_parts_ii",
+                "construction_parts_iii",
                 "copper",
                 "disinfectant",
                 "eggs",
                 "electronics",
                 "electronics_ii",
-                "electronics_iii",
+                "enriched_uranium_4%",
+                "food_pack",
                 "glass",
+                "gold",
+                "household_goods",
+                "imported_goods",
                 "iron",
                 "lab_equipment",
                 "lab_equipment_ii",
-                "lab_equipment_iii",
-                "liquid_nitrogen",
                 "meat",
                 "mechanical_parts",
                 "medical_equipment",
                 "medical_supplies",
                 "medical_supplies_ii",
-                "microchips",
                 "morphine",
+                "paper",
                 "pcb",
                 "plastic",
                 "rubber",
                 "silicon_poly",
-                "snack",
+                "solar_cell",
                 "steel",
-                "uranium_pellets",
+                "tofu",
+                "vegetables",
                 "vehicle_parts",
                 "vehicle_parts_ii",
                 "wood"
             ],
             "output": [
+                "composite_core_basic",
+                "composite_panel",
                 "construction_parts",
                 "construction_parts_ii",
                 "construction_parts_iii",
+                "construction_parts_iv",
+                "crew_supplies",
                 "electronics",
                 "electronics_ii",
-                "electronics_iii",
                 "food_pack",
                 "household_appliances",
                 "household_goods",
                 "lab_equipment",
                 "lab_equipment_ii",
                 "lab_equipment_iii",
-                "lab_equipment_iv",
+                "luxury_goods",
                 "mechanical_parts",
                 "medical_equipment",
                 "medical_supplies",
                 "medical_supplies_ii",
                 "medical_supplies_iii",
+                "office_supplies",
                 "pcb",
-                "server",
+                "rail_parts",
                 "solar_cell",
+                "station_parts_basic",
                 "uranium_rod",
                 "vehicle_parts",
                 "vehicle_parts_ii",
@@ -375,194 +570,175 @@
             ]
         }
     },
-    "assembly_manual": {
-        "id": "assembly_manual",
-        "game_id": "AssemblyManual",
-        "icon": "AssemblyManual.png",
-        "name": "Assembly (Manual)",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
-        "isMine": false,
-        "isStorage": false,
-        "isFarm": false,
-        "workers": 4,
-        "maintenance_cost_units": null,
-        "maintenance_cost_quantity": 0,
-        "electricity_consumed": 0,
-        "electricity_generated": 0,
-        "computing_consumed": 0,
-        "computing_generated": 0,
-        "storage_capacity": 0,
-        "unity_cost": 0,
-        "research_speed": 0,
-        "build_costs": [
-            {
-                "id": "construction_parts",
-                "name": "Construction Parts",
-                "quantity": 25
-            }
-        ],
-        "recipes": [
-            "cp_assembly_t1",
-            "cp2_assembly_t1",
-            "electronics_assembly_t1",
-            "mech._parts_assembly_t1",
-            "vehicle_parts_assembly_t1"
-        ],
-        "products": {
-            "input": [
-                "concrete_slab",
-                "construction_parts",
-                "copper",
-                "electronics",
-                "iron",
-                "mechanical_parts",
-                "rubber",
-                "wood"
-            ],
-            "output": [
-                "construction_parts",
-                "construction_parts_ii",
-                "electronics",
-                "mechanical_parts",
-                "vehicle_parts"
-            ]
-        }
-    },
-    "assembly_robotic": {
-        "id": "assembly_robotic",
+    "assembly_iv": {
+        "id": "assembly_iv",
         "game_id": "AssemblyRoboticT1",
         "icon": "AssemblyRoboticT1.png",
-        "name": "Assembly (Robotic)",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "name": "Assembly IV",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 3,
+        "workers": 2,
         "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 5,
-        "electricity_consumed": 50,
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 250,
         "electricity_generated": 0,
-        "computing_consumed": 4,
+        "computing_consumed": 3,
         "computing_generated": 0,
         "storage_capacity": 0,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 60
-            },
-            {
-                "id": "electronics_ii",
-                "name": "Electronics II",
-                "quantity": 30
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 40
             }
         ],
         "recipes": [
-            "cp_assembly_t3_2",
+            "composite_core_basic_assembly_2",
+            "composite_panel_assembly_2",
+            "cp_assembly_steel_t2",
+            "cp_assembly_t4",
             "cp2_assembly_t3",
             "cp3_assembly_t3",
-            "cp4_assembly_t1",
+            "cp4_assembly_t2",
+            "crew_supplies_assembly_2",
             "electronics_2_assembly_t2",
             "electronics_3_assembly_t2",
             "electronics_assembly_t4",
+            "food_pack_assembly_eggs_2",
+            "food_pack_assembly_meat_2",
+            "food_pack_assembly_tofu_2",
             "household_appliances_assembly_t2",
             "household_goods_assembly_t3",
-            "lab_equipment_2_assembly_t3",
-            "lab_equipment_4_assembly_t3",
-            "lab_equipment_assembly_t2_2",
-            "lab_equipment_assembly_t3",
+            "lab_equipment_1_assembly_t3",
+            "lab_equipment_2_assembly_t2_2",
+            "lab_equipment_3_assembly_t2_2",
+            "lab_equipment_4_assembly_t1",
+            "luxury_goods_assembly_t2",
+            "mech._parts_assembly_t3-1_2",
             "mech._parts_assembly_t4",
             "medical_equipment_assembly_t2",
             "medical_supplies_assembly_t2",
             "medical_supplies_assembly_t2_2",
             "medical_supplies_iii_assembly_t2",
+            "office_supplies_assembly_2",
             "pcb_assembly_t2",
+            "rail_parts_assembly_2",
             "server_assembly_t2",
-            "solar_cell_assembly_2",
+            "solar_cell_assembly_3",
+            "station_parts_basic_assembly_2",
+            "uranium_enriched_t1",
+            "uranium_rods_t2",
             "vehicle_parts_2_assembly_t2",
             "vehicle_parts_3_assembly_t2",
             "vehicle_parts_assembly_t4"
         ],
         "products": {
             "input": [
+                "aluminum",
                 "anesthetics",
                 "antibiotics",
+                "bread",
+                "chemical_fuel",
+                "composite_core_basic",
+                "composite_panel",
                 "concrete_slab",
                 "construction_parts",
                 "construction_parts_ii",
                 "construction_parts_iii",
                 "copper",
                 "disinfectant",
+                "eggs",
                 "electronics",
                 "electronics_ii",
                 "electronics_iii",
+                "enriched_uranium_4%",
+                "food_pack",
                 "glass",
+                "gold",
+                "household_goods",
+                "imported_goods",
                 "iron",
                 "lab_equipment",
                 "lab_equipment_ii",
                 "lab_equipment_iii",
-                "liquid_nitrogen",
+                "meat",
                 "mechanical_parts",
                 "medical_equipment",
                 "medical_supplies",
                 "medical_supplies_ii",
                 "microchips",
                 "morphine",
+                "paper",
                 "pcb",
                 "plastic",
+                "plutonium",
                 "rubber",
                 "silicon_poly",
+                "solar_cell",
                 "steel",
+                "tofu",
+                "vegetables",
                 "vehicle_parts",
                 "vehicle_parts_ii",
                 "wood"
             ],
             "output": [
+                "composite_core_basic",
+                "composite_panel",
                 "construction_parts",
                 "construction_parts_ii",
                 "construction_parts_iii",
                 "construction_parts_iv",
+                "crew_supplies",
                 "electronics",
                 "electronics_ii",
                 "electronics_iii",
+                "enriched_uranium_20%",
+                "food_pack",
                 "household_appliances",
                 "household_goods",
                 "lab_equipment",
                 "lab_equipment_ii",
                 "lab_equipment_iii",
                 "lab_equipment_iv",
+                "luxury_goods",
                 "mechanical_parts",
                 "medical_equipment",
                 "medical_supplies",
                 "medical_supplies_ii",
                 "medical_supplies_iii",
+                "office_supplies",
                 "pcb",
+                "rail_parts",
                 "server",
                 "solar_cell",
+                "station_parts_basic",
+                "uranium_rod",
                 "vehicle_parts",
                 "vehicle_parts_ii",
                 "vehicle_parts_iii"
             ]
         }
     },
-    "assembly_robotic_ii": {
-        "id": "assembly_robotic_ii",
+    "assembly_v": {
+        "id": "assembly_v",
         "game_id": "AssemblyRoboticT2",
         "icon": "AssemblyRoboticT2.png",
-        "name": "Assembly (Robotic) II",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "name": "Assembly V",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 3,
+        "workers": 0,
         "maintenance_cost_units": "maintenance_iii",
-        "maintenance_cost_quantity": 5,
-        "electricity_consumed": 80,
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 6,
         "computing_generated": 0,
@@ -573,48 +749,157 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [
+            "asteroid_booster_parts_assembly",
+            "compact_reactor_assembly",
+            "composite_core_assembly",
+            "composite_core_basic_assembly",
+            "composite_panel_assembly",
             "consumer_electronics_assembly_t1",
-            "cp4_assembly_t2",
+            "cp_assembly_steel_t3",
+            "cp_assembly_t5",
+            "cp2_assembly_t4",
+            "cp3_assembly_t4",
+            "cp4_assembly_t3",
+            "crew_supplies_assembly",
             "electronics_2_assembly_t3",
             "electronics_3_assembly_t3",
+            "electronics_4_assembly",
             "electronics_assembly_t5",
+            "food_pack_assembly_eggs",
+            "food_pack_assembly_meat",
+            "food_pack_assembly_tofu",
             "household_appliances_assembly_t3",
+            "household_goods_assembly_t4",
+            "lab_equipment_1_assembly_t4",
+            "lab_equipment_2_assembly_t2",
+            "lab_equipment_3_assembly_t2",
+            "lab_equipment_4_assembly_t2",
+            "luxury_goods_assembly_t3",
+            "mech._parts_assembly_t3-1",
+            "mech._parts_assembly_t5",
+            "medical_equipment_assembly_t3",
+            "medical_supplies_assembly_t3",
+            "medical_supplies_assembly_t3_2",
+            "medical_supplies_iii_assembly_t3",
+            "office_supplies_assembly",
             "pcb_assembly_t3",
+            "probe_parts_assembly",
+            "rail_parts_assembly",
             "server_assembly_t3",
-            "solar_cell_assembly_3",
-            "solar_cell_assembly_4"
+            "solar_cell_assembly",
+            "solar_cell_assembly_2",
+            "station_parts_assembly",
+            "station_parts_basic_assembly",
+            "uranium_rods_t3",
+            "vehicle_parts_2_assembly_t3",
+            "vehicle_parts_3_assembly_t3",
+            "vehicle_parts_assembly_t5"
         ],
         "products": {
             "input": [
+                "aluminum",
+                "anesthetics",
+                "antibiotics",
+                "bread",
+                "chemical_fuel",
+                "compact_reactor",
+                "composite_core",
+                "composite_core_basic",
+                "composite_panel",
+                "concrete_slab",
+                "construction_parts",
+                "construction_parts_ii",
                 "construction_parts_iii",
                 "copper",
+                "diamond",
+                "disinfectant",
+                "eggs",
                 "electronics",
                 "electronics_ii",
                 "electronics_iii",
+                "electronics_iv",
+                "enriched_uranium_20%",
+                "enriched_uranium_4%",
+                "food_pack",
                 "glass",
+                "gold",
+                "household_goods",
+                "imported_goods",
+                "iron",
+                "lab_equipment",
+                "lab_equipment_ii",
+                "lab_equipment_iii",
+                "lens",
+                "meat",
+                "mechanical_parts",
+                "medical_equipment",
+                "medical_supplies",
+                "medical_supplies_ii",
                 "microchips",
+                "morphine",
+                "paper",
                 "pcb",
                 "plastic",
+                "plutonium",
                 "rubber",
                 "silicon_poly",
                 "silicon_wafer",
-                "steel"
+                "solar_cell",
+                "solar_cell_mono",
+                "steel",
+                "titanium_alloy",
+                "tofu",
+                "vegetables",
+                "vehicle_parts",
+                "vehicle_parts_ii",
+                "wood"
             ],
             "output": [
+                "asteroid_booster_parts",
+                "compact_reactor",
+                "composite_core",
+                "composite_core_basic",
+                "composite_panel",
+                "construction_parts",
+                "construction_parts_ii",
+                "construction_parts_iii",
                 "construction_parts_iv",
                 "consumer_electronics",
+                "crew_supplies",
                 "electronics",
                 "electronics_ii",
                 "electronics_iii",
+                "electronics_iv",
+                "food_pack",
                 "household_appliances",
+                "household_goods",
+                "lab_equipment",
+                "lab_equipment_ii",
+                "lab_equipment_iii",
+                "lab_equipment_iv",
+                "luxury_goods",
+                "mechanical_parts",
+                "medical_equipment",
+                "medical_supplies",
+                "medical_supplies_ii",
+                "medical_supplies_iii",
+                "office_supplies",
                 "pcb",
+                "rail_parts",
                 "server",
                 "solar_cell",
-                "solar_cell_mono"
+                "solar_cell_mono",
+                "space_probe_parts",
+                "station_parts",
+                "station_parts_basic",
+                "uranium_rod",
+                "vehicle_parts",
+                "vehicle_parts_ii",
+                "vehicle_parts_iii"
             ]
         }
     },
@@ -631,7 +916,7 @@
         "workers": 8,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 50,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -669,8 +954,8 @@
         "game_id": "BasicDieselDistiller",
         "icon": "BasicDieselDistiller.png",
         "name": "Basic Distiller",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "basic",
+        "category_name": "Basic",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -722,11 +1007,11 @@
         "isFarm": false,
         "workers": 0,
         "maintenance_cost_units": "maintenance_iii",
-        "maintenance_cost_quantity": 0.5800781,
-        "electricity_consumed": 5,
+        "maintenance_cost_quantity": 0.7998047,
+        "electricity_consumed": 85,
         "electricity_generated": 0,
         "computing_consumed": 0,
-        "computing_generated": 1,
+        "computing_generated": 4,
         "storage_capacity": 0,
         "unity_cost": 0,
         "research_speed": 0,
@@ -734,19 +1019,13 @@
             {
                 "id": "server",
                 "name": "Server",
-                "quantity": 20
+                "quantity": 12
             }
         ],
-        "recipes": [
-            "create_computing_power"
-        ],
+        "recipes": [],
         "products": {
-            "input": [
-                "chilled_water"
-            ],
-            "output": [
-                "water"
-            ]
+            "input": [],
+            "output": []
         }
     },
     "biomass_collection": {
@@ -754,8 +1033,8 @@
         "game_id": "SettlementBiomassModule",
         "icon": "SettlementBiomassModule.png",
         "name": "Biomass Collection",
-        "category_id": "housing_and_services",
-        "category_name": "Housing & Services",
+        "category_id": "settlement",
+        "category_name": "Settlement",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -787,8 +1066,8 @@
         "game_id": "SmeltingFurnaceT1",
         "icon": "SmeltingFurnaceT1.png",
         "name": "Blast Furnace",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "glass",
+        "category_name": "Glass",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -810,11 +1089,11 @@
             }
         ],
         "recipes": [
-            "copper_scrap_smelting_2",
+            "copper_scrap_smelting_4",
             "copper_smelting",
             "glass_broken_smelting_2",
-            "glass_smelting_2",
-            "iron_scrap_smelting_2",
+            "glass_smelting_6",
+            "iron_scrap_smelting_4",
             "iron_smelting"
         ],
         "products": {
@@ -841,14 +1120,14 @@
         "game_id": "SmeltingFurnaceT2",
         "icon": "SmeltingFurnaceT2.png",
         "name": "Blast Furnace II",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "glass",
+        "category_name": "Glass",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 18,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 5,
+        "maintenance_cost_quantity": 6,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
@@ -867,7 +1146,7 @@
             "copper_scrap_smelting",
             "copper_smelting_sand",
             "glass_broken_smelting",
-            "glass_smelting",
+            "glass_smelting_5",
             "iron_scrap_smelting",
             "iron_smelting_lime"
         ],
@@ -892,13 +1171,13 @@
             ]
         }
     },
-    "boiler_coal": {
-        "id": "boiler_coal",
+    "boiler": {
+        "id": "boiler",
         "game_id": "BoilerCoal",
         "icon": "BoilerCoal.png",
-        "name": "Boiler (Coal)",
-        "category_id": "water_extraction_and_processing",
-        "category_name": "Water Extraction & Processing",
+        "name": "Boiler",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -922,18 +1201,20 @@
         "recipes": [
             "steam_generation",
             "steam_generation_2",
-            "steam_generation_3"
+            "steam_generation_3",
+            "steam_generation_4"
         ],
         "products": {
             "input": [
                 "animal_feed",
                 "biomass",
                 "coal",
-                "water"
+                "water",
+                "woodchips"
             ],
             "output": [
                 "exhaust",
-                "steam_hi"
+                "steam_high"
             ]
         }
     },
@@ -942,15 +1223,15 @@
         "game_id": "BoilerElectric",
         "icon": "BoilerElectric.png",
         "name": "Boiler (Electric)",
-        "category_id": "water_extraction_and_processing",
-        "category_name": "Water Extraction & Processing",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 2,
-        "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 2,
-        "electricity_consumed": 1300,
+        "workers": 4,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 4500,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -959,25 +1240,23 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
                 "quantity": 60
-            },
-            {
-                "id": "electronics_ii",
-                "name": "Electronics II",
-                "quantity": 40
             }
         ],
         "recipes": [
-            "steam_generation_11"
+            "steam_generation_12",
+            "steam_generation_13",
+            "steam_generation_14"
         ],
         "products": {
             "input": [
                 "water"
             ],
             "output": [
-                "steam_hi"
+                "steam_high",
+                "steam_super"
             ]
         }
     },
@@ -986,8 +1265,8 @@
         "game_id": "BoilerGas",
         "icon": "BoilerGas.png",
         "name": "Boiler (Gas)",
-        "category_id": "water_extraction_and_processing",
-        "category_name": "Water Extraction & Processing",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -1010,7 +1289,7 @@
         ],
         "recipes": [
             "steam_generation_10",
-            "steam_generation_4",
+            "steam_generation_11",
             "steam_generation_5",
             "steam_generation_6",
             "steam_generation_7",
@@ -1032,7 +1311,7 @@
                 "carbon_dioxide",
                 "exhaust",
                 "steam_depleted",
-                "steam_hi"
+                "steam_high"
             ]
         }
     },
@@ -1041,8 +1320,8 @@
         "game_id": "Burner",
         "icon": "Burner.png",
         "name": "Burner (Solid)",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "solid",
+        "category_name": "Solid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -1070,12 +1349,14 @@
             "burning_4",
             "burning_5",
             "burning_6",
-            "burning_7"
+            "burning_7",
+            "burning_8"
         ],
         "products": {
             "input": [
                 "animal_feed",
                 "biomass",
+                "canola",
                 "chicken_carcass",
                 "meat_trimmings",
                 "sludge",
@@ -1244,15 +1525,15 @@
         "game_id": "ChemicalPlant",
         "icon": "ChemicalPlant.png",
         "name": "Chemical Plant",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "derivatives",
+        "category_name": "Derivatives",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 8,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 60,
+        "electricity_consumed": 250,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1267,29 +1548,38 @@
             }
         ],
         "recipes": [
-            "ammonia_synthesis",
-            "disinfectant_production",
-            "fertilizer_synthesis",
-            "fuel_transesterification",
-            "liquid_nitrogen_production"
+            "ammonia_synthesis_2",
+            "disinfectant_production_2",
+            "fertilizer_synthesis_3",
+            "fertilizer_synthesis_4",
+            "fuel_transesterification_2",
+            "graphite_production_3",
+            "paper_production_2"
         ],
         "products": {
             "input": [
                 "ammonia",
+                "chlorine",
+                "coal",
                 "cooking_oil",
                 "ethanol",
+                "fertilizer_organic",
                 "hydrogen",
+                "limestone",
                 "nitrogen",
+                "oxygen",
                 "plastic",
-                "steel",
-                "water"
+                "steam_high",
+                "woodchips"
             ],
             "output": [
                 "ammonia",
                 "diesel",
                 "disinfectant",
                 "fertilizer_i",
-                "liquid_nitrogen"
+                "graphite",
+                "paper",
+                "sour_water"
             ]
         }
     },
@@ -1298,15 +1588,15 @@
         "game_id": "ChemicalPlant2",
         "icon": "ChemicalPlant2.png",
         "name": "Chemical Plant II",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "titanium",
+        "category_name": "Titanium",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 16,
-        "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 8,
-        "electricity_consumed": 100,
+        "workers": 14,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1315,52 +1605,98 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 120
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 60
             }
         ],
         "recipes": [
-            "ammonia_synthesis_2",
+            "ammonia_synthesis",
             "anesthetics_production",
-            "disinfectant_production_2",
+            "bauxite_digestion",
+            "blanket_fuel_production",
+            "blanket_fuel_production_2",
+            "chemical_fuel_production",
+            "core_fuel_production",
+            "core_fuel_production_pu",
+            "diamond_paste_production",
+            "diamond_paste_production_2",
+            "disinfectant_production",
+            "ethanol_production",
+            "fertilizer_synthesis",
             "fertilizer_synthesis_2",
-            "fuel_transesterification_2",
+            "fuel_transesterification",
             "fuelgas_synthesis",
             "graphite_production",
             "graphite_production_2",
-            "liquid_nitrogen_production_2",
-            "morphine_production"
+            "morphine_production",
+            "mox_rods",
+            "paper_production",
+            "titanium_chloride_reduction",
+            "titanium_chlorination"
         ],
         "products": {
             "input": [
                 "acid",
+                "aluminum",
                 "ammonia",
+                "bauxite_powder",
+                "blanket_fuel_enriched",
+                "brine",
                 "carbon_dioxide",
                 "chlorine",
                 "coal",
                 "cooking_oil",
+                "depleted_uranium",
+                "diamond",
+                "enriched_uranium_20%",
                 "ethanol",
+                "fertilizer_organic",
+                "fuel_gas",
                 "glass",
+                "graphite",
+                "heavy_oil",
                 "hydrogen",
                 "hydrogen_fluoride",
+                "limestone",
                 "nitrogen",
+                "oxygen",
                 "plastic",
+                "plutonium",
                 "poppy",
+                "salt",
+                "steam_high",
                 "steel",
-                "water"
+                "titanium_chloride_pure",
+                "titanium_slag",
+                "woodchips",
+                "yellowcake"
             ],
             "output": [
                 "ammonia",
                 "anesthetics",
+                "blanket_fuel",
+                "carbon_dioxide",
+                "chemical_fuel",
+                "chlorine",
+                "core_fuel",
+                "diamond_paste",
                 "diesel",
                 "disinfectant",
+                "ethanol",
                 "fertilizer_i",
                 "fuel_gas",
                 "graphite",
-                "liquid_nitrogen",
+                "hydrated_alumina",
                 "morphine",
-                "sour_water"
+                "mox_rod",
+                "paper",
+                "red_mud",
+                "slag",
+                "sour_water",
+                "titanium_chloride",
+                "titanium_sponge",
+                "water"
             ]
         }
     },
@@ -1391,10 +1727,18 @@
                 "quantity": 50
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "chicken_farm"
+        ],
         "products": {
-            "input": [],
-            "output": []
+            "input": [
+                "animal_feed",
+                "water"
+            ],
+            "output": [
+                "chicken_carcass",
+                "eggs"
+            ]
         }
     },
     "coal_maker": {
@@ -1402,8 +1746,8 @@
         "game_id": "CharcoalMaker",
         "icon": "CharcoalMaker.png",
         "name": "Coal Maker",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "forestry",
+        "category_name": "Forestry",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -1474,20 +1818,20 @@
             ]
         }
     },
-    "concrete_mixer": {
-        "id": "concrete_mixer",
-        "game_id": "ConcreteMixer",
-        "icon": "ConcreteMixer.png",
-        "name": "Concrete Mixer",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+    "compactor": {
+        "id": "compactor",
+        "game_id": "Compactor",
+        "icon": "Compactor.png",
+        "name": "Compactor",
+        "category_id": "solid",
+        "category_name": "Solid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 4,
+        "workers": 1,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 2,
-        "electricity_consumed": 20,
+        "maintenance_cost_quantity": 1,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1496,26 +1840,76 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts",
-                "name": "Construction Parts",
-                "quantity": 40
-            },
-            {
-                "id": "electronics",
-                "name": "Electronics",
-                "quantity": 10
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 25
             }
         ],
         "recipes": [
-            "concrete_mixing",
-            "concrete_mixing_2",
-            "concrete_mixing_3",
-            "concrete_mixing_4"
+            "aluminum_scrap_pressing",
+            "copper_scrap_pressing",
+            "gold_scrap_pressing",
+            "iron_scrap_pressing",
+            "recyclables_pressing",
+            "waste_pressing"
+        ],
+        "products": {
+            "input": [
+                "aluminum_scrap",
+                "copper_scrap",
+                "gold_scrap",
+                "iron_scrap",
+                "recyclables",
+                "waste"
+            ],
+            "output": [
+                "aluminum_scrap_pressed",
+                "copper_scrap_pressed",
+                "gold_scrap_pressed",
+                "iron_scrap_pressed",
+                "recyclables_pressed",
+                "waste_pressed"
+            ]
+        }
+    },
+    "concrete_mixer": {
+        "id": "concrete_mixer",
+        "game_id": "ConcreteMixer",
+        "icon": "ConcreteMixer.png",
+        "name": "Concrete Mixer",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 4,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 2,
+        "electricity_consumed": 100,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 30
+            }
+        ],
+        "recipes": [
+            "concrete_mixing_10",
+            "concrete_mixing_11",
+            "concrete_mixing_12",
+            "concrete_mixing_9"
         ],
         "products": {
             "input": [
                 "cement",
                 "gravel",
+                "manufactured_sand",
                 "sand",
                 "slag_crushed",
                 "water"
@@ -1530,15 +1924,15 @@
         "game_id": "ConcreteMixerT2",
         "icon": "ConcreteMixerT2.png",
         "name": "Concrete Mixer II",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 7,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 40,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1554,12 +1948,15 @@
         ],
         "recipes": [
             "concrete_mixing_5",
-            "concrete_mixing_6"
+            "concrete_mixing_6",
+            "concrete_mixing_7",
+            "concrete_mixing_8"
         ],
         "products": {
             "input": [
                 "cement",
                 "gravel",
+                "manufactured_sand",
                 "sand",
                 "slag_crushed",
                 "water"
@@ -1574,15 +1971,15 @@
         "game_id": "ConcreteMixerT3",
         "icon": "ConcreteMixerT3.png",
         "name": "Concrete Mixer III",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 10,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
-        "electricity_consumed": 80,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1597,13 +1994,16 @@
             }
         ],
         "recipes": [
-            "concrete_mixing_7",
-            "concrete_mixing_8"
+            "concrete_mixing",
+            "concrete_mixing_2",
+            "concrete_mixing_3",
+            "concrete_mixing_4"
         ],
         "products": {
             "input": [
                 "cement",
                 "gravel",
+                "manufactured_sand",
                 "sand",
                 "slag_crushed",
                 "water"
@@ -1624,9 +2024,9 @@
         "isStorage": false,
         "isFarm": false,
         "workers": 24,
-        "maintenance_cost_units": "maintenance_iii",
-        "maintenance_cost_quantity": 8,
-        "electricity_consumed": 80,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 10,
+        "electricity_consumed": 350,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1656,12 +2056,12 @@
         "game_id": "CasterCooled",
         "icon": "CasterCooled.png",
         "name": "Cooled Caster",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "iron",
+        "category_name": "Iron",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 4,
+        "workers": 2,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
         "electricity_consumed": 0,
@@ -1679,7 +2079,7 @@
             }
         ],
         "recipes": [
-            "steel_casting_cooled"
+            "steel_casting_cooled_2"
         ],
         "products": {
             "input": [
@@ -1696,12 +2096,12 @@
         "game_id": "CasterCooledT2",
         "icon": "CasterCooledT2.png",
         "name": "Cooled Caster II",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "titanium",
+        "category_name": "Titanium",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 6,
+        "workers": 2,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
         "electricity_consumed": 0,
@@ -1719,15 +2119,18 @@
             }
         ],
         "recipes": [
-            "steel_casting_cooled_2"
+            "steel_casting_cooled",
+            "titanium_casting_cooled"
         ],
         "products": {
             "input": [
                 "molten_steel",
+                "molten_titanium_alloy",
                 "water"
             ],
             "output": [
-                "steel"
+                "steel",
+                "titanium_alloy"
             ]
         }
     },
@@ -1741,7 +2144,7 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 2,
+        "workers": 0,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
         "electricity_consumed": 0,
@@ -1771,8 +2174,8 @@
         "products": {
             "input": [
                 "steam_depleted",
-                "steam_hi",
-                "steam_lo"
+                "steam_high",
+                "steam_low"
             ],
             "output": [
                 "water"
@@ -1789,7 +2192,7 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 4,
+        "workers": 0,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
         "electricity_consumed": 0,
@@ -1814,13 +2217,15 @@
         "recipes": [
             "depleted_steam_condensation_2",
             "hi-press_steam_condensation_2",
-            "lo-press_steam_condensation_2"
+            "lo-press_steam_condensation_2",
+            "super-press_steam_condensation"
         ],
         "products": {
             "input": [
                 "steam_depleted",
-                "steam_hi",
-                "steam_lo"
+                "steam_high",
+                "steam_low",
+                "steam_super"
             ],
             "output": [
                 "water"
@@ -1832,15 +2237,15 @@
         "game_id": "CopperElectrolysis",
         "icon": "CopperElectrolysis.png",
         "name": "Copper Electrolysis",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "copper",
+        "category_name": "Copper",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 5,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 80,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1911,15 +2316,15 @@
         "game_id": "HydroCrackerT1",
         "icon": "HydroCrackerT1.png",
         "name": "Cracking Unit",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 12,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 4,
-        "electricity_consumed": 40,
+        "maintenance_cost_quantity": 6,
+        "electricity_consumed": 160,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1949,14 +2354,14 @@
                 "hydrogen",
                 "naphtha",
                 "oxygen",
-                "steam_hi"
+                "steam_high"
             ],
             "output": [
-                "carbon_dioxide",
                 "diesel",
                 "fuel_gas",
+                "hydrogen",
                 "naphtha",
-                "sour_water"
+                "water"
             ]
         }
     },
@@ -1965,15 +2370,15 @@
         "game_id": "Crusher",
         "icon": "Crusher.png",
         "name": "Crusher",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 2,
-        "maintenance_cost_units": null,
-        "maintenance_cost_quantity": 0,
-        "electricity_consumed": 30,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 2,
+        "electricity_consumed": 250,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -1982,58 +2387,70 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts",
-                "name": "Construction Parts",
-                "quantity": 30
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 20
             }
         ],
         "recipes": [
+            "bauxite_milling",
             "copper_ore_crushing",
             "gold_ore_crushing",
             "gold_ore_milling",
-            "gravel_crushing",
+            "gravel_milling",
             "iron_ore_crushing",
+            "quartz_crushing",
+            "quartz_milling",
             "rock_crushing",
             "slag_crushing",
+            "titanium_ore_crushing",
             "uranium_crushing"
         ],
         "products": {
             "input": [
+                "bauxite",
                 "copper_ore",
                 "gold_ore",
                 "gold_ore_crushed",
                 "gravel",
                 "iron_ore",
+                "quartz",
+                "quartz_crushed",
                 "rock",
                 "slag",
+                "titanium_ore",
                 "uranium_ore"
             ],
             "output": [
+                "bauxite_powder",
                 "copper_ore_crushed",
                 "gold_ore_crushed",
                 "gold_ore_powder",
                 "gravel",
                 "iron_ore_crushed",
+                "manufactured_sand",
+                "quartz_crushed",
                 "sand",
                 "slag_crushed",
-                "uranium_ore_crushed"
+                "titanium_ore_crushed",
+                "uranium_ore_powder"
             ]
         }
     },
-    "data_center": {
-        "id": "data_center",
-        "game_id": "DataCenter",
-        "icon": "DataCenter.png",
-        "name": "Data Center",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+    "crusher_large": {
+        "id": "crusher_large",
+        "game_id": "CrusherLarge",
+        "icon": "CrusherLarge.png",
+        "name": "Crusher (Large)",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
-        "maintenance_cost_units": "maintenance_iii",
-        "maintenance_cost_quantity": 4,
-        "electricity_consumed": 0,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 1000,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -2044,23 +2461,182 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 100
-            },
+                "quantity": 120
+            }
+        ],
+        "recipes": [
+            "bauxite_milling_2",
+            "copper_ore_crushing_2",
+            "gold_ore_crushing_2",
+            "gold_ore_milling_2",
+            "gravel_milling_2",
+            "iron_ore_crushing_2",
+            "quartz_crushing_2",
+            "quartz_milling_2",
+            "rock_crushing_2",
+            "slag_crushing_2",
+            "titanium_ore_crushing_2",
+            "uranium_crushing_2"
+        ],
+        "products": {
+            "input": [
+                "bauxite",
+                "copper_ore",
+                "gold_ore",
+                "gold_ore_crushed",
+                "gravel",
+                "iron_ore",
+                "quartz",
+                "quartz_crushed",
+                "rock",
+                "slag",
+                "titanium_ore",
+                "uranium_ore"
+            ],
+            "output": [
+                "bauxite_powder",
+                "copper_ore_crushed",
+                "gold_ore_crushed",
+                "gold_ore_powder",
+                "gravel",
+                "iron_ore_crushed",
+                "manufactured_sand",
+                "quartz_crushed",
+                "sand",
+                "slag_crushed",
+                "titanium_ore_crushed",
+                "uranium_ore_powder"
+            ]
+        }
+    },
+    "crystallizer": {
+        "id": "crystallizer",
+        "game_id": "SiliconCrystallizer",
+        "icon": "SiliconCrystallizer.png",
+        "name": "Crystallizer",
+        "category_id": "aluminum",
+        "category_name": "Aluminum",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 8,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 6,
+        "electricity_consumed": 500,
+        "electricity_generated": 0,
+        "computing_consumed": 4,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
             {
-                "id": "electronics_ii",
-                "name": "Electronics II",
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 60
+            }
+        ],
+        "recipes": [
+            "alumina_crystallization",
+            "silicon_crystallization"
+        ],
+        "products": {
+            "input": [
+                "alumina",
+                "silicon_poly",
+                "water"
+            ],
+            "output": [
+                "sapphire_wafer",
+                "silicon_wafer"
+            ]
+        }
+    },
+    "data_center": {
+        "id": "data_center",
+        "game_id": "DataCenter",
+        "icon": "DataCenter.png",
+        "name": "Data Center",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 6,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
                 "quantity": 120
             },
             {
                 "id": "electronics_iii",
                 "name": "Electronics III",
-                "quantity": 20
+                "quantity": 40
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "basic_rack"
+        ],
         "products": {
-            "input": [],
-            "output": []
+            "input": [
+                "chilled_water",
+                "electricity",
+                "maintenance_iii"
+            ],
+            "output": [
+                "computing",
+                "water"
+            ]
+        }
+    },
+    "diamond_reactor": {
+        "id": "diamond_reactor",
+        "game_id": "DiamondReactor",
+        "icon": "DiamondReactor.png",
+        "name": "Diamond Reactor",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 8,
+        "maintenance_cost_units": "maintenance_iii",
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 2000,
+        "electricity_generated": 0,
+        "computing_consumed": 2,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 100
+            }
+        ],
+        "recipes": [
+            "diamond_synthesis"
+        ],
+        "products": {
+            "input": [
+                "graphite",
+                "salt"
+            ],
+            "output": [
+                "diamond"
+            ]
         }
     },
     "diesel_generator": {
@@ -2068,16 +2644,16 @@
         "game_id": "DieselGenerator",
         "icon": "DieselGenerator.png",
         "name": "Diesel Generator",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 2,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 6,
+        "maintenance_cost_quantity": 4,
         "electricity_consumed": 0,
-        "electricity_generated": 180,
+        "electricity_generated": 800,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -2105,6 +2681,51 @@
             "output": [
                 "air_pollution",
                 "electricity"
+            ]
+        }
+    },
+    "diesel_generator_ii": {
+        "id": "diesel_generator_ii",
+        "game_id": "DieselGeneratorT2",
+        "icon": "DieselGeneratorT2.png",
+        "name": "Diesel Generator II",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 2,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 0,
+        "electricity_generated": 5000,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 40
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 60
+            }
+        ],
+        "recipes": [
+            "dieselgeneratort2"
+        ],
+        "products": {
+            "input": [
+                "diesel"
+            ],
+            "output": [
+                "electricity",
+                "exhaust"
             ]
         }
     },
@@ -2150,8 +2771,8 @@
         "game_id": "DistillationTowerT1",
         "icon": "DistillationTowerT1.png",
         "name": "Distillation (Stage I)",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -2178,7 +2799,7 @@
         "products": {
             "input": [
                 "crude_oil",
-                "steam_hi"
+                "steam_high"
             ],
             "output": [
                 "heavy_oil",
@@ -2192,14 +2813,14 @@
         "game_id": "DistillationTowerT2",
         "icon": "DistillationTowerT2.png",
         "name": "Distillation (Stage II)",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 8,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 3,
+        "maintenance_cost_quantity": 4,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
@@ -2220,7 +2841,7 @@
         "products": {
             "input": [
                 "medium_oil",
-                "steam_hi"
+                "steam_high"
             ],
             "output": [
                 "diesel",
@@ -2233,14 +2854,14 @@
         "game_id": "DistillationTowerT3",
         "icon": "DistillationTowerT3.png",
         "name": "Distillation (Stage III)",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "titanium",
+        "category_name": "Titanium",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 10,
+        "workers": 8,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 3,
+        "maintenance_cost_quantity": 6,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
@@ -2256,16 +2877,20 @@
             }
         ],
         "recipes": [
-            "heavy_distillate_refining"
+            "heavy_distillate_refining",
+            "titanium_purification"
         ],
         "products": {
             "input": [
                 "light_oil",
-                "steam_hi"
+                "steam_high",
+                "titanium_chloride"
             ],
             "output": [
                 "fuel_gas",
-                "naphtha"
+                "naphtha",
+                "steam_depleted",
+                "titanium_chloride_pure"
             ]
         }
     },
@@ -2274,15 +2899,15 @@
         "game_id": "Electrolyzer",
         "icon": "Electrolyzer.png",
         "name": "Electrolyzer",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "water_extraction_and_processing",
+        "category_name": "Water Extraction & Processing",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 3,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 100,
+        "electricity_consumed": 300,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -2294,6 +2919,52 @@
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
                 "quantity": 40
+            }
+        ],
+        "recipes": [
+            "ammonia_electrolysis_2",
+            "brine_electrolysis_2",
+            "water_electrolysis_2"
+        ],
+        "products": {
+            "input": [
+                "ammonia",
+                "brine",
+                "water"
+            ],
+            "output": [
+                "chlorine",
+                "hydrogen",
+                "nitrogen",
+                "oxygen"
+            ]
+        }
+    },
+    "electrolyzer_ii": {
+        "id": "electrolyzer_ii",
+        "game_id": "ElectrolyzerT2",
+        "icon": "ElectrolyzerT2.png",
+        "name": "Electrolyzer II",
+        "category_id": "water_extraction_and_processing",
+        "category_name": "Water Extraction & Processing",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 3,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 2,
+        "electricity_consumed": 1100,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -2320,15 +2991,15 @@
         "game_id": "UraniumEnrichmentPlant",
         "icon": "UraniumEnrichmentPlant.png",
         "name": "Enrichment Plant",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 14,
-        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_units": "maintenance_ii",
         "maintenance_cost_quantity": 8,
-        "electricity_consumed": 200,
+        "electricity_consumed": 4000,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -2337,26 +3008,34 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 150
-            },
-            {
-                "id": "electronics_ii",
-                "name": "Electronics II",
-                "quantity": 40
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 80
             }
         ],
         "recipes": [
-            "uranium_enrichment"
+            "blanket_fuel_reprocessing",
+            "blanket_fuel_reprocessing_into_pu",
+            "blanket_fuel_reprocessing_into_u20",
+            "uranium_enrichment",
+            "uranium_enrichment_2",
+            "uranium_enrichment_3"
         ],
         "products": {
             "input": [
+                "blanket_fuel_enriched",
+                "enriched_uranium_4%",
                 "hydrogen_fluoride",
-                "yellow_cake"
+                "reprocessed_uranium_1%",
+                "yellowcake"
             ],
             "output": [
-                "uranium_pellets"
+                "blanket_fuel",
+                "core_fuel",
+                "depleted_uranium",
+                "enriched_uranium_20%",
+                "enriched_uranium_4%",
+                "plutonium"
             ]
         }
     },
@@ -2372,7 +3051,7 @@
         "isFarm": false,
         "workers": 4,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 2,
+        "maintenance_cost_quantity": 1,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
@@ -2388,9 +3067,9 @@
             }
         ],
         "recipes": [
-            "brine_making",
-            "salt_making",
-            "salt_making_2"
+            "brine_making_2",
+            "salt_making_3",
+            "salt_making_4"
         ],
         "products": {
             "input": [
@@ -2415,8 +3094,8 @@
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 3,
-        "electricity_consumed": 60,
+        "maintenance_cost_quantity": 2,
+        "electricity_consumed": 250,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -2431,9 +3110,9 @@
             }
         ],
         "recipes": [
-            "brine_making_2",
-            "salt_making_3",
-            "salt_making_4"
+            "brine_making",
+            "salt_making",
+            "salt_making_2"
         ],
         "products": {
             "input": [
@@ -2451,15 +3130,15 @@
         "game_id": "ExhaustScrubber",
         "icon": "ExhaustScrubber.png",
         "name": "Exhaust Scrubber",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "fluid",
+        "category_name": "Fluid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 8,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 50,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -2474,17 +3153,20 @@
             }
         ],
         "recipes": [
-            "exhaust_filtering"
+            "exhaust_filtering",
+            "exhaust_filtering_2"
         ],
         "products": {
             "input": [
                 "exhaust",
+                "limestone",
                 "water"
             ],
             "output": [
                 "air_pollution",
                 "carbon_dioxide",
-                "steam_lo",
+                "slag",
+                "steam_low",
                 "sulfur"
             ]
         }
@@ -2499,7 +3181,7 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 10,
+        "workers": 8,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
         "electricity_consumed": 0,
@@ -2516,10 +3198,90 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "canola",
+            "corn",
+            "potato",
+            "soybeans",
+            "tree_sapling",
+            "vegetables",
+            "wheat"
+        ],
         "products": {
             "input": [],
-            "output": []
+            "output": [
+                "canola",
+                "corn",
+                "potato",
+                "soybean",
+                "tree_sapling",
+                "vegetables",
+                "wheat"
+            ]
+        }
+    },
+    "fast_breeder_reactor": {
+        "id": "fast_breeder_reactor",
+        "game_id": "FastBreederReactor",
+        "icon": "FastBreederReactor.png",
+        "name": "Fast Breeder Reactor",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 200,
+        "maintenance_cost_units": "maintenance_iii",
+        "maintenance_cost_quantity": 60,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 18,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 1500
+            },
+            {
+                "id": "titanium_alloy",
+                "name": "Titanium alloy",
+                "quantity": 200
+            },
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 200
+            }
+        ],
+        "recipes": [
+            "fast_breeder_reactor",
+            "fast_breeder_reactor_1",
+            "fast_breeder_reactor_2",
+            "fast_breeder_reactor_3",
+            "fast_breeder_reactor_fuel_1_powerlevel_2",
+            "fast_breeder_reactor_fuel_1_powerlevel_3",
+            "fast_breeder_reactor_powerlevel_1_enrichment_3",
+            "fast_breeder_reactor_powerlevel_2_enrichment_2",
+            "fast_breeder_reactor_powerlevel_2_enrichment_3",
+            "fast_breeder_reactor_powerlevel_3_enrichment_2",
+            "fast_breeder_reactor_powerlevel_3_enrichment_3",
+            "fast_breeder_reactor_powerlevel_4_enrichment_3"
+        ],
+        "products": {
+            "input": [
+                "blanket_fuel",
+                "core_fuel",
+                "water"
+            ],
+            "output": [
+                "blanket_fuel_enriched",
+                "core_fuel_spent",
+                "steam_super"
+            ]
         }
     },
     "fermentation_tank": {
@@ -2527,15 +3289,15 @@
         "game_id": "FermentationTank",
         "icon": "FermentationTank.png",
         "name": "Fermentation Tank",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "food_production",
+        "category_name": "Food Production",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 4,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 5,
+        "electricity_consumed": 20,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -2573,8 +3335,8 @@
         "game_id": "Flare",
         "icon": "Flare.png",
         "name": "Flare",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "derivatives",
+        "category_name": "Derivatives",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -2638,7 +3400,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 880,
+        "storage_capacity": 1600,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -2671,7 +3433,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 440,
+        "storage_capacity": 800,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -2704,7 +3466,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 220,
+        "storage_capacity": 400,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -3327,7 +4089,7 @@
         "workers": 8,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 25,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -3343,6 +4105,7 @@
         ],
         "recipes": [
             "meat_processing",
+            "meat_processing_2",
             "sausage_processing",
             "snack_production",
             "snack_production_2",
@@ -3382,8 +4145,8 @@
         "game_id": "FuelStationT1",
         "icon": "FuelStationT1.png",
         "name": "Fuel Station",
-        "category_id": "buildings_for_vehicles",
-        "category_name": "Buildings (For Vehicles)",
+        "category_id": "vehicles",
+        "category_name": "Vehicles",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -3394,7 +4157,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 40,
+        "storage_capacity": 100,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -3415,8 +4178,8 @@
         "game_id": "FuelStationT2",
         "icon": "FuelStationT2.png",
         "name": "Fuel Station II",
-        "category_id": "buildings_for_vehicles",
-        "category_name": "Buildings (For Vehicles)",
+        "category_id": "vehicles",
+        "category_name": "Vehicles",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -3427,7 +4190,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 120,
+        "storage_capacity": 200,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -3448,8 +4211,8 @@
         "game_id": "FuelStationT3",
         "icon": "FuelStationT3.png",
         "name": "Fuel Station III",
-        "category_id": "buildings_for_vehicles",
-        "category_name": "Buildings (For Vehicles)",
+        "category_id": "vehicles",
+        "category_name": "Vehicles",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -3460,7 +4223,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 360,
+        "storage_capacity": 400,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -3481,15 +4244,15 @@
         "game_id": "GasInjectionPump",
         "icon": "GasInjectionPump.png",
         "name": "Gas Injection Pump",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "fluid",
+        "category_name": "Fluid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 4,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 100,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -3519,15 +4282,15 @@
         "game_id": "GlassMakerT1",
         "icon": "GlassMakerT1.png",
         "name": "Glass Maker",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "glass",
+        "category_name": "Glass",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 80,
+        "electricity_consumed": 300,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -3542,15 +4305,15 @@
             }
         ],
         "recipes": [
-            "glass_casting"
+            "glass_casting_2"
         ],
         "products": {
             "input": [
                 "molten_glass"
             ],
             "output": [
-                "glass",
-                "slag"
+                "broken_glass",
+                "glass"
             ]
         }
     },
@@ -3559,15 +4322,15 @@
         "game_id": "GlassMakerT2",
         "icon": "GlassMakerT2.png",
         "name": "Glass Maker II",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "glass",
+        "category_name": "Glass",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 14,
-        "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 8,
-        "electricity_consumed": 200,
+        "workers": 8,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 500,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -3578,11 +4341,11 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 100
             }
         ],
         "recipes": [
-            "glass_casting_2"
+            "glass_casting"
         ],
         "products": {
             "input": [
@@ -3598,15 +4361,15 @@
         "game_id": "GoldFurnace",
         "icon": "GoldFurnace.png",
         "name": "Gold Furnace",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "gold",
+        "category_name": "Gold",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 120,
+        "electricity_consumed": 800,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -3720,7 +4483,7 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 22,
+        "workers": 16,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
         "electricity_consumed": 0,
@@ -3739,13 +4502,64 @@
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 320
+                "quantity": 160
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "canola_fertilizer_i_2",
+            "canola_fertilizer_ii_2",
+            "canola_fertilizer_organic_2",
+            "corn_fertilizer_i_2",
+            "corn_fertilizer_ii_2",
+            "corn_fertilizer_organic_2",
+            "flowers_fertilizer_i_2",
+            "flowers_fertilizer_ii_2",
+            "flowers_fertilizer_organic_2",
+            "fruits_fertilizer_i_2",
+            "fruits_fertilizer_ii_2",
+            "fruits_fertilizer_organic_2",
+            "poppy_fertilizer_i_2",
+            "poppy_fertilizer_ii_2",
+            "poppy_fertilizer_organic_2",
+            "potato_fertilizer_i_2",
+            "potato_fertilizer_ii_2",
+            "potato_fertilizer_organic_2",
+            "soybeans_fertilizer_i_2",
+            "soybeans_fertilizer_ii_2",
+            "soybeans_fertilizer_organic_2",
+            "sugar_cane_fertilizer_i_2",
+            "sugar_cane_fertilizer_ii_2",
+            "sugar_cane_fertilizer_organic_2",
+            "tree_sapling_fertilizer_i_2",
+            "tree_sapling_fertilizer_ii_2",
+            "tree_sapling_fertilizer_organic_2",
+            "vegetables_fertilizer_i_2",
+            "vegetables_fertilizer_ii_2",
+            "vegetables_fertilizer_organic_2",
+            "wheat_fertilizer_i_2",
+            "wheat_fertilizer_ii_2",
+            "wheat_fertilizer_organic_2"
+        ],
         "products": {
-            "input": [],
-            "output": []
+            "input": [
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "water"
+            ],
+            "output": [
+                "canola",
+                "corn",
+                "flowers",
+                "fruit",
+                "poppy",
+                "potato",
+                "soybean",
+                "sugar_cane",
+                "tree_sapling",
+                "vegetables",
+                "wheat"
+            ]
         }
     },
     "greenhouse_ii": {
@@ -3758,7 +4572,7 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 32,
+        "workers": 20,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 8,
         "electricity_consumed": 0,
@@ -3777,13 +4591,64 @@
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 640
+                "quantity": 320
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "canola_fertilizer_i",
+            "canola_fertilizer_ii",
+            "canola_fertilizer_organic",
+            "corn_fertilizer_i",
+            "corn_fertilizer_ii",
+            "corn_fertilizer_organic",
+            "flowers_fertilizer_i",
+            "flowers_fertilizer_ii",
+            "flowers_fertilizer_organic",
+            "fruits_fertilizer_i",
+            "fruits_fertilizer_ii",
+            "fruits_fertilizer_organic",
+            "poppy_fertilizer_i",
+            "poppy_fertilizer_ii",
+            "poppy_fertilizer_organic",
+            "potato_fertilizer_i",
+            "potato_fertilizer_ii",
+            "potato_fertilizer_organic",
+            "soybeans_fertilizer_i",
+            "soybeans_fertilizer_ii",
+            "soybeans_fertilizer_organic",
+            "sugar_cane_fertilizer_i",
+            "sugar_cane_fertilizer_ii",
+            "sugar_cane_fertilizer_organic",
+            "tree_sapling_fertilizer_i",
+            "tree_sapling_fertilizer_ii",
+            "tree_sapling_fertilizer_organic",
+            "vegetables_fertilizer_i",
+            "vegetables_fertilizer_ii",
+            "vegetables_fertilizer_organic",
+            "wheat_fertilizer_i",
+            "wheat_fertilizer_ii",
+            "wheat_fertilizer_organic"
+        ],
         "products": {
-            "input": [],
-            "output": []
+            "input": [
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "water"
+            ],
+            "output": [
+                "canola",
+                "corn",
+                "flowers",
+                "fruit",
+                "poppy",
+                "potato",
+                "soybean",
+                "sugar_cane",
+                "tree_sapling",
+                "vegetables",
+                "wheat"
+            ]
         }
     },
     "groundwater_pump": {
@@ -3799,7 +4664,7 @@
         "workers": 2,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 30,
+        "electricity_consumed": 120,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -3828,8 +4693,8 @@
         "game_id": "TurbineHighPress",
         "icon": "TurbineHighPress.png",
         "name": "High-pressure Turbine",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -3855,11 +4720,11 @@
         ],
         "products": {
             "input": [
-                "steam_hi"
+                "steam_high"
             ],
             "output": [
                 "mechanical_power",
-                "steam_lo"
+                "steam_low"
             ]
         }
     },
@@ -3868,14 +4733,14 @@
         "game_id": "TurbineHighPressT2",
         "icon": "TurbineHighPressT2.png",
         "name": "High-pressure Turbine II",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 4,
-        "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 3,
+        "workers": 2,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 2,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
@@ -3885,9 +4750,9 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 80
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -3895,11 +4760,11 @@
         ],
         "products": {
             "input": [
-                "steam_hi"
+                "steam_high"
             ],
             "output": [
                 "mechanical_power",
-                "steam_lo"
+                "steam_low"
             ]
         }
     },
@@ -3916,7 +4781,7 @@
         "workers": 20,
         "maintenance_cost_units": "maintenance_ii",
         "maintenance_cost_quantity": 8,
-        "electricity_consumed": 40,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -3925,19 +4790,14 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 80
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 40
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 80
-            },
-            {
-                "id": "electronics_ii",
-                "name": "Electronics II",
-                "quantity": 20
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -3959,7 +4819,7 @@
         "workers": 16,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
-        "electricity_consumed": 30,
+        "electricity_consumed": 150,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -4001,7 +4861,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 70,
+        "storage_capacity": 80,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -4034,7 +4894,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 130,
+        "storage_capacity": 140,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -4067,7 +4927,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 230,
+        "storage_capacity": 240,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -4079,7 +4939,83 @@
             {
                 "id": "glass",
                 "name": "Glass",
+                "quantity": 120
+            }
+        ],
+        "recipes": [],
+        "products": {
+            "input": [],
+            "output": []
+        }
+    },
+    "housing_iv": {
+        "id": "housing_iv",
+        "game_id": "HousingT4",
+        "icon": "HousingT4.png",
+        "name": "Housing IV",
+        "category_id": "housing_and_services",
+        "category_name": "Housing & Services",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 400,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 200
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
                 "quantity": 240
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 200
+            }
+        ],
+        "recipes": [],
+        "products": {
+            "input": [],
+            "output": []
+        }
+    },
+    "hydrogen_fuel_station": {
+        "id": "hydrogen_fuel_station",
+        "game_id": "FuelStationHydrogenT1",
+        "icon": "FuelStationHydrogenT1.png",
+        "name": "Hydrogen Fuel Station",
+        "category_id": "vehicles",
+        "category_name": "Vehicles",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 400,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 70
             }
         ],
         "recipes": [],
@@ -4093,15 +5029,15 @@
         "game_id": "HydrogenReformer",
         "icon": "HydrogenReformer.png",
         "name": "Hydrogen Reformer",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 18,
+        "workers": 8,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 6,
-        "electricity_consumed": 40,
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -4112,20 +5048,72 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 80
+                "quantity": 50
             }
         ],
         "recipes": [
+            "hydrogen_from_sp_steam",
             "hydrogen_reforming"
         ],
         "products": {
             "input": [
                 "fuel_gas",
-                "steam_hi"
+                "steam_high",
+                "steam_super",
+                "water"
             ],
             "output": [
                 "carbon_dioxide",
-                "hydrogen"
+                "hydrogen",
+                "oxygen",
+                "steam_depleted"
+            ]
+        }
+    },
+    "incineration_plant": {
+        "id": "incineration_plant",
+        "game_id": "IncinerationPlant",
+        "icon": "IncinerationPlant.png",
+        "name": "Incineration Plant",
+        "category_id": "solid",
+        "category_name": "Solid",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 16,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 500,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 180
+            }
+        ],
+        "recipes": [
+            "waste_incineration",
+            "waste_incineration_2",
+            "waste_incineration_3",
+            "waste_incineration_4"
+        ],
+        "products": {
+            "input": [
+                "fuel_gas",
+                "hydrogen",
+                "waste",
+                "waste_pressed",
+                "water"
+            ],
+            "output": [
+                "exhaust",
+                "steam_high"
             ]
         }
     },
@@ -4176,7 +5164,7 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 14,
+        "workers": 10,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
         "electricity_consumed": 0,
@@ -4193,10 +5181,128 @@
                 "quantity": 60
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "canola_fertilizer_i_3",
+            "canola_fertilizer_ii_3",
+            "canola_fertilizer_organic_3",
+            "corn_fertilizer_i_3",
+            "corn_fertilizer_ii_3",
+            "corn_fertilizer_organic_3",
+            "potato_fertilizer_i_3",
+            "potato_fertilizer_ii_3",
+            "potato_fertilizer_organic_3",
+            "soybeans_fertilizer_i_3",
+            "soybeans_fertilizer_ii_3",
+            "soybeans_fertilizer_organic_3",
+            "tree_sapling_fertilizer_i_3",
+            "tree_sapling_fertilizer_ii_3",
+            "tree_sapling_fertilizer_organic_3",
+            "vegetables_fertilizer_i_3",
+            "vegetables_fertilizer_ii_3",
+            "vegetables_fertilizer_organic_3",
+            "wheat_fertilizer_i_3",
+            "wheat_fertilizer_ii_3",
+            "wheat_fertilizer_organic_3"
+        ],
         "products": {
-            "input": [],
-            "output": []
+            "input": [
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "water"
+            ],
+            "output": [
+                "canola",
+                "corn",
+                "potato",
+                "soybean",
+                "tree_sapling",
+                "vegetables",
+                "wheat"
+            ]
+        }
+    },
+    "kiln": {
+        "id": "kiln",
+        "game_id": "BricksMaker",
+        "icon": "BricksMaker.png",
+        "name": "Kiln",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 6,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 50
+            }
+        ],
+        "recipes": [
+            "simple_concrete_making"
+        ],
+        "products": {
+            "input": [
+                "coal",
+                "limestone",
+                "water"
+            ],
+            "output": [
+                "concrete_slab",
+                "exhaust"
+            ]
+        }
+    },
+    "lens_polisher": {
+        "id": "lens_polisher",
+        "game_id": "LensMaker",
+        "icon": "LensMaker.png",
+        "name": "Lens Polisher",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 6,
+        "maintenance_cost_units": "maintenance_iii",
+        "maintenance_cost_quantity": 2,
+        "electricity_consumed": 200,
+        "electricity_generated": 0,
+        "computing_consumed": 4,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 50
+            }
+        ],
+        "recipes": [
+            "lens_making"
+        ],
+        "products": {
+            "input": [
+                "diamond_paste",
+                "ethanol",
+                "sapphire_wafer"
+            ],
+            "output": [
+                "lens"
+            ]
         }
     },
     "limestone_mine": {
@@ -4241,8 +5347,8 @@
         "game_id": "WasteDump",
         "icon": "WasteDump.png",
         "name": "Liquid Dump",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "fluid",
+        "category_name": "Fluid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -4266,6 +5372,10 @@
         "recipes": [
             "acid_dumping",
             "brine_dumping",
+            "fertilizer_dumping",
+            "fertilizer_dumping_2",
+            "fertilizer_dumping_3",
+            "red_mud_dumping",
             "seawater_dumping",
             "sour_water_dumping",
             "toxic_slurry_dumping",
@@ -4276,6 +5386,10 @@
             "input": [
                 "acid",
                 "brine",
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "red_mud",
                 "seawater",
                 "sour_water",
                 "toxic_slurry",
@@ -4304,7 +5418,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 720,
+        "storage_capacity": 1600,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -4330,14 +5444,14 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 5,
+        "workers": 4,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 3,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 360,
+        "storage_capacity": 800,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -4370,7 +5484,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 180,
+        "storage_capacity": 400,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -5051,12 +6165,12 @@
         "game_id": "TurbineLowPress",
         "icon": "TurbineLowPress.png",
         "name": "Low-pressure Turbine",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 3,
+        "workers": 2,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
         "electricity_consumed": 0,
@@ -5078,7 +6192,7 @@
         ],
         "products": {
             "input": [
-                "steam_lo"
+                "steam_low"
             ],
             "output": [
                 "mechanical_power",
@@ -5091,15 +6205,55 @@
         "game_id": "TurbineLowPressT2",
         "icon": "TurbineLowPressT2.png",
         "name": "Low-pressure Turbine II",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 6,
-        "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 3,
+        "workers": 2,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 2,
         "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 60
+            }
+        ],
+        "recipes": [
+            "turbinelowpresst2"
+        ],
+        "products": {
+            "input": [
+                "steam_low"
+            ],
+            "output": [
+                "mechanical_power",
+                "steam_depleted"
+            ]
+        }
+    },
+    "luxury_goods_module": {
+        "id": "luxury_goods_module",
+        "game_id": "SettlementLuxuryGoodsModule",
+        "icon": "SettlementLuxuryGoodsModule.png",
+        "name": "Luxury Goods Module",
+        "category_id": "housing_and_services",
+        "category_name": "Housing & Services",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 16,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 150,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5110,20 +6264,18 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 140
+                "quantity": 80
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 40
             }
         ],
-        "recipes": [
-            "turbinelowpresst2"
-        ],
+        "recipes": [],
         "products": {
-            "input": [
-                "steam_lo"
-            ],
-            "output": [
-                "mechanical_power",
-                "steam_depleted"
-            ]
+            "input": [],
+            "output": []
         }
     },
     "maintenance_depot": {
@@ -5131,15 +6283,15 @@
         "game_id": "MaintenanceDepotT1",
         "icon": "MaintenanceDepotT1.png",
         "name": "Maintenance Depot",
-        "category_id": "buildings",
-        "category_name": "Buildings",
+        "category_id": "maintenance",
+        "category_name": "Maintenance",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 20,
+        "workers": 12,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 60,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5154,8 +6306,8 @@
             }
         ],
         "recipes": [
-            "maintenance_i_4",
-            "maintenance_i_5"
+            "maintenance_i",
+            "maintenance_i_2"
         ],
         "products": {
             "input": [
@@ -5173,15 +6325,15 @@
         "game_id": "MaintenanceDepotT0",
         "icon": "MaintenanceDepotT0.png",
         "name": "Maintenance Depot (Basic)",
-        "category_id": "buildings",
-        "category_name": "Buildings",
+        "category_id": "maintenance",
+        "category_name": "Maintenance",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 25,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5196,7 +6348,7 @@
             }
         ],
         "recipes": [
-            "maintenance_i_6"
+            "maintenance_i_3"
         ],
         "products": {
             "input": [
@@ -5213,15 +6365,15 @@
         "game_id": "MaintenanceDepotT2",
         "icon": "MaintenanceDepotT2.png",
         "name": "Maintenance II Depot",
-        "category_id": "buildings",
-        "category_name": "Buildings",
+        "category_id": "maintenance",
+        "category_name": "Maintenance",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 28,
+        "workers": 16,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 100,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5232,17 +6384,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 40
             },
             {
-                "id": "electronics_ii",
-                "name": "Electronics II",
-                "quantity": 20
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 10
             }
         ],
         "recipes": [
-            "maintenance_ii_3",
-            "maintenance_ii_4"
+            "maintenance_ii",
+            "maintenance_ii_2"
         ],
         "products": {
             "input": [
@@ -5260,15 +6412,15 @@
         "game_id": "MaintenanceDepotT3",
         "icon": "MaintenanceDepotT3.png",
         "name": "Maintenance III Depot",
-        "category_id": "buildings",
-        "category_name": "Buildings",
+        "category_id": "maintenance",
+        "category_name": "Maintenance",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 32,
+        "workers": 20,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 140,
+        "electricity_consumed": 600,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5277,9 +6429,9 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 50
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 40
             },
             {
                 "id": "electronics_iii",
@@ -5288,8 +6440,8 @@
             }
         ],
         "recipes": [
-            "maintenance_iii_3",
-            "maintenance_iii_4"
+            "maintenance_iii",
+            "maintenance_iii_2"
         ],
         "products": {
             "input": [
@@ -5307,8 +6459,8 @@
         "game_id": "Caster",
         "icon": "Caster.png",
         "name": "Metal Caster",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "aluminum",
+        "category_name": "Aluminum",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -5330,15 +6482,18 @@
             }
         ],
         "recipes": [
-            "copper_casting",
-            "iron_casting"
+            "aluminum_casting_2",
+            "copper_casting_2",
+            "iron_casting_2"
         ],
         "products": {
             "input": [
+                "molten_aluminum",
                 "molten_copper",
                 "molten_iron"
             ],
             "output": [
+                "aluminum",
                 "impure_copper",
                 "iron"
             ]
@@ -5349,12 +6504,12 @@
         "game_id": "CasterT2",
         "icon": "CasterT2.png",
         "name": "Metal Caster II",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "aluminum",
+        "category_name": "Aluminum",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 3,
+        "workers": 2,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
         "electricity_consumed": 0,
@@ -5377,15 +6532,18 @@
             }
         ],
         "recipes": [
-            "copper_casting_2",
-            "iron_casting_2"
+            "aluminum_casting",
+            "copper_casting",
+            "iron_casting"
         ],
         "products": {
             "input": [
+                "molten_aluminum",
                 "molten_copper",
                 "molten_iron"
             ],
             "output": [
+                "aluminum",
                 "impure_copper",
                 "iron"
             ]
@@ -5396,15 +6554,15 @@
         "game_id": "MicrochipMachine",
         "icon": "MicrochipMachine.png",
         "name": "Microchip Machine",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 6,
+        "workers": 4,
         "maintenance_cost_units": "maintenance_ii",
         "maintenance_cost_quantity": 6,
-        "electricity_consumed": 30,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 4,
         "computing_generated": 0,
@@ -5415,84 +6573,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 80
-            }
-        ],
-        "recipes": [
-            "microchip_manufacturing_final_stage",
-            "microchip_manufacturing_stage_1a",
-            "microchip_manufacturing_stage_1b",
-            "microchip_manufacturing_stage_1c",
-            "microchip_manufacturing_stage_1d",
-            "microchip_manufacturing_stage_2a",
-            "microchip_manufacturing_stage_2b",
-            "microchip_manufacturing_stage_2c",
-            "microchip_manufacturing_stage_2d",
-            "microchip_manufacturing_stage_3a",
-            "microchip_manufacturing_stage_3b",
-            "microchip_manufacturing_stage_3c"
-        ],
-        "products": {
-            "input": [
-                "acid",
-                "copper",
-                "gold",
-                "microchips_stage_1_a",
-                "microchips_stage_1_b",
-                "microchips_stage_1_c",
-                "microchips_stage_2_a",
-                "microchips_stage_2_b",
-                "microchips_stage_2_c",
-                "microchips_stage_3_a",
-                "microchips_stage_3_b",
-                "microchips_stage_3_c",
-                "microchips_stage_4_a",
-                "microchips_stage_4_b",
-                "plastic",
-                "silicon_wafer",
-                "water"
-            ],
-            "output": [
-                "microchips",
-                "microchips_stage_1_a",
-                "microchips_stage_1_b",
-                "microchips_stage_1_c",
-                "microchips_stage_2_a",
-                "microchips_stage_2_b",
-                "microchips_stage_2_c",
-                "microchips_stage_3_a",
-                "microchips_stage_3_b",
-                "microchips_stage_3_c",
-                "microchips_stage_4_a",
-                "microchips_stage_4_b"
-            ]
-        }
-    },
-    "microchip_machine_ii": {
-        "id": "microchip_machine_ii",
-        "game_id": "MicrochipMachineT2",
-        "icon": "MicrochipMachineT2.png",
-        "name": "Microchip Machine II",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
-        "isMine": false,
-        "isStorage": false,
-        "isFarm": false,
-        "workers": 8,
-        "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 10,
-        "electricity_consumed": 60,
-        "electricity_generated": 0,
-        "computing_consumed": 8,
-        "computing_generated": 0,
-        "storage_capacity": 0,
-        "unity_cost": 0,
-        "research_speed": 0,
-        "build_costs": [
-            {
-                "id": "construction_parts_iv",
-                "name": "Construction Parts IV",
-                "quantity": 160
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -5545,6 +6626,83 @@
             ]
         }
     },
+    "microchip_machine_ii": {
+        "id": "microchip_machine_ii",
+        "game_id": "MicrochipMachineT2",
+        "icon": "MicrochipMachineT2.png",
+        "name": "Microchip Machine II",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 6,
+        "maintenance_cost_units": "maintenance_iii",
+        "maintenance_cost_quantity": 8,
+        "electricity_consumed": 500,
+        "electricity_generated": 0,
+        "computing_consumed": 12,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 180
+            }
+        ],
+        "recipes": [
+            "microchip_manufacturing_final_stage",
+            "microchip_manufacturing_stage_1a",
+            "microchip_manufacturing_stage_1b",
+            "microchip_manufacturing_stage_1c",
+            "microchip_manufacturing_stage_1d",
+            "microchip_manufacturing_stage_2a",
+            "microchip_manufacturing_stage_2b",
+            "microchip_manufacturing_stage_2c",
+            "microchip_manufacturing_stage_2d",
+            "microchip_manufacturing_stage_3a",
+            "microchip_manufacturing_stage_3b",
+            "microchip_manufacturing_stage_3c"
+        ],
+        "products": {
+            "input": [
+                "acid",
+                "copper",
+                "gold",
+                "microchips_stage_1_a",
+                "microchips_stage_1_b",
+                "microchips_stage_1_c",
+                "microchips_stage_2_a",
+                "microchips_stage_2_b",
+                "microchips_stage_2_c",
+                "microchips_stage_3_a",
+                "microchips_stage_3_b",
+                "microchips_stage_3_c",
+                "microchips_stage_4_a",
+                "microchips_stage_4_b",
+                "plastic",
+                "silicon_wafer",
+                "water"
+            ],
+            "output": [
+                "microchips",
+                "microchips_stage_1_a",
+                "microchips_stage_1_b",
+                "microchips_stage_1_c",
+                "microchips_stage_2_a",
+                "microchips_stage_2_b",
+                "microchips_stage_2_c",
+                "microchips_stage_3_a",
+                "microchips_stage_3_b",
+                "microchips_stage_3_c",
+                "microchips_stage_4_a",
+                "microchips_stage_4_b"
+            ]
+        }
+    },
     "mill": {
         "id": "mill",
         "game_id": "FoodMill",
@@ -5558,7 +6716,7 @@
         "workers": 5,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 30,
+        "electricity_consumed": 120,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5599,8 +6757,8 @@
         "game_id": "MineTower",
         "icon": "MineTower.png",
         "name": "Mine Control Tower",
-        "category_id": "buildings_for_vehicles",
-        "category_name": "Buildings (For Vehicles)",
+        "category_id": "terraforming",
+        "category_name": "Terraforming",
         "isMine": true,
         "isStorage": false,
         "isFarm": false,
@@ -5632,15 +6790,15 @@
         "game_id": "IndustrialMixer",
         "icon": "IndustrialMixer.png",
         "name": "Mixer",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "food_production",
+        "category_name": "Food Production",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 5,
+        "workers": 4,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 20,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5655,21 +6813,24 @@
             }
         ],
         "recipes": [
-            "acid_mixing",
-            "animal_feed_production",
-            "animal_feed_production_2",
-            "animal_feed_production_3",
-            "animal_feed_production_4",
-            "brine_production",
-            "composing",
-            "composing_2",
-            "composing_3",
-            "fertilizer_ii_synthesis",
-            "fertilizer_mixing",
-            "filter_media_mixing",
-            "glass_mix_mixing",
-            "glass_mix_mixing_2",
-            "sulfur_neutralization"
+            "acid_mixing_2",
+            "animal_feed_production_5",
+            "animal_feed_production_6",
+            "animal_feed_production_7",
+            "animal_feed_production_8",
+            "brine_production_2",
+            "composing_4",
+            "composing_5",
+            "composing_6",
+            "dirt_mixing_2",
+            "fertilizer_ii_synthesis_2",
+            "fertilizer_mixing_3",
+            "fertilizer_mixing_dirt_2",
+            "filter_media_mixing_3",
+            "filter_media_mixing_4",
+            "glass_mix_mixing_3",
+            "glass_mix_mixing_4",
+            "sulfur_neutralization_2"
         ],
         "products": {
             "input": [
@@ -5679,9 +6840,11 @@
                 "coal",
                 "compost",
                 "corn",
+                "dirt",
                 "fertilizer_i",
                 "gravel",
                 "limestone",
+                "manufactured_sand",
                 "meat_trimmings",
                 "potato",
                 "salt",
@@ -5696,6 +6859,90 @@
                 "animal_feed",
                 "brine",
                 "compost",
+                "dirt",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "filter_media",
+                "glass_mix",
+                "slag"
+            ]
+        }
+    },
+    "mixer_ii": {
+        "id": "mixer_ii",
+        "game_id": "IndustrialMixerT2",
+        "icon": "IndustrialMixerT2.png",
+        "name": "Mixer II",
+        "category_id": "food_production",
+        "category_name": "Food Production",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 4,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 4,
+        "electricity_consumed": 200,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 40
+            }
+        ],
+        "recipes": [
+            "acid_mixing",
+            "animal_feed_production",
+            "animal_feed_production_2",
+            "animal_feed_production_3",
+            "animal_feed_production_4",
+            "brine_production",
+            "composing",
+            "composing_2",
+            "composing_3",
+            "dirt_mixing",
+            "fertilizer_ii_synthesis",
+            "fertilizer_mixing",
+            "fertilizer_mixing_dirt",
+            "filter_media_mixing",
+            "filter_media_mixing_2",
+            "glass_mix_mixing",
+            "glass_mix_mixing_2",
+            "sulfur_neutralization"
+        ],
+        "products": {
+            "input": [
+                "acid",
+                "animal_feed",
+                "biomass",
+                "coal",
+                "compost",
+                "corn",
+                "dirt",
+                "fertilizer_i",
+                "gravel",
+                "limestone",
+                "manufactured_sand",
+                "meat_trimmings",
+                "potato",
+                "salt",
+                "sand",
+                "soybean",
+                "sulfur",
+                "water",
+                "wheat"
+            ],
+            "output": [
+                "acid",
+                "animal_feed",
+                "brine",
+                "compost",
+                "dirt",
                 "fertilizer_ii",
                 "fertilizer_organic",
                 "filter_media",
@@ -5709,14 +6956,14 @@
         "game_id": "NuclearReactor",
         "icon": "NuclearReactor.png",
         "name": "Nuclear Reactor",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 80,
-        "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 32,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 60,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
@@ -5726,18 +6973,15 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 800
-            },
-            {
-                "id": "electronics_ii",
-                "name": "Electronics II",
-                "quantity": 80
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 400
             }
         ],
         "recipes": [
-            "nuclearreactor"
+            "nuclear_reactor",
+            "nuclear_reactor_1",
+            "nuclear_reactor_fuel_1_powerlevel_2"
         ],
         "products": {
             "input": [
@@ -5746,7 +6990,109 @@
             ],
             "output": [
                 "spent_fuel",
-                "steam_hi"
+                "steam_high"
+            ]
+        }
+    },
+    "nuclear_reactor_ii": {
+        "id": "nuclear_reactor_ii",
+        "game_id": "NuclearReactorT2",
+        "icon": "NuclearReactorT2.png",
+        "name": "Nuclear Reactor II",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 110,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 90,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 12,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 700
+            }
+        ],
+        "recipes": [
+            "nuclear_reactor_ii",
+            "nuclear_reactor_ii_1",
+            "nuclear_reactor_ii_2",
+            "nuclear_reactor_ii_3",
+            "nuclear_reactor_ii_fuel_1_powerlevel_2",
+            "nuclear_reactor_ii_fuel_1_powerlevel_3",
+            "nuclear_reactor_ii_fuel_2_powerlevel_2",
+            "nuclear_reactor_ii_fuel_2_powerlevel_3"
+        ],
+        "products": {
+            "input": [
+                "mox_rod",
+                "uranium_rod",
+                "water"
+            ],
+            "output": [
+                "spent_fuel",
+                "spent_mox",
+                "steam_high"
+            ]
+        }
+    },
+    "nuclear_reprocessing_plant": {
+        "id": "nuclear_reprocessing_plant",
+        "game_id": "NuclearReprocessingPlant",
+        "icon": "NuclearReprocessingPlant.png",
+        "name": "Nuclear Reprocessing Plant",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 30,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 20,
+        "electricity_consumed": 2000,
+        "electricity_generated": 0,
+        "computing_consumed": 24,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 300
+            }
+        ],
+        "recipes": [
+            "core_fuel_reprocessing",
+            "spent_fuel_reprocessing",
+            "spent_fuel_to_blanket",
+            "spent_mox_to_blanket"
+        ],
+        "products": {
+            "input": [
+                "acid",
+                "core_fuel_spent",
+                "molten_glass",
+                "salt",
+                "spent_fuel",
+                "spent_mox",
+                "steel"
+            ],
+            "output": [
+                "blanket_fuel",
+                "core_fuel",
+                "fission_product",
+                "plutonium",
+                "reprocessed_uranium_1%"
             ]
         }
     },
@@ -5755,15 +7101,15 @@
         "game_id": "OilPump",
         "icon": "OilPump.png",
         "name": "Oil Pump",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "basic",
+        "category_name": "Basic",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 1,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 20,
+        "electricity_consumed": 80,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5792,15 +7138,15 @@
         "game_id": "OxygenFurnace",
         "icon": "OxygenFurnace.png",
         "name": "Oxygen Furnace",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "iron",
+        "category_name": "Iron",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 6,
+        "workers": 4,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 25,
+        "electricity_consumed": 120,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5811,11 +7157,11 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 60
+                "quantity": 50
             }
         ],
         "recipes": [
-            "steel_smelting"
+            "steel_smelting_2"
         ],
         "products": {
             "input": [
@@ -5833,15 +7179,15 @@
         "game_id": "OxygenFurnaceT2",
         "icon": "OxygenFurnaceT2.png",
         "name": "Oxygen Furnace II",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "iron",
+        "category_name": "Iron",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 10,
+        "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
-        "electricity_consumed": 40,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5852,11 +7198,11 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 70
+                "quantity": 60
             }
         ],
         "recipes": [
-            "steel_smelting_2"
+            "steel_smelting"
         ],
         "products": {
             "input": [
@@ -5874,15 +7220,15 @@
         "game_id": "PolymerizationPlant",
         "icon": "PolymerizationPlant.png",
         "name": "Polymerization Plant",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "derivatives",
+        "category_name": "Derivatives",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 12,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
-        "electricity_consumed": 100,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -5917,8 +7263,8 @@
         "game_id": "PowerGeneratorT1",
         "icon": "PowerGeneratorT1.png",
         "name": "Power Generator",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -5926,7 +7272,7 @@
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 1,
         "electricity_consumed": 0,
-        "electricity_generated": 300,
+        "electricity_generated": 2000,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -5956,21 +7302,21 @@
             ]
         }
     },
-    "power_generator_ii": {
-        "id": "power_generator_ii",
+    "power_generator_large": {
+        "id": "power_generator_large",
         "game_id": "PowerGeneratorT2",
         "icon": "PowerGeneratorT2.png",
-        "name": "Power Generator II",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "name": "Power Generator (Large)",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 0,
         "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 8,
+        "maintenance_cost_quantity": 6,
         "electricity_consumed": 0,
-        "electricity_generated": 2500,
+        "electricity_generated": 15000,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -5978,9 +7324,9 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 80
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 40
             },
             {
                 "id": "electronics",
@@ -6000,6 +7346,44 @@
             ]
         }
     },
+    "radioactive_waste_storage": {
+        "id": "radioactive_waste_storage",
+        "game_id": "NuclearWasteStorage",
+        "icon": "NuclearWasteStorage.png",
+        "name": "Radioactive Waste Storage",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
+        "isMine": false,
+        "isStorage": true,
+        "isFarm": false,
+        "workers": 10,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 2400,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 150
+            },
+            {
+                "id": "concrete_slab",
+                "name": "Concrete slab",
+                "quantity": 500
+            }
+        ],
+        "recipes": [],
+        "products": {
+            "input": [],
+            "output": []
+        }
+    },
     "rainwater_harvester": {
         "id": "rainwater_harvester",
         "game_id": "RainwaterHarvester",
@@ -6011,8 +7395,8 @@
         "isStorage": false,
         "isFarm": false,
         "workers": 0,
-        "maintenance_cost_units": null,
-        "maintenance_cost_quantity": 0,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 1,
         "electricity_consumed": 0,
         "electricity_generated": 0,
         "computing_consumed": 0,
@@ -6032,10 +7416,14 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "rainwater_harvester"
+        ],
         "products": {
             "input": [],
-            "output": []
+            "output": [
+                "water"
+            ]
         }
     },
     "recyclables_collection": {
@@ -6043,8 +7431,8 @@
         "game_id": "SettlementRecyclablesModule",
         "icon": "SettlementRecyclablesModule.png",
         "name": "Recyclables Collection",
-        "category_id": "housing_and_services",
-        "category_name": "Housing & Services",
+        "category_id": "settlement",
+        "category_name": "Settlement",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -6071,26 +7459,26 @@
             "output": []
         }
     },
-    "research_lab": {
-        "id": "research_lab",
+    "research_lab_basic": {
+        "id": "research_lab_basic",
         "game_id": "ResearchLab1",
         "icon": "ResearchLab1.png",
-        "name": "Research Lab",
+        "name": "Research Lab (Basic)",
         "category_id": "buildings",
         "category_name": "Buildings",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 4,
+        "workers": 6,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 0,
+        "electricity_consumed": 40,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
         "unity_cost": 0.25,
-        "research_speed": 3.199219,
+        "research_speed": 3,
         "build_costs": [
             {
                 "id": "construction_parts",
@@ -6104,26 +7492,26 @@
             "output": []
         }
     },
-    "research_lab_ii": {
-        "id": "research_lab_ii",
+    "research_lab_i": {
+        "id": "research_lab_i",
         "game_id": "ResearchLab2",
         "icon": "ResearchLab2.png",
-        "name": "Research Lab II",
+        "name": "Research Lab I",
         "category_id": "buildings",
         "category_name": "Buildings",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 8,
+        "workers": 12,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 8,
-        "electricity_consumed": 50,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
         "unity_cost": 0.25,
-        "research_speed": 4,
+        "research_speed": 6,
         "build_costs": [
             {
                 "id": "construction_parts_ii",
@@ -6133,11 +7521,12 @@
             {
                 "id": "lab_equipment",
                 "name": "Lab Equipment",
-                "quantity": 10
+                "quantity": 12
             }
         ],
         "recipes": [
-            "research_lab_ii"
+            "research_lab_i",
+            "research_lab_i_1"
         ],
         "products": {
             "input": [
@@ -6148,26 +7537,26 @@
             ]
         }
     },
-    "research_lab_iii": {
-        "id": "research_lab_iii",
+    "research_lab_ii": {
+        "id": "research_lab_ii",
         "game_id": "ResearchLab3",
         "icon": "ResearchLab3.png",
-        "name": "Research Lab III",
+        "name": "Research Lab II",
         "category_id": "buildings",
         "category_name": "Buildings",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 16,
+        "workers": 20,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 12,
-        "electricity_consumed": 90,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
-        "unity_cost": 0.2001953,
-        "research_speed": 4.800781,
+        "unity_cost": 0.2998047,
+        "research_speed": 12,
         "build_costs": [
             {
                 "id": "construction_parts_iii",
@@ -6177,11 +7566,12 @@
             {
                 "id": "lab_equipment_ii",
                 "name": "Lab Equipment II",
-                "quantity": 20
+                "quantity": 24
             }
         ],
         "recipes": [
-            "research_lab_iii"
+            "research_lab_ii",
+            "research_lab_ii_1"
         ],
         "products": {
             "input": [
@@ -6192,45 +7582,41 @@
             ]
         }
     },
-    "research_lab_iv": {
-        "id": "research_lab_iv",
+    "research_lab_iii": {
+        "id": "research_lab_iii",
         "game_id": "ResearchLab4",
         "icon": "ResearchLab4.png",
-        "name": "Research Lab IV",
+        "name": "Research Lab III",
         "category_id": "buildings",
         "category_name": "Buildings",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 30,
-        "maintenance_cost_units": "maintenance_i",
-        "maintenance_cost_quantity": 16,
-        "electricity_consumed": 150,
+        "workers": 46,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 12,
+        "electricity_consumed": 600,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
-        "unity_cost": 0.2001953,
-        "research_speed": 5.601563,
+        "unity_cost": 0.4003906,
+        "research_speed": 24,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 220
-            },
-            {
-                "id": "glass",
-                "name": "Glass",
-                "quantity": 60
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 120
             },
             {
                 "id": "lab_equipment_iii",
                 "name": "Lab Equipment III",
-                "quantity": 20
+                "quantity": 48
             }
         ],
         "recipes": [
-            "research_lab_iv"
+            "research_lab_iii",
+            "research_lab_iii_1"
         ],
         "products": {
             "input": [
@@ -6241,45 +7627,41 @@
             ]
         }
     },
-    "research_lab_v": {
-        "id": "research_lab_v",
+    "research_lab_iv": {
+        "id": "research_lab_iv",
         "game_id": "ResearchLab5",
         "icon": "ResearchLab5.png",
-        "name": "Research Lab V",
+        "name": "Research Lab IV",
         "category_id": "buildings",
         "category_name": "Buildings",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 48,
-        "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 16,
-        "electricity_consumed": 250,
+        "workers": 80,
+        "maintenance_cost_units": "maintenance_iii",
+        "maintenance_cost_quantity": 12,
+        "electricity_consumed": 1000,
         "electricity_generated": 0,
         "computing_consumed": 12,
         "computing_generated": 0,
         "storage_capacity": 0,
-        "unity_cost": 0.2001953,
-        "research_speed": 6.398438,
+        "unity_cost": 0.5,
+        "research_speed": 48,
         "build_costs": [
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 200
-            },
-            {
-                "id": "glass",
-                "name": "Glass",
-                "quantity": 160
+                "quantity": 300
             },
             {
                 "id": "lab_equipment_iv",
                 "name": "Lab Equipment IV",
-                "quantity": 20
+                "quantity": 96
             }
         ],
         "recipes": [
-            "research_lab_v"
+            "research_lab_iv",
+            "research_lab_iv_1"
         ],
         "products": {
             "input": [
@@ -6332,15 +7714,15 @@
         "game_id": "RocketAssemblyDepot",
         "icon": "RocketAssemblyDepot.png",
         "name": "Rocket Assembly Depot",
-        "category_id": "buildings",
-        "category_name": "Buildings",
+        "category_id": "rockets",
+        "category_name": "Rockets",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 160,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 500,
+        "electricity_consumed": 2000,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6370,8 +7752,8 @@
         "game_id": "RocketLaunchPad",
         "icon": "RocketLaunchPad.png",
         "name": "Rocket Launch Pad",
-        "category_id": "buildings",
-        "category_name": "Buildings",
+        "category_id": "rockets",
+        "category_name": "Rockets",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -6413,15 +7795,15 @@
         "game_id": "RotaryKiln",
         "icon": "RotaryKiln.png",
         "name": "Rotary Kiln",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 20,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6430,13 +7812,13 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts",
-                "name": "Construction Parts",
-                "quantity": 60
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 30
             }
         ],
         "recipes": [
-            "cement_production"
+            "cement_production_3"
         ],
         "products": {
             "input": [
@@ -6454,15 +7836,15 @@
         "game_id": "RotaryKilnGas",
         "icon": "RotaryKilnGas.png",
         "name": "Rotary Kiln (Gas)",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "aluminum",
+        "category_name": "Aluminum",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 10,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 3,
-        "electricity_consumed": 20,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6477,18 +7859,23 @@
             }
         ],
         "recipes": [
-            "cement_production_2",
-            "cement_production_3"
+            "alumina_calcification",
+            "alumina_calcification_2",
+            "cement_production",
+            "cement_production_2"
         ],
         "products": {
             "input": [
                 "fuel_gas",
+                "hydrated_alumina",
                 "hydrogen",
                 "limestone"
             ],
             "output": [
+                "alumina",
+                "carbon_dioxide",
                 "cement",
-                "exhaust"
+                "steam_depleted"
             ]
         }
     },
@@ -6497,15 +7884,15 @@
         "game_id": "VacuumDistillationTower",
         "icon": "VacuumDistillationTower.png",
         "name": "Rubber Maker",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "derivatives",
+        "category_name": "Derivatives",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 80,
+        "electricity_consumed": 300,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6587,10 +7974,10 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 2,
+        "workers": 1,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 20,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6605,7 +7992,8 @@
             }
         ],
         "recipes": [
-            "ocean_water_pumping"
+            "ocean_water_pumping",
+            "ocean_water_pumping_2"
         ],
         "products": {
             "input": [],
@@ -6624,10 +8012,10 @@
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 3,
+        "workers": 1,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 60,
+        "electricity_consumed": 200,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6642,7 +8030,8 @@
             }
         ],
         "recipes": [
-            "ocean_water_pumping_ii"
+            "ocean_water_pumping_ii",
+            "ocean_water_pumping_ii_2"
         ],
         "products": {
             "input": [],
@@ -6656,15 +8045,15 @@
         "game_id": "SettlingTank",
         "icon": "SettlingTank.png",
         "name": "Settling Tank",
-        "category_id": "general_machines",
-        "category_name": "General Machines",
+        "category_id": "nuclear",
+        "category_name": "Nuclear",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 30,
+        "electricity_consumed": 120,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6681,61 +8070,89 @@
         "recipes": [
             "fluoride_leaching",
             "gold_settling",
+            "red_mud_settling",
+            "red_mud_settling_acid",
             "uranium_leaching"
         ],
         "products": {
             "input": [
                 "acid",
                 "gold_ore_powder",
+                "limestone",
+                "red_mud",
                 "rock",
-                "uranium_ore_crushed"
+                "seawater",
+                "uranium_ore_powder"
             ],
             "output": [
                 "gold_ore_concentrate",
                 "hydrogen_fluoride",
+                "iron_ore_crushed",
                 "slag",
                 "toxic_slurry",
-                "yellow_cake"
+                "yellowcake"
             ]
         }
     },
-    "silicon_crystallizer": {
-        "id": "silicon_crystallizer",
-        "game_id": "SiliconCrystallizer",
-        "icon": "SiliconCrystallizer.png",
-        "name": "Silicon Crystallizer",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+    "shredder": {
+        "id": "shredder",
+        "game_id": "Shredder",
+        "icon": "Shredder.png",
+        "name": "Shredder",
+        "category_id": "forestry",
+        "category_name": "Forestry",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 8,
-        "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 5,
-        "electricity_consumed": 50,
+        "workers": 1,
+        "maintenance_cost_units": "maintenance_i",
+        "maintenance_cost_quantity": 1,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
-        "computing_consumed": 4,
+        "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iv",
-                "name": "Construction Parts IV",
-                "quantity": 30
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 25
             }
         ],
         "recipes": [
-            "silicon_crystallization"
+            "shredding_aluminum_scrap",
+            "shredding_copper_scrap",
+            "shredding_gold_scrap",
+            "shredding_iron_scrap",
+            "shredding_poly_cells",
+            "shredding_saplings",
+            "shredding_waste",
+            "shredding_waste_2",
+            "shredding_wood"
         ],
         "products": {
             "input": [
-                "silicon_poly",
-                "water"
+                "aluminum_scrap_pressed",
+                "copper_scrap_pressed",
+                "gold_scrap_pressed",
+                "iron_scrap_pressed",
+                "retired_waste",
+                "solar_cell",
+                "tree_sapling",
+                "waste_pressed",
+                "wood"
             ],
             "output": [
-                "silicon_wafer"
+                "aluminum_scrap",
+                "biomass",
+                "copper_scrap",
+                "gold_scrap",
+                "iron_scrap",
+                "recyclables",
+                "waste",
+                "woodchips"
             ]
         }
     },
@@ -6744,15 +8161,15 @@
         "game_id": "SiliconReactor",
         "icon": "SiliconReactor.png",
         "name": "Silicon Reactor",
-        "category_id": "metallurgy_and_smelting",
-        "category_name": "Metallurgy & Smelting",
+        "category_id": "silicon",
+        "category_name": "Silicon",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 2,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 1,
-        "electricity_consumed": 20,
+        "electricity_consumed": 80,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -6858,8 +8275,8 @@
         "game_id": "SmokeStack",
         "icon": "SmokeStack.png",
         "name": "Smoke Stack",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "titanium",
+        "category_name": "Titanium",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -6881,13 +8298,14 @@
             }
         ],
         "recipes": [
-            "product_disposal",
-            "product_disposal_2",
-            "product_disposal_3",
-            "product_disposal_4",
-            "product_disposal_5",
-            "product_disposal_6",
-            "product_disposal_7"
+            "product_disposal_10",
+            "product_disposal_11",
+            "product_disposal_12",
+            "product_disposal_13",
+            "product_disposal_14",
+            "product_disposal_15",
+            "product_disposal_16",
+            "product_disposal_9"
         ],
         "products": {
             "input": [
@@ -6896,8 +8314,9 @@
                 "nitrogen",
                 "oxygen",
                 "steam_depleted",
-                "steam_hi",
-                "steam_lo"
+                "steam_high",
+                "steam_low",
+                "steam_super"
             ],
             "output": [
                 "air_pollution"
@@ -6909,8 +8328,8 @@
         "game_id": "SmokeStackLarge",
         "icon": "SmokeStackLarge.png",
         "name": "Smoke Stack (Large)",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "titanium",
+        "category_name": "Titanium",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -6937,13 +8356,14 @@
             }
         ],
         "recipes": [
-            "product_disposal_10",
-            "product_disposal_11",
-            "product_disposal_12",
-            "product_disposal_13",
-            "product_disposal_14",
-            "product_disposal_8",
-            "product_disposal_9"
+            "product_disposal",
+            "product_disposal_2",
+            "product_disposal_3",
+            "product_disposal_4",
+            "product_disposal_5",
+            "product_disposal_6",
+            "product_disposal_7",
+            "product_disposal_8"
         ],
         "products": {
             "input": [
@@ -6952,8 +8372,9 @@
                 "nitrogen",
                 "oxygen",
                 "steam_depleted",
-                "steam_hi",
-                "steam_lo"
+                "steam_high",
+                "steam_low",
+                "steam_super"
             ],
             "output": [
                 "air_pollution"
@@ -6965,16 +8386,16 @@
         "game_id": "SolarPanel",
         "icon": "SolarPanel.png",
         "name": "Solar Panel",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 0,
         "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 0.5996094,
+        "maintenance_cost_quantity": 0.2001953,
         "electricity_consumed": 0,
-        "electricity_generated": 32,
+        "electricity_generated": 150,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -6982,13 +8403,8 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 20
-            },
-            {
-                "id": "electronics_ii",
-                "name": "Electronics II",
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
                 "quantity": 10
             },
             {
@@ -7008,16 +8424,16 @@
         "game_id": "SolarPanelMono",
         "icon": "SolarPanelMono.png",
         "name": "Solar Panel (Mono)",
-        "category_id": "power_production",
-        "category_name": "Power Production",
+        "category_id": "general",
+        "category_name": "General",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 0,
         "maintenance_cost_units": "maintenance_ii",
-        "maintenance_cost_quantity": 0.5996094,
+        "maintenance_cost_quantity": 0.2001953,
         "electricity_consumed": 0,
-        "electricity_generated": 40,
+        "electricity_generated": 200,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -7025,13 +8441,8 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 20
-            },
-            {
-                "id": "electronics_ii",
-                "name": "Electronics II",
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
                 "quantity": 10
             },
             {
@@ -7051,15 +8462,15 @@
         "game_id": "SourWaterStripper",
         "icon": "SourWaterStripper.png",
         "name": "Sour Water Stripper",
-        "category_id": "crude_oil_refining",
-        "category_name": "Crude Oil Refining",
+        "category_id": "distillation",
+        "category_name": "Distillation",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 12,
+        "workers": 8,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 4,
-        "electricity_consumed": 40,
+        "electricity_consumed": 160,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -7079,7 +8490,7 @@
         "products": {
             "input": [
                 "sour_water",
-                "steam_hi"
+                "steam_high"
             ],
             "output": [
                 "ammonia",
@@ -7348,6 +8759,46 @@
             ]
         }
     },
+    "super-pressure_turbine": {
+        "id": "super-pressure_turbine",
+        "game_id": "TurbineSuperPress",
+        "icon": "TurbineSuperPress.png",
+        "name": "Super-pressure Turbine",
+        "category_id": "general",
+        "category_name": "General",
+        "isMine": false,
+        "isStorage": false,
+        "isFarm": false,
+        "workers": 1,
+        "maintenance_cost_units": "maintenance_ii",
+        "maintenance_cost_quantity": 3,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 40
+            }
+        ],
+        "recipes": [
+            "turbinesuperpress"
+        ],
+        "products": {
+            "input": [
+                "steam_super"
+            ],
+            "output": [
+                "mechanical_power",
+                "steam_high"
+            ]
+        }
+    },
     "thermal_desalinator": {
         "id": "thermal_desalinator",
         "game_id": "ThermalDesalinator",
@@ -7361,7 +8812,7 @@
         "workers": 4,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 40,
+        "electricity_consumed": 400,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -7383,14 +8834,16 @@
         "recipes": [
             "thermal_desalination",
             "thermal_desalination_2",
-            "thermal_desalination_3"
+            "thermal_desalination_3",
+            "thermal_desalination_4"
         ],
         "products": {
             "input": [
                 "seawater",
                 "steam_depleted",
-                "steam_hi",
-                "steam_lo"
+                "steam_high",
+                "steam_low",
+                "steam_super"
             ],
             "output": [
                 "brine",
@@ -7415,7 +8868,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 720,
+        "storage_capacity": 1600,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -7448,7 +8901,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 360,
+        "storage_capacity": 800,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -7481,7 +8934,7 @@
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
-        "storage_capacity": 180,
+        "storage_capacity": 400,
         "unity_cost": 0,
         "research_speed": 0,
         "build_costs": [
@@ -8522,8 +9975,8 @@
         "game_id": "VehiclesDepot",
         "icon": "VehiclesDepot.png",
         "name": "Vehicles Depot",
-        "category_id": "buildings_for_vehicles",
-        "category_name": "Buildings (For Vehicles)",
+        "category_id": "vehicles",
+        "category_name": "Vehicles",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -8555,15 +10008,15 @@
         "game_id": "VehiclesDepotT2",
         "icon": "VehiclesDepotT2.png",
         "name": "Vehicles Depot II",
-        "category_id": "buildings_for_vehicles",
-        "category_name": "Buildings (For Vehicles)",
+        "category_id": "vehicles",
+        "category_name": "Vehicles",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 10,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 80,
+        "electricity_consumed": 320,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -8588,15 +10041,15 @@
         "game_id": "VehiclesDepotT3",
         "icon": "VehiclesDepotT3.png",
         "name": "Vehicles Depot III",
-        "category_id": "buildings_for_vehicles",
-        "category_name": "Buildings (For Vehicles)",
+        "category_id": "vehicles",
+        "category_name": "Vehicles",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 16,
         "maintenance_cost_units": null,
         "maintenance_cost_quantity": 0,
-        "electricity_consumed": 160,
+        "electricity_consumed": 640,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -8605,9 +10058,9 @@
         "research_speed": 0,
         "build_costs": [
             {
-                "id": "construction_parts_iii",
-                "name": "Construction Parts III",
-                "quantity": 280
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 180
             }
         ],
         "recipes": [],
@@ -8621,8 +10074,8 @@
         "game_id": "SettlementLandfillModule",
         "icon": "SettlementLandfillModule.png",
         "name": "Waste Collection",
-        "category_id": "housing_and_services",
-        "category_name": "Housing & Services",
+        "category_id": "settlement",
+        "category_name": "Settlement",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
@@ -8691,12 +10144,12 @@
         "game_id": "WasteSortingPlant",
         "icon": "WasteSortingPlant.png",
         "name": "Waste Sorting Plant",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "solid",
+        "category_name": "Solid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
-        "workers": 45,
+        "workers": 32,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 20,
         "electricity_consumed": 0,
@@ -8710,17 +10163,20 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 400
+                "quantity": 360
             }
         ],
         "recipes": [
-            "wastesortingplant"
+            "waste_sorting_plant",
+            "waste_sorting_plant_1"
         ],
         "products": {
             "input": [
-                "recyclables"
+                "recyclables",
+                "recyclables_pressed"
             ],
             "output": [
+                "aluminum_scrap",
                 "broken_glass",
                 "copper_scrap",
                 "gold_scrap",
@@ -8733,15 +10189,15 @@
         "game_id": "WaterTreatmentPlant",
         "icon": "WaterTreatmentPlant.png",
         "name": "Wastewater Treatment",
-        "category_id": "waste_management",
-        "category_name": "Waste Management",
+        "category_id": "fluid",
+        "category_name": "Fluid",
         "isMine": false,
         "isStorage": false,
         "isFarm": false,
         "workers": 26,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 10,
-        "electricity_consumed": 180,
+        "electricity_consumed": 600,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -8789,7 +10245,7 @@
         "workers": 3,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 2,
-        "electricity_consumed": 80,
+        "electricity_consumed": 1000,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,
@@ -8828,7 +10284,7 @@
         "workers": 6,
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
-        "electricity_consumed": 20,
+        "electricity_consumed": 100,
         "electricity_generated": 0,
         "computing_consumed": 0,
         "computing_generated": 0,

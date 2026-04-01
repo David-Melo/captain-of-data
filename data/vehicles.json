@@ -1,5 +1,5 @@
 {
-    "game_version": "0.8.1.0",
+    "game_version": "0.8.2.0",
     "vehicles": [
         {
             "name": "Truck",
@@ -272,12 +272,16 @@
             "name": "Amphibious excavator",
             "costs": [
                 {
+                    "product": "Vehicle Parts II",
+                    "quantity": 60
+                },
+                {
                     "product": "Steel",
                     "quantity": 30
                 },
                 {
-                    "product": "Vehicle Parts II",
-                    "quantity": 220
+                    "product": "Electronics",
+                    "quantity": 40
                 },
                 {
                     "product": "Hydrogen",

@@ -1,5 +1,5 @@
 {
-    "game_version": "0.8.1.0",
+    "game_version": "0.8.2.0",
     "transports": [
         {
             "id": "FlatConveyorT3",
@@ -134,24 +134,6 @@
             ]
         },
         {
-            "id": "MoltenMetalChannel",
-            "name": "Molten channel",
-            "category": "",
-            "next_tier": "",
-            "maintenance_cost_units": "",
-            "maintenance_cost_quantity": 0,
-            "electricity_consumed": 0,
-            "throughput_per_second": 2.001953,
-            "length_per_cost": 0,
-            "icon_path": "Assets/Unity/Generated/Icons/Transport/MoltenMetalChannel.png",
-            "build_costs": [
-                {
-                    "product": "Construction Parts",
-                    "quantity": 28
-                }
-            ]
-        },
-        {
             "id": "PipeT4",
             "name": "Pipe IV",
             "category": "",
@@ -220,6 +202,24 @@
             "throughput_per_second": 0.9960938,
             "length_per_cost": 0,
             "icon_path": "Assets/Unity/Generated/Icons/Transport/PipeT1.png",
+            "build_costs": [
+                {
+                    "product": "Construction Parts",
+                    "quantity": 28
+                }
+            ]
+        },
+        {
+            "id": "MoltenMetalChannel",
+            "name": "Molten channel",
+            "category": "",
+            "next_tier": "",
+            "maintenance_cost_units": "",
+            "maintenance_cost_quantity": 0,
+            "electricity_consumed": 0,
+            "throughput_per_second": 2.001953,
+            "length_per_cost": 0,
+            "icon_path": "Assets/Unity/Generated/Icons/Transport/MoltenMetalChannel.png",
             "build_costs": [
                 {
                     "product": "Construction Parts",
