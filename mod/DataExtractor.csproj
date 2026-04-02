@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ModDeployDir>$(APPDATA)\Captain of Industry\Mods\DataExtractor</ModDeployDir>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mafi">
       <HintPath>$(COI_ROOT)\Captain of Industry_Data\Managed\Mafi.dll</HintPath>
@@ -131,4 +134,8 @@
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(ModDeployDir)" mkdir "$(ModDeployDir)"
+xcopy /Y /I "$(TargetDir)*" "$(ModDeployDir)\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

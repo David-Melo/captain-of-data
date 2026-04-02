@@ -26627,6 +26627,156 @@
             }
         ]
     },
+    "thermal_storage": {
+        "id": "thermal_storage",
+        "name": "Thermal Storage",
+        "machine": "thermal_storage",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "steam_low",
+                "name": "Steam (Low)",
+                "quantity": 602.3529109407167
+            }
+        ],
+        "outputs": [
+            {
+                "id": "heat",
+                "name": "Heat",
+                "quantity": 5421.17619846645
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 602.3529109407167
+            }
+        ]
+    },
+    "thermal_storage_1": {
+        "id": "thermal_storage_1",
+        "name": "Thermal Storage 1",
+        "machine": "thermal_storage",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 602.3529109407167
+            },
+            {
+                "id": "heat",
+                "name": "Heat",
+                "quantity": 6023.529109407167
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steam_low",
+                "name": "Steam (Low)",
+                "quantity": 602.3529109407167
+            }
+        ]
+    },
+    "thermal_storage_2": {
+        "id": "thermal_storage_2",
+        "name": "Thermal Storage 2",
+        "machine": "thermal_storage",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "steam_high",
+                "name": "Steam (High)",
+                "quantity": 602.3529109407167
+            }
+        ],
+        "outputs": [
+            {
+                "id": "heat",
+                "name": "Heat",
+                "quantity": 10842.3523969329
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 602.3529109407167
+            }
+        ]
+    },
+    "thermal_storage_3": {
+        "id": "thermal_storage_3",
+        "name": "Thermal Storage 3",
+        "machine": "thermal_storage",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 602.3529109407167
+            },
+            {
+                "id": "heat",
+                "name": "Heat",
+                "quantity": 12047.058218814334
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steam_high",
+                "name": "Steam (High)",
+                "quantity": 602.3529109407167
+            }
+        ]
+    },
+    "thermal_storage_4": {
+        "id": "thermal_storage_4",
+        "name": "Thermal Storage 4",
+        "machine": "thermal_storage",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "steam_super",
+                "name": "Steam (Super)",
+                "quantity": 602.3529109407167
+            }
+        ],
+        "outputs": [
+            {
+                "id": "heat",
+                "name": "Heat",
+                "quantity": 21684.7047938658
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 602.3529109407167
+            }
+        ]
+    },
+    "thermal_storage_5": {
+        "id": "thermal_storage_5",
+        "name": "Thermal Storage 5",
+        "machine": "thermal_storage",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 602.3529109407167
+            },
+            {
+                "id": "heat",
+                "name": "Heat",
+                "quantity": 24094.11643762867
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steam_super",
+                "name": "Steam (Super)",
+                "quantity": 602.3529109407167
+            }
+        ]
+    },
     "titanium_alloy_mixing": {
         "id": "titanium_alloy_mixing",
         "name": "Titanium Alloy Mixing",

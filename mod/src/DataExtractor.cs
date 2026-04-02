@@ -93,6 +93,7 @@
  */
 
 using Mafi;
+using Mafi.Base.Prototypes.Buildings.ThermalStorages;
 using Mafi.Base.Prototypes.Machines;
 using Mafi.Base.Prototypes.Machines.PowerGenerators;
 using Mafi.Collections;
@@ -214,7 +215,8 @@ namespace DataExtractorMod
             string research_speed,
             string icon,
             string build_costs,
-            string recipes
+            string recipes,
+            string subcategory = ""
         )
         {
             return MakeMachineJsonObject2(
@@ -235,7 +237,8 @@ namespace DataExtractorMod
                 research_speed,
                 icon,
                 build_costs,
-                recipes
+                recipes,
+                subcategory
             );
         }
 
@@ -257,7 +260,8 @@ namespace DataExtractorMod
             string research_speed,
             string icon,
             string build_costs,
-            string recipes
+            string recipes,
+            string subcategory = ""
         )
         {
             System.Text.StringBuilder obj = new System.Text.StringBuilder();
@@ -267,6 +271,7 @@ namespace DataExtractorMod
             props.Add($"\"id\":\"{id}\"");
             props.Add($"\"name\":\"{name}\"");
             props.Add($"\"category\":\"{category}\"");
+            props.Add($"\"subcategory\":\"{subcategory}\"");
             props.Add($"\"next_tier\":\"{next_tier}\"");
             props.Add($"\"workers\":{workers}");
             props.Add($"\"maintenance_cost_units\":\"{maintenance_cost_units}\"");
@@ -300,7 +305,8 @@ namespace DataExtractorMod
             string throughput_per_second,
             string length_per_cost,
             string icon,
-            string build_costs
+            string build_costs,
+            string subcategory = ""
         )
         {
             System.Text.StringBuilder obj = new System.Text.StringBuilder();
@@ -310,6 +316,7 @@ namespace DataExtractorMod
             props.Add($"\"id\":\"{id}\"");
             props.Add($"\"name\":\"{name}\"");
             props.Add($"\"category\":\"{category}\"");
+            props.Add($"\"subcategory\":\"{subcategory}\"");
             props.Add($"\"next_tier\":\"{next_tier}\"");
             props.Add($"\"maintenance_cost_units\":\"{maintenance_cost_units}\"");
             props.Add($"\"maintenance_cost_quantity\":{maintenance_cost_quantity}");
@@ -323,6 +330,32 @@ namespace DataExtractorMod
             obj.AppendLine(props.JoinStrings(","));
             obj.AppendLine("}");
             return obj.ToString();
+        }
+
+        private static string GetTopLevelCategory(ImmutableArray<ToolbarEntryData> categories, string fallbackCategory)
+        {
+            foreach (ToolbarEntryData cat in categories)
+            {
+                if (cat.CategoryProto.ParentCategory.HasValue)
+                {
+                    return cat.CategoryProto.ParentCategory.Value.Strings.Name.ToString();
+                }
+            }
+
+            return fallbackCategory;
+        }
+
+        private static string GetSubcategory(ImmutableArray<ToolbarEntryData> categories)
+        {
+            foreach (ToolbarEntryData cat in categories)
+            {
+                if (cat.CategoryProto.ParentCategory.HasValue)
+                {
+                    return cat.CategoryProto.Strings.Name.ToString();
+                }
+            }
+
+            return "";
         }
 
         public static string MakeRecipeJsonObject(
@@ -1032,7 +1065,8 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
-;
+                    category = GetTopLevelCategory(generator.Graphics.Categories, category);
+
                     List<string> machinesProducts = new List<string> { };
 
                     foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
@@ -1064,7 +1098,8 @@ namespace DataExtractorMod
                         research_speed,
                         generator.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(generator.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1105,7 +1140,8 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
-;
+                    category = GetTopLevelCategory(generator.Graphics.Categories, category);
+
                     List<string> machinesProducts = new List<string> { };
 
                     foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
@@ -1138,7 +1174,8 @@ namespace DataExtractorMod
                         research_speed,
                         generator.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(generator.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1179,7 +1216,8 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
-;
+                    category = GetTopLevelCategory(generator.Graphics.Categories, category);
+
                     List<string> machinesProducts = new List<string> { };
 
                     foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
@@ -1207,7 +1245,8 @@ namespace DataExtractorMod
                         research_speed,
                         generator.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(generator.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1248,7 +1287,8 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
-;
+                    category = GetTopLevelCategory(generator.Graphics.Categories, category);
+
                     List<string> machinesProducts = new List<string> { };
 
                     foreach (ProductQuantity cost in generator.Costs.BaseConstructionCost.Products)
@@ -1278,7 +1318,8 @@ namespace DataExtractorMod
                         research_speed,
                         generator.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(generator.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1331,6 +1372,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -1363,7 +1405,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1420,6 +1463,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(item.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -1514,7 +1558,8 @@ namespace DataExtractorMod
                         research_speed,
                         item.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(item.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1558,6 +1603,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(item.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -1622,7 +1668,8 @@ namespace DataExtractorMod
                         research_speed,
                         item.IconPath,
                         machinesProducts.JoinStrings(","),
-                        machineRecipeJson
+                        machineRecipeJson,
+                        GetSubcategory(item.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1666,6 +1713,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(item.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -1696,7 +1744,8 @@ namespace DataExtractorMod
                         research_speed,
                         item.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(item.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1740,6 +1789,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(item.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -1770,7 +1820,8 @@ namespace DataExtractorMod
                         research_speed,
                         item.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(item.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1822,6 +1873,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(item.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -1852,7 +1904,8 @@ namespace DataExtractorMod
                         research_speed.ToString(),
                         item.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipes
+                        recipes,
+                        GetSubcategory(item.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1896,6 +1949,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -1926,7 +1980,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -1970,6 +2025,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2000,7 +2056,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
 
                     machineItems.Add(machineJson);
@@ -2102,6 +2159,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2178,7 +2236,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2200,7 +2259,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     storageItems.Add(storageJson);
 
@@ -2209,6 +2269,84 @@ namespace DataExtractorMod
                 {
                     Log.Info("###################################################");
                     Log.Info("ERROR Depot" + machine.Id.ToString());
+                    Log.Info("###################################################");
+                }
+            }
+
+            IEnumerable<ThermalStorageProto> thermalStorages = protosDb.All<ThermalStorageProto>();
+            foreach (ThermalStorageProto machine in thermalStorages)
+            {
+
+                try
+                {
+
+                    string id = machine.Id.ToString();
+                    string name = machine.Strings.Name.ToString();
+                    string category = "";
+                    string workers = machine.Costs.Workers.ToString();
+                    string maintenance_cost_units = machine.Costs.Maintenance.Product.Strings.Name.ToString();
+                    string maintenance_cost_quantity = machine.Costs.Maintenance.MaintenancePerMonth.Value.ToString();
+                    string electricity_consumed = "0";
+                    string electricity_generated = "0";
+                    string product_type = machine.HeatProduct.Strings.Name.ToString();
+                    string capacity = machine.Capacity.ToString();
+                    string unity_cost = "0";
+                    string research_speed = "0";
+                    string computing_consumed = "0";
+                    string computing_generated = "0";
+                    string next_tier = "";
+
+                    foreach (ToolbarEntryData cat in machine.Graphics.Categories)
+                    {
+                        category = cat.CategoryProto.Strings.Name.ToString();
+                    }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
+
+                    List<string> machinesProducts = new List<string> { };
+
+                    foreach (ProductQuantity cost in machine.Costs.BaseConstructionCost.Products)
+                    {
+                        string vehicleProductJson = MakeVehicleProductJsonObject(
+                            cost.Product.Strings.Name.ToString(),
+                            cost.Quantity.ToString()
+                        );
+                        machinesProducts.Add(vehicleProductJson);
+                    }
+
+                    List<string> recipeItems = new List<string> { };
+                    if (machine.Recipes != null)
+                    {
+                        recipeItems = MakeRecipesJsonObject(protosDb, machine.Recipes.AsEnumerable(), id, name);
+                    }
+
+                    string machineJson = MakeMachineJsonObject2(
+                        id,
+                        name,
+                        category,
+                        next_tier,
+                        workers,
+                        maintenance_cost_units,
+                        maintenance_cost_quantity,
+                        electricity_consumed,
+                        electricity_generated,
+                        computing_consumed,
+                        computing_generated,
+                        product_type,
+                        capacity,
+                        unity_cost,
+                        research_speed,
+                        machine.IconPath,
+                        machinesProducts.JoinStrings(","),
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(machine.Graphics.Categories)
+                    );
+                    machineItems.Add(machineJson);
+
+                }
+                catch
+                {
+                    Log.Info("###################################################");
+                    Log.Info("ERROR ThermalStorage" + machine.Id.ToString());
                     Log.Info("###################################################");
                 }
             }
@@ -2238,6 +2376,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2266,7 +2405,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2304,6 +2444,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2332,7 +2473,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2370,6 +2512,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2398,7 +2541,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2436,6 +2580,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2464,7 +2609,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2502,6 +2648,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2530,7 +2677,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2574,6 +2722,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2772,7 +2921,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2813,6 +2963,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2841,7 +2992,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2879,6 +3031,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2907,7 +3060,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        ""
+                        "",
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -2950,6 +3104,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -2982,7 +3137,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -3021,6 +3177,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -3061,7 +3218,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        machineRecipeJson
+                        machineRecipeJson,
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -3101,6 +3259,7 @@ namespace DataExtractorMod
                     {
                         category = cat.CategoryProto.Strings.Name.ToString();
                     }
+                    category = GetTopLevelCategory(machine.Graphics.Categories, category);
 
                     List<string> machinesProducts = new List<string> { };
 
@@ -3168,7 +3327,8 @@ namespace DataExtractorMod
                         research_speed,
                         machine.IconPath,
                         machinesProducts.JoinStrings(","),
-                        recipeItems.JoinStrings(",")
+                        recipeItems.JoinStrings(","),
+                        GetSubcategory(machine.Graphics.Categories)
                     );
                     machineItems.Add(machineJson);
 
@@ -3326,6 +3486,11 @@ namespace DataExtractorMod
             foreach (TransportProto transport in transports)
             {
                 string category = "";
+                foreach (ToolbarEntryData cat in transport.Graphics.Categories)
+                {
+                    category = cat.CategoryProto.Strings.Name.ToString();
+                }
+                category = GetTopLevelCategory(transport.Graphics.Categories, category);
                 string next_tier = "";
                 if (transport.Upgrade.NextTier.HasValue)
                 {
@@ -3356,7 +3521,8 @@ namespace DataExtractorMod
                     (transport.ThroughputPerTick.Value * 10).ToString(),
                     transport.LengthPerCost.Value.ToString(),
                     transport.IconPath,
-                    machinesProducts.JoinStrings(",")
+                    machinesProducts.JoinStrings(","),
+                    GetSubcategory(transport.Graphics.Categories)
                 );
                 transportItems.Add(transportsJson);
 

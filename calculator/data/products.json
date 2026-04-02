@@ -3971,6 +3971,31 @@
             ]
         }
     },
+    "heat": {
+        "id": "heat",
+        "name": "Heat",
+        "icon": "Heat.png",
+        "recipes": {
+            "input": [
+                "thermal_storage_1",
+                "thermal_storage_3",
+                "thermal_storage_5"
+            ],
+            "output": [
+                "thermal_storage",
+                "thermal_storage_2",
+                "thermal_storage_4"
+            ]
+        },
+        "machines": {
+            "input": [
+                "thermal_storage"
+            ],
+            "output": [
+                "thermal_storage"
+            ]
+        }
+    },
     "heavy_oil": {
         "id": "heavy_oil",
         "name": "Heavy Oil",
@@ -8049,6 +8074,7 @@
                 "product_disposal_3",
                 "sour_water_stripping_recovery",
                 "thermal_desalination_2",
+                "thermal_storage_2",
                 "titanium_purification",
                 "turbinehighpress",
                 "turbinehighpresst2"
@@ -8078,6 +8104,7 @@
                 "steam_generation_7",
                 "steam_generation_8",
                 "steam_generation_9",
+                "thermal_storage_3",
                 "turbinesuperpress",
                 "waste_incineration",
                 "waste_incineration_2",
@@ -8101,7 +8128,8 @@
                 "smoke_stack",
                 "smoke_stack_large",
                 "sour_water_stripper",
-                "thermal_desalinator"
+                "thermal_desalinator",
+                "thermal_storage"
             ],
             "output": [
                 "boiler",
@@ -8110,7 +8138,8 @@
                 "incineration_plant",
                 "nuclear_reactor",
                 "nuclear_reactor_ii",
-                "super-pressure_turbine"
+                "super-pressure_turbine",
+                "thermal_storage"
             ]
         }
     },
@@ -8158,6 +8187,7 @@
                 "product_disposal_10",
                 "product_disposal_2",
                 "thermal_desalination_3",
+                "thermal_storage",
                 "turbinelowpress",
                 "turbinelowpresst2"
             ],
@@ -8173,6 +8203,7 @@
                 "iron_scrap_smelting_arc_ii",
                 "iron_smelting_arc_ii",
                 "silicon_smelting_arc_ii",
+                "thermal_storage_1",
                 "titanium_smelting_arc_ii",
                 "turbinehighpress",
                 "turbinehighpresst2"
@@ -8186,13 +8217,15 @@
                 "low-pressure_turbine_ii",
                 "smoke_stack",
                 "smoke_stack_large",
-                "thermal_desalinator"
+                "thermal_desalinator",
+                "thermal_storage"
             ],
             "output": [
                 "arc_furnace_ii",
                 "exhaust_scrubber",
                 "high-pressure_turbine",
-                "high-pressure_turbine_ii"
+                "high-pressure_turbine_ii",
+                "thermal_storage"
             ]
         }
     },
@@ -8207,6 +8240,7 @@
                 "product_disposal_4",
                 "super-press_steam_condensation",
                 "thermal_desalination",
+                "thermal_storage_4",
                 "turbinesuperpress"
             ],
             "output": [
@@ -8222,7 +8256,8 @@
                 "fast_breeder_reactor_powerlevel_3_enrichment_2",
                 "fast_breeder_reactor_powerlevel_3_enrichment_3",
                 "fast_breeder_reactor_powerlevel_4_enrichment_3",
-                "steam_generation_14"
+                "steam_generation_14",
+                "thermal_storage_5"
             ]
         },
         "machines": {
@@ -8232,11 +8267,13 @@
                 "smoke_stack",
                 "smoke_stack_large",
                 "super-pressure_turbine",
-                "thermal_desalinator"
+                "thermal_desalinator",
+                "thermal_storage"
             ],
             "output": [
                 "boiler_electric",
-                "fast_breeder_reactor"
+                "fast_breeder_reactor",
+                "thermal_storage"
             ]
         }
     },
@@ -9384,6 +9421,9 @@
                 "sugar_cane_fertilizer_organic",
                 "sugar_cane_fertilizer_organic_2",
                 "sugar_refining_cane",
+                "thermal_storage_1",
+                "thermal_storage_3",
+                "thermal_storage_5",
                 "titanium_casting_cooled",
                 "titanium_smelting_arc_ii",
                 "tofu_making",
@@ -9445,6 +9485,9 @@
                 "thermal_desalination_2",
                 "thermal_desalination_3",
                 "thermal_desalination_4",
+                "thermal_storage",
+                "thermal_storage_2",
+                "thermal_storage_4",
                 "toxic_slurry_treatment",
                 "water_desalination_basic",
                 "water_pumping",
@@ -9494,6 +9537,7 @@
                 "mixer_ii",
                 "nuclear_reactor",
                 "nuclear_reactor_ii",
+                "thermal_storage",
                 "water_chiller"
             ],
             "output": [
@@ -9511,6 +9555,7 @@
                 "rainwater_harvester",
                 "sour_water_stripper",
                 "thermal_desalinator",
+                "thermal_storage",
                 "wastewater_treatment"
             ]
         }

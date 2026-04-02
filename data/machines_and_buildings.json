@@ -4,7 +4,8 @@
         {
             "id": "TurbineSuperPress",
             "name": "Super-pressure turbine",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "Maintenance II",
@@ -52,7 +53,8 @@
         {
             "id": "TurbineHighPressT2",
             "name": "High-pressure turbine II",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "Maintenance II",
@@ -100,7 +102,8 @@
         {
             "id": "TurbineHighPress",
             "name": "High-pressure turbine",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "TurbineHighPressT2",
             "workers": 2,
             "maintenance_cost_units": "Maintenance I",
@@ -148,7 +151,8 @@
         {
             "id": "TurbineLowPressT2",
             "name": "Low-pressure turbine II",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "Maintenance II",
@@ -196,7 +200,8 @@
         {
             "id": "TurbineLowPress",
             "name": "Low-pressure turbine",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "TurbineLowPressT2",
             "workers": 2,
             "maintenance_cost_units": "Maintenance I",
@@ -244,7 +249,8 @@
         {
             "id": "PowerGeneratorT1",
             "name": "Power generator",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "Maintenance I",
@@ -292,7 +298,8 @@
         {
             "id": "PowerGeneratorT2",
             "name": "Power generator (large)",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "Maintenance I",
@@ -340,7 +347,8 @@
         {
             "id": "SolarPanel",
             "name": "Solar panel",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "Maintenance II",
@@ -369,7 +377,8 @@
         {
             "id": "SolarPanelMono",
             "name": "Solar panel (mono)",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "Maintenance II",
@@ -398,7 +407,8 @@
         {
             "id": "DieselGenerator",
             "name": "Diesel generator",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "Maintenance I",
@@ -450,7 +460,8 @@
         {
             "id": "DieselGeneratorT2",
             "name": "Diesel generator II",
-            "category": "General",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "Maintenance I",
@@ -503,6 +514,7 @@
             "id": "FoodMill",
             "name": "Mill",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "",
             "workers": 5,
             "maintenance_cost_units": "Maintenance I",
@@ -621,6 +633,7 @@
             "id": "FoodProcessor",
             "name": "Food processor",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -849,6 +862,7 @@
             "id": "BakingUnit",
             "name": "Baking unit",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -930,7 +944,8 @@
         {
             "id": "BasicDieselDistiller",
             "name": "Basic distiller",
-            "category": "Basic",
+            "category": "Crude oil refining",
+            "subcategory": "Basic",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "",
@@ -1016,7 +1031,8 @@
         {
             "id": "OilPump",
             "name": "Oil pump",
-            "category": "Basic",
+            "category": "Crude oil refining",
+            "subcategory": "Basic",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "Maintenance I",
@@ -1056,6 +1072,7 @@
             "id": "LandWaterPump",
             "name": "Groundwater pump",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "Maintenance I",
@@ -1094,7 +1111,8 @@
         {
             "id": "GasInjectionPump",
             "name": "Gas injection pump",
-            "category": "Fluid",
+            "category": "Waste management",
+            "subcategory": "Fluid",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -1138,6 +1156,7 @@
             "id": "OceanWaterPumpT1",
             "name": "Seawater pump",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "Maintenance I",
@@ -1190,6 +1209,7 @@
             "id": "OceanWaterPumpLarge",
             "name": "Seawater pump (tall)",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "Maintenance I",
@@ -1241,7 +1261,8 @@
         {
             "id": "BoilerCoal",
             "name": "Boiler",
-            "category": "Distillation",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "",
@@ -1371,7 +1392,8 @@
         {
             "id": "BoilerGas",
             "name": "Boiler (gas)",
-            "category": "Distillation",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "",
@@ -1579,7 +1601,8 @@
         {
             "id": "BoilerElectric",
             "name": "Boiler (electric)",
-            "category": "Distillation",
+            "category": "Power production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -1660,6 +1683,7 @@
             "id": "EvaporationPondHeated",
             "name": "Evaporation pond (heated)",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -1740,6 +1764,7 @@
             "id": "EvaporationPond",
             "name": "Evaporation pond",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "EvaporationPondHeated",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -1820,6 +1845,7 @@
             "id": "ThermalDesalinator",
             "name": "Thermal desalinator",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -1954,6 +1980,7 @@
             "id": "WaterChiller",
             "name": "Water chiller",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 3,
             "maintenance_cost_units": "Maintenance I",
@@ -1997,7 +2024,8 @@
         {
             "id": "BricksMaker",
             "name": "Kiln",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -2053,7 +2081,8 @@
         {
             "id": "AssemblyRoboticT2",
             "name": "Assembly V",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "Maintenance III",
@@ -3153,7 +3182,8 @@
         {
             "id": "AssemblyRoboticT1",
             "name": "Assembly IV",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "AssemblyRoboticT2",
             "workers": 2,
             "maintenance_cost_units": "Maintenance II",
@@ -4067,7 +4097,8 @@
         {
             "id": "AssemblyElectrifiedT2",
             "name": "Assembly III",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "AssemblyRoboticT1",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -4893,7 +4924,8 @@
         {
             "id": "AssemblyElectrified",
             "name": "Assembly II",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "AssemblyElectrifiedT2",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -5099,7 +5131,8 @@
         {
             "id": "AssemblyManual",
             "name": "Assembly I",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "AssemblyElectrified",
             "workers": 4,
             "maintenance_cost_units": "",
@@ -5235,7 +5268,8 @@
         {
             "id": "ConcreteMixerT3",
             "name": "Concrete Mixer III",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 10,
             "maintenance_cost_units": "Maintenance I",
@@ -5381,7 +5415,8 @@
         {
             "id": "ConcreteMixerT2",
             "name": "Concrete Mixer II",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "ConcreteMixerT3",
             "workers": 7,
             "maintenance_cost_units": "Maintenance I",
@@ -5527,7 +5562,8 @@
         {
             "id": "ConcreteMixer",
             "name": "Concrete Mixer",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "ConcreteMixerT2",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -5673,7 +5709,8 @@
         {
             "id": "RotaryKilnGas",
             "name": "Rotary Kiln (gas)",
-            "category": "Aluminum",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 10,
             "maintenance_cost_units": "Maintenance I",
@@ -5803,7 +5840,8 @@
         {
             "id": "RotaryKiln",
             "name": "Rotary Kiln",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "RotaryKilnGas",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -5855,7 +5893,8 @@
         {
             "id": "DiamondReactor",
             "name": "Diamond reactor",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance III",
@@ -5903,7 +5942,8 @@
         {
             "id": "LensMaker",
             "name": "Lens polisher",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance III",
@@ -5955,7 +5995,8 @@
         {
             "id": "MicrochipMachineT2",
             "name": "Microchip machine II",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance III",
@@ -6277,7 +6318,8 @@
         {
             "id": "MicrochipMachine",
             "name": "Microchip machine",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "MicrochipMachineT2",
             "workers": 4,
             "maintenance_cost_units": "Maintenance II",
@@ -6600,6 +6642,7 @@
             "id": "ElectrolyzerT2",
             "name": "Electrolyzer II",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 3,
             "maintenance_cost_units": "Maintenance II",
@@ -6688,6 +6731,7 @@
             "id": "Electrolyzer",
             "name": "Electrolyzer",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "ElectrolyzerT2",
             "workers": 3,
             "maintenance_cost_units": "Maintenance I",
@@ -6776,6 +6820,7 @@
             "id": "FermentationTank",
             "name": "Fermentation tank",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -6883,7 +6928,8 @@
         {
             "id": "SettlingTank",
             "name": "Settling tank",
-            "category": "Nuclear",
+            "category": "Smelting",
+            "subcategory": "Gold",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -7044,6 +7090,7 @@
             "id": "CoolingTowerT1",
             "name": "Cooling tower",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -7128,6 +7175,7 @@
             "id": "CoolingTowerT2",
             "name": "Cooling tower (large)",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -7229,7 +7277,8 @@
         {
             "id": "UraniumEnrichmentPlant",
             "name": "Enrichment plant",
-            "category": "Nuclear",
+            "category": "Power production",
+            "subcategory": "Nuclear",
             "next_tier": "",
             "workers": 14,
             "maintenance_cost_units": "Maintenance II",
@@ -7399,7 +7448,8 @@
         {
             "id": "NuclearReprocessingPlant",
             "name": "Nuclear reprocessing plant",
-            "category": "Nuclear",
+            "category": "Power production",
+            "subcategory": "Nuclear",
             "next_tier": "",
             "workers": 30,
             "maintenance_cost_units": "Maintenance II",
@@ -7562,6 +7612,7 @@
             "id": "CharcoalMaker",
             "name": "Coal maker",
             "category": "Forestry",
+            "subcategory": "",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "",
@@ -7609,7 +7660,8 @@
         {
             "id": "Crusher",
             "name": "Crusher",
-            "category": "Nuclear",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "Maintenance I",
@@ -7851,7 +7903,8 @@
         {
             "id": "CrusherLarge",
             "name": "Crusher (large)",
-            "category": "Nuclear",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -8093,7 +8146,8 @@
         {
             "id": "ArcFurnace2",
             "name": "Arc furnace II",
-            "category": "Titanium",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "",
             "workers": 14,
             "maintenance_cost_units": "Maintenance II",
@@ -8491,7 +8545,8 @@
         {
             "id": "ArcFurnace",
             "name": "Arc furnace",
-            "category": "Silicon",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "ArcFurnace2",
             "workers": 12,
             "maintenance_cost_units": "Maintenance I",
@@ -8753,7 +8808,8 @@
         {
             "id": "SmeltingFurnaceT2",
             "name": "Blast furnace II",
-            "category": "Glass",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "ArcFurnace",
             "workers": 18,
             "maintenance_cost_units": "Maintenance I",
@@ -8955,7 +9011,8 @@
         {
             "id": "SmeltingFurnaceT1",
             "name": "Blast furnace",
-            "category": "Glass",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "SmeltingFurnaceT2",
             "workers": 8,
             "maintenance_cost_units": "",
@@ -9149,7 +9206,8 @@
         {
             "id": "AluminumCell",
             "name": "Aluminum cell",
-            "category": "Aluminum",
+            "category": "Smelting",
+            "subcategory": "Aluminum",
             "next_tier": "",
             "workers": 14,
             "maintenance_cost_units": "Maintenance II",
@@ -9201,7 +9259,8 @@
         {
             "id": "CasterCooledT2",
             "name": "Cooled caster II",
-            "category": "Titanium",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "",
@@ -9271,7 +9330,8 @@
         {
             "id": "CasterCooled",
             "name": "Cooled caster",
-            "category": "Iron",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "CasterCooledT2",
             "workers": 2,
             "maintenance_cost_units": "",
@@ -9319,7 +9379,8 @@
         {
             "id": "CasterT2",
             "name": "Metal caster II",
-            "category": "Aluminum",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "",
@@ -9403,7 +9464,8 @@
         {
             "id": "Caster",
             "name": "Metal caster",
-            "category": "Aluminum",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "CasterT2",
             "workers": 2,
             "maintenance_cost_units": "",
@@ -9483,7 +9545,8 @@
         {
             "id": "AlloyMixer",
             "name": "Alloy mixer",
-            "category": "Titanium",
+            "category": "Smelting",
+            "subcategory": "Titanium",
             "next_tier": "",
             "workers": 12,
             "maintenance_cost_units": "Maintenance II",
@@ -9531,7 +9594,8 @@
         {
             "id": "CopperElectrolysis",
             "name": "Copper electrolysis",
-            "category": "Copper",
+            "category": "Smelting",
+            "subcategory": "Copper",
             "next_tier": "",
             "workers": 5,
             "maintenance_cost_units": "Maintenance I",
@@ -9601,7 +9665,8 @@
         {
             "id": "OxygenFurnaceT2",
             "name": "Oxygen furnace II",
-            "category": "Iron",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -9653,7 +9718,8 @@
         {
             "id": "OxygenFurnace",
             "name": "Oxygen furnace",
-            "category": "Iron",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "OxygenFurnaceT2",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -9705,7 +9771,8 @@
         {
             "id": "GlassMakerT2",
             "name": "Glass maker II",
-            "category": "Glass",
+            "category": "Smelting",
+            "subcategory": "Glass",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance II",
@@ -9749,7 +9816,8 @@
         {
             "id": "GlassMakerT1",
             "name": "Glass maker",
-            "category": "Glass",
+            "category": "Smelting",
+            "subcategory": "Glass",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -9797,7 +9865,8 @@
         {
             "id": "SiliconCrystallizer",
             "name": "Crystallizer",
-            "category": "Aluminum",
+            "category": "Smelting",
+            "subcategory": "Silicon",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance II",
@@ -9863,7 +9932,8 @@
         {
             "id": "SiliconReactor",
             "name": "Silicon reactor",
-            "category": "Silicon",
+            "category": "Smelting",
+            "subcategory": "Silicon",
             "next_tier": "",
             "workers": 2,
             "maintenance_cost_units": "Maintenance I",
@@ -9911,7 +9981,8 @@
         {
             "id": "GoldFurnace",
             "name": "Gold furnace",
-            "category": "Gold",
+            "category": "Smelting",
+            "subcategory": "Gold",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -9981,7 +10052,8 @@
         {
             "id": "IndustrialMixerT2",
             "name": "Mixer II",
-            "category": "Food production",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -10403,7 +10475,8 @@
         {
             "id": "IndustrialMixer",
             "name": "Mixer",
-            "category": "Food production",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "IndustrialMixerT2",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -10825,7 +10898,8 @@
         {
             "id": "ChemicalPlant2",
             "name": "Chemical plant II",
-            "category": "Titanium",
+            "category": "Crude oil refining",
+            "subcategory": "Derivatives",
             "next_tier": "",
             "workers": 14,
             "maintenance_cost_units": "Maintenance II",
@@ -11409,7 +11483,8 @@
         {
             "id": "ChemicalPlant",
             "name": "Chemical plant",
-            "category": "Derivatives",
+            "category": "Crude oil refining",
+            "subcategory": "Derivatives",
             "next_tier": "ChemicalPlant2",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -11601,7 +11676,8 @@
         {
             "id": "DistillationTowerT1",
             "name": "Distillation (stage I)",
-            "category": "Distillation",
+            "category": "Crude oil refining",
+            "subcategory": "Distillation",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -11657,7 +11733,8 @@
         {
             "id": "DistillationTowerT2",
             "name": "Distillation (stage II)",
-            "category": "Distillation",
+            "category": "Crude oil refining",
+            "subcategory": "Distillation",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -11709,7 +11786,8 @@
         {
             "id": "DistillationTowerT3",
             "name": "Distillation (stage III)",
-            "category": "Titanium",
+            "category": "Crude oil refining",
+            "subcategory": "Distillation",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -11787,7 +11865,8 @@
         {
             "id": "VacuumDistillationTower",
             "name": "Rubber maker",
-            "category": "Derivatives",
+            "category": "Crude oil refining",
+            "subcategory": "Derivatives",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -11931,7 +12010,8 @@
         {
             "id": "HydroCrackerT1",
             "name": "Cracking unit",
-            "category": "Distillation",
+            "category": "Crude oil refining",
+            "subcategory": "Distillation",
             "next_tier": "",
             "workers": 12,
             "maintenance_cost_units": "Maintenance I",
@@ -12113,7 +12193,8 @@
         {
             "id": "HydrogenReformer",
             "name": "Hydrogen reformer",
-            "category": "Distillation",
+            "category": "Crude oil refining",
+            "subcategory": "Distillation",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -12195,7 +12276,8 @@
         {
             "id": "SourWaterStripper",
             "name": "Sour water stripper",
-            "category": "Distillation",
+            "category": "Crude oil refining",
+            "subcategory": "Distillation",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -12251,7 +12333,8 @@
         {
             "id": "PolymerizationPlant",
             "name": "Polymerization plant",
-            "category": "Derivatives",
+            "category": "Crude oil refining",
+            "subcategory": "Derivatives",
             "next_tier": "",
             "workers": 12,
             "maintenance_cost_units": "Maintenance I",
@@ -12329,7 +12412,8 @@
         {
             "id": "SmokeStackLarge",
             "name": "Smoke stack (large)",
-            "category": "Titanium",
+            "category": "Waste management",
+            "subcategory": "Fluid",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -12473,7 +12557,8 @@
         {
             "id": "SmokeStack",
             "name": "Smoke stack",
-            "category": "Titanium",
+            "category": "Waste management",
+            "subcategory": "Fluid",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -12613,7 +12698,8 @@
         {
             "id": "WasteDump",
             "name": "Liquid dump",
-            "category": "Fluid",
+            "category": "Waste management",
+            "subcategory": "Fluid",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "",
@@ -12822,7 +12908,8 @@
         {
             "id": "Flare",
             "name": "Flare",
-            "category": "Derivatives",
+            "category": "Waste management",
+            "subcategory": "Fluid",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "",
@@ -12987,7 +13074,8 @@
         {
             "id": "ExhaustScrubber",
             "name": "Exhaust scrubber",
-            "category": "Fluid",
+            "category": "Waste management",
+            "subcategory": "Fluid",
             "next_tier": "",
             "workers": 8,
             "maintenance_cost_units": "Maintenance I",
@@ -13085,7 +13173,8 @@
         {
             "id": "WaterTreatmentPlant",
             "name": "Wastewater treatment",
-            "category": "Fluid",
+            "category": "Waste management",
+            "subcategory": "Fluid",
             "next_tier": "",
             "workers": 26,
             "maintenance_cost_units": "Maintenance I",
@@ -13201,7 +13290,8 @@
         {
             "id": "Burner",
             "name": "Burner (solid)",
-            "category": "Solid",
+            "category": "Waste management",
+            "subcategory": "Solid",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "",
@@ -13371,7 +13461,8 @@
         {
             "id": "IncinerationPlant",
             "name": "Incineration plant",
-            "category": "Solid",
+            "category": "Waste management",
+            "subcategory": "Solid",
             "next_tier": "",
             "workers": 16,
             "maintenance_cost_units": "Maintenance I",
@@ -13517,7 +13608,8 @@
         {
             "id": "Shredder",
             "name": "Shredder",
-            "category": "Forestry",
+            "category": "Waste management",
+            "subcategory": "Solid",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "Maintenance I",
@@ -13705,7 +13797,8 @@
         {
             "id": "Compactor",
             "name": "Compactor",
-            "category": "Solid",
+            "category": "Waste management",
+            "subcategory": "Solid",
             "next_tier": "",
             "workers": 1,
             "maintenance_cost_units": "Maintenance I",
@@ -13839,7 +13932,8 @@
         {
             "id": "AnaerobicDigester",
             "name": "Anaerobic digester",
-            "category": "Solid",
+            "category": "Waste management",
+            "subcategory": "Solid",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -14107,7 +14201,8 @@
         {
             "id": "AirSeparator",
             "name": "Air separator",
-            "category": "Iron",
+            "category": "Smelting",
+            "subcategory": "Iron",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -14150,7 +14245,8 @@
         {
             "id": "MaintenanceDepotT1",
             "name": "Maintenance depot",
-            "category": "Maintenance",
+            "category": "Production",
+            "subcategory": "Maintenance",
             "next_tier": "",
             "workers": 12,
             "maintenance_cost_units": "",
@@ -14224,7 +14320,8 @@
         {
             "id": "MaintenanceDepotT0",
             "name": "Maintenance depot (basic)",
-            "category": "Maintenance",
+            "category": "Production",
+            "subcategory": "Maintenance",
             "next_tier": "MaintenanceDepotT1",
             "workers": 6,
             "maintenance_cost_units": "",
@@ -14272,7 +14369,8 @@
         {
             "id": "MaintenanceDepotT2",
             "name": "Maintenance II depot",
-            "category": "Maintenance",
+            "category": "Production",
+            "subcategory": "Maintenance",
             "next_tier": "",
             "workers": 16,
             "maintenance_cost_units": "",
@@ -14350,7 +14448,8 @@
         {
             "id": "MaintenanceDepotT3",
             "name": "Maintenance III depot",
-            "category": "Maintenance",
+            "category": "Production",
+            "subcategory": "Maintenance",
             "next_tier": "",
             "workers": 20,
             "maintenance_cost_units": "",
@@ -14429,6 +14528,7 @@
             "id": "FarmT4",
             "name": "Greenhouse II",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "",
             "workers": 20,
             "maintenance_cost_units": "Maintenance I",
@@ -15185,6 +15285,7 @@
             "id": "FarmT3",
             "name": "Greenhouse",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "FarmT4",
             "workers": 16,
             "maintenance_cost_units": "Maintenance I",
@@ -15941,6 +16042,7 @@
             "id": "FarmT2",
             "name": "Irrigated Farm",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "FarmT3",
             "workers": 10,
             "maintenance_cost_units": "Maintenance I",
@@ -16429,6 +16531,7 @@
             "id": "FarmT1",
             "name": "Farm",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "FarmT2",
             "workers": 8,
             "maintenance_cost_units": "",
@@ -16546,6 +16649,7 @@
             "id": "ChickenFarm",
             "name": "Chicken farm",
             "category": "Food production",
+            "subcategory": "",
             "next_tier": "",
             "workers": 12,
             "maintenance_cost_units": "",
@@ -16598,6 +16702,7 @@
             "id": "CargoDepotT4",
             "name": "Cargo depot (8)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -16627,6 +16732,7 @@
             "id": "CargoDepotT3",
             "name": "Cargo depot (6)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotT4",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -16656,6 +16762,7 @@
             "id": "CargoDepotT2",
             "name": "Cargo depot (4)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -16685,6 +16792,7 @@
             "id": "CargoDepotT1",
             "name": "Cargo depot (2)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotT2",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -16714,6 +16822,7 @@
             "id": "CargoDepotModuleUnitT3",
             "name": "Unit module (L)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "",
             "workers": 5,
             "maintenance_cost_units": "Maintenance I",
@@ -16739,6 +16848,7 @@
             "id": "CargoDepotModuleUnitT2",
             "name": "Unit module (M)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotModuleUnitT3",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -16764,6 +16874,7 @@
             "id": "CargoDepotModuleUnitT1",
             "name": "Unit module (S)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotModuleUnitT2",
             "workers": 3,
             "maintenance_cost_units": "Maintenance I",
@@ -16789,6 +16900,7 @@
             "id": "CargoDepotModuleLooseT3",
             "name": "Loose module (L)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "",
             "workers": 5,
             "maintenance_cost_units": "Maintenance I",
@@ -16814,6 +16926,7 @@
             "id": "CargoDepotModuleLooseT2",
             "name": "Loose module (M)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotModuleLooseT3",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -16839,6 +16952,7 @@
             "id": "CargoDepotModuleLooseT1",
             "name": "Loose module (S)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotModuleLooseT2",
             "workers": 3,
             "maintenance_cost_units": "Maintenance I",
@@ -16864,6 +16978,7 @@
             "id": "CargoDepotModuleFluidT3",
             "name": "Fluid module (L)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "",
             "workers": 5,
             "maintenance_cost_units": "Maintenance I",
@@ -16889,6 +17004,7 @@
             "id": "CargoDepotModuleFluidT2",
             "name": "Fluid module (M)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotModuleFluidT3",
             "workers": 4,
             "maintenance_cost_units": "Maintenance I",
@@ -16914,6 +17030,7 @@
             "id": "CargoDepotModuleFluidT1",
             "name": "Fluid module (S)",
             "category": "Cargo docks",
+            "subcategory": "",
             "next_tier": "CargoDepotModuleFluidT2",
             "workers": 3,
             "maintenance_cost_units": "Maintenance I",
@@ -16939,6 +17056,7 @@
             "id": "ResearchLab1",
             "name": "Research lab (basic)",
             "category": "Buildings",
+            "subcategory": "",
             "next_tier": "ResearchLab2",
             "workers": 6,
             "maintenance_cost_units": "",
@@ -16964,6 +17082,7 @@
             "id": "ResearchLab2",
             "name": "Research lab I",
             "category": "Buildings",
+            "subcategory": "",
             "next_tier": "ResearchLab3",
             "workers": 12,
             "maintenance_cost_units": "Maintenance I",
@@ -17025,6 +17144,7 @@
             "id": "ResearchLab3",
             "name": "Research lab II",
             "category": "Buildings",
+            "subcategory": "",
             "next_tier": "ResearchLab4",
             "workers": 20,
             "maintenance_cost_units": "Maintenance I",
@@ -17086,6 +17206,7 @@
             "id": "ResearchLab4",
             "name": "Research lab III",
             "category": "Buildings",
+            "subcategory": "",
             "next_tier": "ResearchLab5",
             "workers": 46,
             "maintenance_cost_units": "Maintenance II",
@@ -17147,6 +17268,7 @@
             "id": "ResearchLab5",
             "name": "Research lab IV",
             "category": "Buildings",
+            "subcategory": "",
             "next_tier": "",
             "workers": 80,
             "maintenance_cost_units": "Maintenance III",
@@ -17208,6 +17330,7 @@
             "id": "VehiclesDepotT3",
             "name": "Vehicles depot III",
             "category": "Vehicles",
+            "subcategory": "",
             "next_tier": "",
             "workers": 16,
             "maintenance_cost_units": "",
@@ -17233,6 +17356,7 @@
             "id": "VehiclesDepotT2",
             "name": "Vehicles depot II",
             "category": "Vehicles",
+            "subcategory": "",
             "next_tier": "",
             "workers": 10,
             "maintenance_cost_units": "",
@@ -17258,6 +17382,7 @@
             "id": "VehiclesDepot",
             "name": "Vehicles depot",
             "category": "Vehicles",
+            "subcategory": "",
             "next_tier": "VehiclesDepotT2",
             "workers": 6,
             "maintenance_cost_units": "",
@@ -17283,6 +17408,7 @@
             "id": "FuelStationHydrogenT1",
             "name": "Hydrogen fuel station",
             "category": "Vehicles",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17308,6 +17434,7 @@
             "id": "FuelStationT3",
             "name": "Fuel station III",
             "category": "Vehicles",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17333,6 +17460,7 @@
             "id": "FuelStationT2",
             "name": "Fuel station II",
             "category": "Vehicles",
+            "subcategory": "",
             "next_tier": "FuelStationT3",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17358,6 +17486,7 @@
             "id": "FuelStationT1",
             "name": "Fuel station",
             "category": "Vehicles",
+            "subcategory": "",
             "next_tier": "FuelStationT2",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17383,6 +17512,7 @@
             "id": "StorageUnitT4",
             "name": "Unit storage IV",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17408,6 +17538,7 @@
             "id": "StorageUnitT3",
             "name": "Unit storage III",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "StorageUnitT4",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17433,6 +17564,7 @@
             "id": "StorageUnitT2",
             "name": "Unit storage II",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17458,6 +17590,7 @@
             "id": "StorageUnit",
             "name": "Unit storage",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "StorageUnitT2",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17483,6 +17616,7 @@
             "id": "StorageLooseT4",
             "name": "Loose storage IV",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17508,6 +17642,7 @@
             "id": "StorageLooseT3",
             "name": "Loose storage III",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "StorageLooseT4",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17533,6 +17668,7 @@
             "id": "StorageLooseT2",
             "name": "Loose storage II",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17558,6 +17694,7 @@
             "id": "StorageLoose",
             "name": "Loose storage",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "StorageLooseT2",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17583,6 +17720,7 @@
             "id": "StorageFluidT4",
             "name": "Fluid storage IV",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17608,6 +17746,7 @@
             "id": "StorageFluidT3",
             "name": "Fluid storage III",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "StorageFluidT4",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17633,6 +17772,7 @@
             "id": "StorageFluidT2",
             "name": "Fluid storage II",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17658,6 +17798,7 @@
             "id": "StorageFluid",
             "name": "Fluid storage",
             "category": "Storage",
+            "subcategory": "",
             "next_tier": "StorageFluidT2",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17682,7 +17823,8 @@
         {
             "id": "NuclearWasteStorage",
             "name": "Radioactive waste storage",
-            "category": "Nuclear",
+            "category": "Power production",
+            "subcategory": "Nuclear",
             "next_tier": "",
             "workers": 10,
             "maintenance_cost_units": "",
@@ -17709,9 +17851,173 @@
             "recipes": []
         },
         {
+            "id": "ThermalStorage",
+            "name": "Thermal storage",
+            "category": "Storage",
+            "subcategory": "",
+            "next_tier": "",
+            "workers": 4,
+            "maintenance_cost_units": "Maintenance I",
+            "maintenance_cost_quantity": 4,
+            "electricity_consumed": 0,
+            "electricity_generated": 0,
+            "computing_consumed": 0,
+            "computing_generated": 0,
+            "product_type": "Heat",
+            "storage_capacity": 3000,
+            "unity_cost": 0,
+            "research_speed": 0,
+            "icon_path": "Assets/Unity/Generated/Icons/LayoutEntity/ThermalStorage.png",
+            "build_costs": [
+                {
+                    "product": "Construction Parts III",
+                    "quantity": 200
+                },
+                {
+                    "product": "Salt",
+                    "quantity": 600
+                }
+            ],
+            "recipes": [
+                {
+                    "id": "ThermalStorage",
+                    "name": "Thermal storage",
+                    "duration": 0.09960938,
+                    "inputs": [
+                        {
+                            "name": "Steam (low)",
+                            "quantity": 1
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Heat",
+                            "quantity": 9
+                        },
+                        {
+                            "name": "Water",
+                            "quantity": 1
+                        }
+                    ],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "ThermalStorage1",
+                    "name": "Thermal storage 1",
+                    "duration": 0.09960938,
+                    "inputs": [
+                        {
+                            "name": "Water",
+                            "quantity": 1
+                        },
+                        {
+                            "name": "Heat",
+                            "quantity": 10
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Steam (low)",
+                            "quantity": 1
+                        }
+                    ],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "ThermalStorage2",
+                    "name": "Thermal storage 2",
+                    "duration": 0.09960938,
+                    "inputs": [
+                        {
+                            "name": "Steam (high)",
+                            "quantity": 1
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Heat",
+                            "quantity": 18
+                        },
+                        {
+                            "name": "Water",
+                            "quantity": 1
+                        }
+                    ],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "ThermalStorage3",
+                    "name": "Thermal storage 3",
+                    "duration": 0.09960938,
+                    "inputs": [
+                        {
+                            "name": "Water",
+                            "quantity": 1
+                        },
+                        {
+                            "name": "Heat",
+                            "quantity": 20
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Steam (high)",
+                            "quantity": 1
+                        }
+                    ],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "ThermalStorage4",
+                    "name": "Thermal storage 4",
+                    "duration": 0.09960938,
+                    "inputs": [
+                        {
+                            "name": "Steam (super)",
+                            "quantity": 1
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Heat",
+                            "quantity": 36
+                        },
+                        {
+                            "name": "Water",
+                            "quantity": 1
+                        }
+                    ],
+                    "power_multiplier": 1
+                },
+                {
+                    "id": "ThermalStorage5",
+                    "name": "Thermal storage 5",
+                    "duration": 0.09960938,
+                    "inputs": [
+                        {
+                            "name": "Water",
+                            "quantity": 1
+                        },
+                        {
+                            "name": "Heat",
+                            "quantity": 40
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "Steam (super)",
+                            "quantity": 1
+                        }
+                    ],
+                    "power_multiplier": 1
+                }
+            ]
+        },
+        {
             "id": "HousingT4",
             "name": "Housing IV",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17745,6 +18051,7 @@
             "id": "HousingT3",
             "name": "Housing III",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17774,6 +18081,7 @@
             "id": "HousingT2",
             "name": "Housing II",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17799,6 +18107,7 @@
             "id": "Housing",
             "name": "Housing",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17824,6 +18133,7 @@
             "id": "MineTower",
             "name": "Mine control tower",
             "category": "Terraforming",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "",
@@ -17848,7 +18158,8 @@
         {
             "id": "SettlementLandfillModule",
             "name": "Waste collection",
-            "category": "Settlement",
+            "category": "Waste management",
+            "subcategory": "Settlement",
             "next_tier": "",
             "workers": 4,
             "maintenance_cost_units": "",
@@ -17873,7 +18184,8 @@
         {
             "id": "SettlementRecyclablesModule",
             "name": "Recyclables collection",
-            "category": "Settlement",
+            "category": "Waste management",
+            "subcategory": "Settlement",
             "next_tier": "",
             "workers": 12,
             "maintenance_cost_units": "",
@@ -17898,7 +18210,8 @@
         {
             "id": "SettlementBiomassModule",
             "name": "Biomass collection",
-            "category": "Settlement",
+            "category": "Waste management",
+            "subcategory": "Settlement",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "",
@@ -17924,6 +18237,7 @@
             "id": "SettlementFoodModuleT2",
             "name": "Food market II",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "",
@@ -17949,6 +18263,7 @@
             "id": "SettlementFoodModule",
             "name": "Food market",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 3,
             "maintenance_cost_units": "",
@@ -17974,6 +18289,7 @@
             "id": "SettlementHouseholdGoodsModule",
             "name": "Household goods module",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 16,
             "maintenance_cost_units": "Maintenance I",
@@ -18003,6 +18319,7 @@
             "id": "SettlementHouseholdAppliancesModule",
             "name": "Household appliances module",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 20,
             "maintenance_cost_units": "Maintenance II",
@@ -18032,6 +18349,7 @@
             "id": "SettlementConsumerElectronicsModule",
             "name": "Consumer electronics module",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 24,
             "maintenance_cost_units": "Maintenance II",
@@ -18061,6 +18379,7 @@
             "id": "SettlementLuxuryGoodsModule",
             "name": "Luxury goods module",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 16,
             "maintenance_cost_units": "Maintenance I",
@@ -18090,6 +18409,7 @@
             "id": "SettlementWaterModule",
             "name": "Water facility",
             "category": "Housing & services",
+            "subcategory": "",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "Maintenance I",
@@ -18114,7 +18434,8 @@
         {
             "id": "NuclearReactorT2",
             "name": "Nuclear reactor II",
-            "category": "Nuclear",
+            "category": "Power production",
+            "subcategory": "Nuclear",
             "next_tier": "",
             "workers": 110,
             "maintenance_cost_units": "Maintenance II",
@@ -18348,7 +18669,8 @@
         {
             "id": "NuclearReactor",
             "name": "Nuclear reactor",
-            "category": "Nuclear",
+            "category": "Power production",
+            "subcategory": "Nuclear",
             "next_tier": "NuclearReactorT2",
             "workers": 80,
             "maintenance_cost_units": "Maintenance II",
@@ -18452,7 +18774,8 @@
         {
             "id": "FastBreederReactor",
             "name": "Fast breeder reactor",
-            "category": "Nuclear",
+            "category": "Power production",
+            "subcategory": "Nuclear",
             "next_tier": "",
             "workers": 200,
             "maintenance_cost_units": "Maintenance III",
@@ -18862,7 +19185,8 @@
         {
             "id": "RocketAssemblyDepot",
             "name": "Rocket assembly depot",
-            "category": "Rockets",
+            "category": "Buildings",
+            "subcategory": "Rockets",
             "next_tier": "",
             "workers": 160,
             "maintenance_cost_units": "",
@@ -18891,7 +19215,8 @@
         {
             "id": "RocketLaunchPad",
             "name": "Rocket launch pad",
-            "category": "Rockets",
+            "category": "Buildings",
+            "subcategory": "Rockets",
             "next_tier": "",
             "workers": 30,
             "maintenance_cost_units": "",
@@ -18924,7 +19249,8 @@
         {
             "id": "WasteSortingPlant",
             "name": "Waste sorting plant",
-            "category": "Solid",
+            "category": "Waste management",
+            "subcategory": "Solid",
             "next_tier": "",
             "workers": 32,
             "maintenance_cost_units": "Maintenance I",
@@ -19019,6 +19345,7 @@
             "id": "RainwaterHarvester",
             "name": "Rainwater harvester",
             "category": "Water extraction & processing",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "Maintenance I",
@@ -19061,7 +19388,8 @@
         {
             "id": "DataCenter",
             "name": "Data center",
-            "category": "General",
+            "category": "Production",
+            "subcategory": "General",
             "next_tier": "",
             "workers": 6,
             "maintenance_cost_units": "",
@@ -19122,6 +19450,7 @@
             "id": "BasicServerRack",
             "name": "Basic rack",
             "category": "Data center",
+            "subcategory": "",
             "next_tier": "",
             "workers": 0,
             "maintenance_cost_units": "Maintenance III",

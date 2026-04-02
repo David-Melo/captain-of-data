@@ -4,7 +4,8 @@
         {
             "id": "FlatConveyorT3",
             "name": "Flat conveyor III",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Flat",
             "next_tier": "",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -26,7 +27,8 @@
         {
             "id": "FlatConveyorT2",
             "name": "Flat conveyor II",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Flat",
             "next_tier": "FlatConveyorT3",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -48,7 +50,8 @@
         {
             "id": "FlatConveyorT1",
             "name": "Flat conveyor I",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Flat",
             "next_tier": "FlatConveyorT2",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -70,7 +73,8 @@
         {
             "id": "LooseMaterialConveyorT3",
             "name": "U-shape conveyor III",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Loose",
             "next_tier": "",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -92,7 +96,8 @@
         {
             "id": "LooseMaterialConveyorT2",
             "name": "U-shape conveyor II",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Loose",
             "next_tier": "LooseMaterialConveyorT3",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -114,7 +119,8 @@
         {
             "id": "LooseMaterialConveyor",
             "name": "U-shape conveyor I",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Loose",
             "next_tier": "LooseMaterialConveyorT2",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -136,7 +142,8 @@
         {
             "id": "PipeT4",
             "name": "Pipe IV",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Fluid",
             "next_tier": "",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -158,7 +165,8 @@
         {
             "id": "PipeT3",
             "name": "Pipe III",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Fluid",
             "next_tier": "PipeT4",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -176,7 +184,8 @@
         {
             "id": "PipeT2",
             "name": "Pipe II",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Fluid",
             "next_tier": "PipeT3",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -194,7 +203,8 @@
         {
             "id": "PipeT1",
             "name": "Pipe I",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Fluid",
             "next_tier": "PipeT2",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -212,7 +222,8 @@
         {
             "id": "MoltenMetalChannel",
             "name": "Molten channel",
-            "category": "",
+            "category": "Transports",
+            "subcategory": "Molten",
             "next_tier": "",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
@@ -231,6 +242,7 @@
             "id": "Shaft",
             "name": "Shaft",
             "category": "",
+            "subcategory": "",
             "next_tier": "",
             "maintenance_cost_units": "",
             "maintenance_cost_quantity": 0,
