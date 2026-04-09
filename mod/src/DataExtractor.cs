@@ -127,6 +127,7 @@ using Mafi.Core.Vehicles.Excavators;
 using Mafi.Core.Vehicles.TreeHarvesters;
 using Mafi.Core.Vehicles.Trucks;
 using Mafi.Core.World.Contracts;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -134,7 +135,7 @@ using System.Reflection;
 
 namespace DataExtractorMod
 {
-    public sealed class DataExtractor : IMod
+    public sealed partial class DataExtractor : IMod
     {
         public string Name => "Data Extractor Mod By ItsDesm (modified by doubleaxe)";
 
@@ -147,6 +148,9 @@ namespace DataExtractorMod
         private static readonly string MOD_ROOT_DIR_PATH = new FileSystemHelper().GetDirPath(FileType.Mod, false);
         private static readonly string MOD_DIR_PATH = Path.Combine(MOD_ROOT_DIR_PATH, "DataExtractor");
         private static readonly string PLUGIN_DIR_PATH = Path.Combine(MOD_DIR_PATH, "Plugins");
+        public static readonly string GAME_VERSION = typeof(Mafi.Base.BaseMod).GetTypeInfo().Assembly.GetName().Version.ToString();
+
+        private static string EXPORT_DIR => Environment.GetEnvironmentVariable("CAPTAIN_OF_DATA__EXPORT_DIR") ?? "C:/temp";
 
         private static readonly bool DEBUG = false;
 
@@ -763,10 +767,9 @@ namespace DataExtractorMod
 
         public void RegisterDependencies(DependencyResolverBuilder depBuilder, ProtosDb protosDb, bool gameWasLoaded)
         {
+            Reporter reporter = new Reporter(EXPORT_DIR);
 
             List<string> DUMP = new List<string> { };
-
-            string game_version = typeof(Mafi.Base.BaseMod).GetTypeInfo().Assembly.GetName().Version.ToString();
 
             /*
              * -------------------------------------
@@ -810,9 +813,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
 
             }
@@ -848,9 +849,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
 
             }
@@ -884,9 +883,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
 
             }
@@ -922,9 +919,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
 
             }
@@ -958,15 +953,13 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
 
             }
             upgradeItems.Add($"\"fuel_tanks\":[{tankItems.JoinStrings(",")}]");
 
-            File.WriteAllText("c:/temp/ship_upgrades.json", $"{{\"game_version\":\"{game_version}\",{upgradeItems.JoinStrings(",")}}}");
+            reporter.WriteFile("ship_upgrades.json", $"{{\"game_version\":\"{GAME_VERSION}\",{upgradeItems.JoinStrings(",")}}}");
 
             /*
              * -------------------------------------
@@ -1015,14 +1008,12 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + vehicle.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(vehicle);
                 }
 
             }
 
-            File.WriteAllText("c:/temp/vehicles.json", $"{{\"game_version\":\"{game_version}\",\"vehicles\":[{vehicleItems.JoinStrings(",")}]}}");
+            reporter.WriteFile("vehicles.json", $"{{\"game_version\":\"{GAME_VERSION}\",\"vehicles\":[{vehicleItems.JoinStrings(",")}]}}");
 
             /*
              * -------------------------------------
@@ -1106,9 +1097,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + generator.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(generator);
                 }
             }
 
@@ -1182,9 +1171,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + generator.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(generator);
                 }
             }
 
@@ -1253,9 +1240,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + generator.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(generator);
                 }
             }
 
@@ -1326,9 +1311,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + generator.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(generator);
                 }
             }
 
@@ -1413,9 +1396,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + machine.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(machine);
                 }
             }
 
@@ -1566,9 +1547,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
             }
 
@@ -1676,9 +1655,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
             }
 
@@ -1752,9 +1729,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
             }
 
@@ -1828,9 +1803,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
             }
 
@@ -1912,9 +1885,7 @@ namespace DataExtractorMod
                 }
                 catch
                 {
-                    Log.Info("###################################################");
-                    Log.Info("ERROR" + item.ToString() + item.Id.ToString());
-                    Log.Info("###################################################");
+                    reporter.RecordError(item);
                 }
             }
 
@@ -2123,7 +2094,7 @@ namespace DataExtractorMod
                 }
             }
 
-            File.WriteAllText("c:/temp/products.json", $"{{\"game_version\":\"{game_version}\",\"products\":[{productsJson.JoinStrings(",")}]}}");
+            reporter.WriteFile("products.json", $"{{\"game_version\":\"{GAME_VERSION}\",\"products\":[{productsJson.JoinStrings(",")}]}}");
 
             List<string> storageItems = new List<string> { };
 
@@ -3450,7 +3421,7 @@ namespace DataExtractorMod
 
             }
 
-            File.WriteAllText("c:/temp/terrain_materials.json", $"{{\"game_version\":\"{game_version}\",\"terrain_materials\":[{materialItems.JoinStrings(",")}]}}");
+            reporter.WriteFile("terrain_materials.json", $"{{\"game_version\":\"{GAME_VERSION}\",\"terrain_materials\":[{materialItems.JoinStrings(",")}]}}");
 
             List<string> contractItems = new List<string> { };
 
@@ -3474,7 +3445,7 @@ namespace DataExtractorMod
 
             }
 
-            File.WriteAllText("c:/temp/contracts.json", $"{{\"game_version\":\"{game_version}\",\"contracts\":[{contractItems.JoinStrings(",")}]}}");
+            reporter.WriteFile("contracts.json", $"{{\"game_version\":\"{GAME_VERSION}\",\"contracts\":[{contractItems.JoinStrings(",")}]}}");
 
             /*
                 * -------------------------------------
@@ -3528,7 +3499,7 @@ namespace DataExtractorMod
 
             }
 
-            File.WriteAllText("c:/temp/transports.json", $"{{\"game_version\":\"{game_version}\",\"transports\":[{transportItems.JoinStrings(",")}]}}");
+            reporter.WriteFile("transports.json", $"{{\"game_version\":\"{GAME_VERSION}\",\"transports\":[{transportItems.JoinStrings(",")}]}}");
 
             /*
                 * -------------------------------------
@@ -3536,8 +3507,8 @@ namespace DataExtractorMod
                 * -------------------------------------
             */
 
-            File.WriteAllText("c:/temp/machines_and_buildings.json", $"{{\"game_version\":\"{game_version}\",\"machines_and_buildings\":[{machineItems.JoinStrings(",")}]}}");
-            File.WriteAllText("c:/temp/storages.json", $"{{\"game_version\":\"{game_version}\",\"storages\":[{storageItems.JoinStrings(",")}]}}");
+            reporter.WriteFile("machines_and_buildings.json", $"{{\"game_version\":\"{GAME_VERSION}\",\"machines_and_buildings\":[{machineItems.JoinStrings(",")}]}}");
+            reporter.WriteFile("storages.json", $"{{\"game_version\":\"{GAME_VERSION}\",\"storages\":[{storageItems.JoinStrings(",")}]}}");
 
             /*
                 * -------------------------------------
@@ -3548,8 +3519,9 @@ namespace DataExtractorMod
 
             if (DUMP.Count != 0)
             {
-                File.WriteAllLines("c:/temp/dump.txt", DUMP);
+                reporter.WriteFile("dump.txt", string.Join(Environment.NewLine, DUMP));
             }
+            reporter.Finish();
         }
 
         /*
