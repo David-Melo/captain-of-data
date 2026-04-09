@@ -2,7 +2,11 @@
 
 Added solution file and project. I have only `VS Community 2019`, so sorry, solution is for this studio and `Windows .Net 4.8`.
 
-In order to open properly, you should set `COI_ROOT` environment variable to your Captain Of Industry Steam installation, and set your `PATH` variable to `%COI_ROOT%\Captain of Industry_Data\Managed`.
+In order to open properly, you should
+- set `COI_ROOT` to your Captain Of Industry Steam installation
+    - either in your environment variables
+    - or by copying `Directory.Build.props.example` as `Directory.Build.props`, and filling `<COI_ROOT>`
+- and set your `PATH` variable to `%COI_ROOT%\Captain of Industry_Data\Managed`.
 
 In order to run, place compiled `DataExtractor.dll` to folder `Users\[user]\AppData\Roaming\Captain of Industry\Mods\DataExtractor`
 
@@ -14,6 +18,8 @@ Image icons: use [AssetStudio](https://github.com/Perfare/AssetStudio)
 - Added details on farms, recipes, production, consumption.
 - Added details on storages - item type to store.
 - Added icons.
+
+You can configure the output path of the export by running the game with the environment variable `CAPTAIN_OF_DATA__EXPORT_DIR` set.
 
 # Original REAMDE is below
 
